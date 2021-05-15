@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:travishenson/portfolio.git",
+  "author": "Travis Henson",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^10.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-ionicons": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.5",
+    "typescript": "^4.2.4"
+  }
+}
