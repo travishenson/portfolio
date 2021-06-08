@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Index = () => {
+const Index: React.FC = () => {
   return (
     <div style={{
       alignItems: 'center',
@@ -25,4 +25,4 @@ const Index = () => {
   )
 }
 
-export default Index;
+export {Index};
