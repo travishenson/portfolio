@@ -1,6 +1,7 @@
 import React from 'react';
+import {NextPage} from 'next';
 
-const Index: React.FC = () => {
+const Index: NextPage = () => {
   return (
     <div style={{
       alignItems: 'center',
@@ -13,7 +14,7 @@ const Index: React.FC = () => {
       width: '90%'
     }}>
       <h1>Hi, I'm Travis Henson.</h1>
-      <p>I'm a JavaScript-focused web developer; my site is currently under construction.</p>
+      <p>I'm a JavaScript-focused web developer.</p>
       <hr style={{margin: '25px 0', width: '100%', maxWidth: '750px',}} />
       <p>Visit the links below to contact me:</p>
       <div style={{display: 'flex', justifyContent: 'space-between', marginTop: '15px', maxWidth: '650px', width: '90%'}}>
@@ -25,4 +26,4 @@ const Index: React.FC = () => {
   )
 }
 
-export {Index};
+export default Index;

@@ -1,6 +1,7 @@
 import React from 'react';
+import {NextPage} from 'next';
 
-const About: React.FC = () => {
+const About: NextPage = () => {
   return (
     <div>
 
@@ -8,4 +9,4 @@ const About: React.FC = () => {
   )
 }
 
-export {About};
+export default About;

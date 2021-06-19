@@ -1,6 +1,7 @@
 import React from 'react';
+import {NextPage} from 'next';
 
-const Contact: React.FC = () => {
+const Contact: NextPage = () => {
   return (
     <div>
 
@@ -8,4 +9,4 @@ const Contact: React.FC = () => {
   )
 }
 
-export {Contact};
+export default Contact;

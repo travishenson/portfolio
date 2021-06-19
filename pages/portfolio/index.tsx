@@ -1,6 +1,7 @@
 import React from 'react';
+import {NextPage} from 'next';
 
-const Portfolio: React.FC = () => {
+const Portfolio: NextPage = () => {
   return (
     <div>
 
@@ -8,4 +9,4 @@ const Portfolio: React.FC = () => {
   )
 }
 
-export {Portfolio};
+export default Portfolio;

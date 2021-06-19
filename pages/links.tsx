@@ -1,12 +1,12 @@
 import React from 'react';
 import {NextPage} from 'next';
 
-const Blog: NextPage = () => {
+const Links: NextPage = () => {
   return (
     <div>
-
+      List various links here.
     </div>
   )
 }
 
-export default Blog;
+export default Links;

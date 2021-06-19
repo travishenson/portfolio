@@ -1,6 +1,7 @@
 import React from 'react';
+import {NextPage} from 'next';
 
-const Resume: React.FC = () => {
+const Resume: NextPage = () => {
   return (
     <div>
 
@@ -8,4 +9,4 @@ const Resume: React.FC = () => {
   )
 }
 
-export {Resume};
+export default Resume;
