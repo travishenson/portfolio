@@ -1,16 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap');
+
+:root {
+  /* Colors */
+  --blue: #0076CF;
+  --dark-blue: #004B87;
+  --navy: #002E5D;
+  --grey: #5B6770;
+  --dark-grey: #25282A;
+  --black: #212322;
+  --white: #FFFFFF;
+
+  /* Typography */
+  --heading-text: 'Inter', sans-serif;
+  --body-text: 'Inter', sans-serif;
+}
 
 body {
-  background-color: #212322;
+  background-color: var(--black);
   color: white;
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--body-text);
   font-size: 18px;
   height: 100vh;
   line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Oswald', sans-serif;
+  font-family: var(--heading-text);
 }
 
 a, a:hover {
