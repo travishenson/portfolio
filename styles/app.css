@@ -2,13 +2,19 @@
 
 :root {
   /* Colors */
-  --blue: #0076CF;
-  --dark-blue: #004B87;
-  --navy: #002E5D;
-  --grey: #5B6770;
-  --dark-grey: #25282A;
-  --black: #212322;
-  --white: #FFFFFF;
+    /* Primary */
+    --blue100: #B3D9FF;
+    --blue300: #4CA6FF;
+    --blue500: #0073E6;
+    --blue700: #004080;
+    --blue900: #00264D;
+    
+    /* Neutrals */
+    --grey100: #F2F2F2;
+    --grey300: #BDBDBD;
+    --grey500: #878787;
+    --grey700: #4F4F4F;
+    --grey900: #1A1A1A;
 
   /* Typography */
   --heading-text: 'Inter', sans-serif;
@@ -16,8 +22,8 @@
 }
 
 body {
-  background-color: var(--black);
-  color: white;
+  background-color: var(--grey900);
+  color: var(--grey100);
   font-family: var(--body-text);
   font-size: 18px;
   height: 100vh;
@@ -29,5 +35,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a, a:hover {
-  color: white;
+  color: var(--grey100);
 }
