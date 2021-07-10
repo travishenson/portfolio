@@ -1,0 +1,15 @@
+@use '../abstracts/variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap');
+
+body {
+  color: variables.$blue900;
+  font-family: variables.$body-text;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: variables.$blue500;
+  font-family: variables.$heading-text;
+}

@@ -2,9 +2,8 @@ import React from 'react';
 import {AppProps} from 'next/app';
 import Head from 'next/head';
 
-// Global css stylesheets
-import '../styles/reset.css';
-import '../styles/app.css';
+// Sass import
+import '../sass/app.scss';
 
 const App: React.FC<AppProps> = ({
   Component,
