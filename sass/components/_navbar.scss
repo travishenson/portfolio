@@ -2,7 +2,7 @@
 
 nav {
   border-top: 10px solid variables.$blue500;
-  padding-top: 25px;
+  padding: 25px;
   width: 100%;
 }
 
@@ -26,6 +26,19 @@ nav {
     padding-bottom: 5px;
     position: relative;
     text-decoration: none;
+  }
+
+  .active-page::after {
+    background-color: variables.$grey100;
+    bottom: 0;
+    content: '';
+    left: 0;
+    height: 2px;
+    opacity: 1;
+    position: absolute;
+    transition: opacity 300ms, transform 300ms;
+    transform: translate3d(0, 0.2em, 0);
+    width: 100%;
   }
 
   a::after {

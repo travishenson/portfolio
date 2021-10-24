@@ -1,11 +1,23 @@
 import React, { ReactNode } from 'react';
+import { NextSeo } from 'next-seo';
 
 import { Navbar } from './molecules/navbar';
 import { Footer } from './molecules/footer';
 
-const Layout: React.FC<{ children: ReactNode }> = ({ children }) => (
+interface LayoutProps {
+  pageTitle: string;
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({
+  pageTitle,
+  children,
+}: LayoutProps) => (
   <>
-    <Navbar />
+    <NextSeo title={`${pageTitle} | Travis Henson`} />
+    <header>
+      <Navbar />
+    </header>
     <div className="page-content">{children}</div>
     <Footer />
   </>
