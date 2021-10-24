@@ -2,7 +2,7 @@
 
 nav {
   border-top: 10px solid variables.$blue500;
-  padding: 25px;
+  padding: 25px 50px;
   width: 100%;
 }
 
@@ -21,11 +21,20 @@ nav {
   text-transform: uppercase;
 
   a {
-    color: variables.$grey100;
+    color: variables.$grey300;
     margin-left: 50px;
     padding-bottom: 5px;
     position: relative;
     text-decoration: none;
+    transition: color 300ms;
+  }
+
+  a:hover {
+    color: variables.$grey100;
+  }
+
+  .active-page {
+    color: variables.$grey100;
   }
 
   .active-page::after {
