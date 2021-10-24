@@ -1,14 +1,11 @@
-// Abstracts
-
 // Base
-@use 'base/global';
-@use 'base/reset';
-@use 'base/typography';
+@use 'base/base';
 
 // Components
+@use 'components/components';
 
 // Layout
+@use 'layout/layout';
 
 // Pages
-
-// Themes
+@use 'pages/pages';
