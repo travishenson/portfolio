@@ -1,5 +1,48 @@
 @use '../abstracts/variables';
 
 nav {
+  border-top: 10px solid variables.$blue500;
+  padding-top: 25px;
   width: 100%;
+}
+
+.nav-inner {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.nav-links {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  a {
+    color: variables.$grey100;
+    margin-left: 50px;
+    padding-bottom: 5px;
+    position: relative;
+    text-decoration: none;
+  }
+
+  a::after {
+    background-color: variables.$grey100;
+    bottom: 0;
+    content: '';
+    left: 0;
+    height: 2px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 300ms, transform 300ms;
+    width: 100%;
+  }
+
+  a:hover::after,
+  a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+  }
 }
