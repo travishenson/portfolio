@@ -14,7 +14,11 @@ const Layout: React.FC<LayoutProps> = ({
   children,
 }: LayoutProps) => (
   <>
-    <NextSeo title={`${pageTitle} | Travis Henson`} />
+    <NextSeo
+      title={
+        pageTitle === 'Home' ? 'Travis Henson | JavaScript Developer' : `${pageTitle} | Travis Henson`
+      }
+    />
     <header>
       <Navbar />
     </header>
