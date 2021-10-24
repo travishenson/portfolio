@@ -1,12 +1,8 @@
 import React from 'react';
-import {NextPage} from 'next';
+import { NextPage } from 'next';
 
-const Contact: NextPage = () => {
-  return (
-    <div>
-
-    </div>
-  )
-}
+const Contact: NextPage = () => (
+  <div />
+);
 
 export default Contact;

@@ -9,7 +9,7 @@ export const gqlClient = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT!, {
 });
 
 // GraphQL generic function
-async function graphql(query: string, { variables }: any = {}) {
+async function graphql(query: string) {
   const data = await gqlClient.request(query);
 
   return data.projects;

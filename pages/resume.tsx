@@ -1,12 +1,8 @@
 import React from 'react';
-import {NextPage} from 'next';
+import { NextPage } from 'next';
 
-const Resume: NextPage = () => {
-  return (
-    <div>
-
-    </div>
-  )
-}
+const Resume: NextPage = () => (
+  <div />
+);
 
 export default Resume;
