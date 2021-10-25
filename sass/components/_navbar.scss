@@ -1,6 +1,6 @@
 @use '../abstracts/variables';
 
-nav {
+.desktop-nav {
   border-top: 10px solid variables.$blue500;
   padding: 25px 50px;
   width: 100%;
@@ -66,5 +66,15 @@ nav {
   a:focus::after {
     opacity: 1;
     transform: translate3d(0, 0.2em, 0);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-inner {
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: none;
   }
 }

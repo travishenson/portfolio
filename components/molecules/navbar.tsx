@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav>
+    <nav className="desktop-nav">
       <div className="nav-inner">
         <a href="/">
           <img src="/images/logo.png" width="50px" height="50px" />

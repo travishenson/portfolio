@@ -3,3 +3,8 @@
 body {
   background-color: variables.$grey900;
 }
+
+.no-scroll {
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
