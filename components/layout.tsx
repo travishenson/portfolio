@@ -67,7 +67,9 @@ const Layout: React.FC<LayoutProps> = ({
       <header>
         <Navbar />
       </header>
-      <div className="page-content">{children}</div>
+      <div className={pageTitle === 'Home' ? 'page-content-home' : 'page-content'}>
+        {children}
+      </div>
       <MobileNav />
       <Footer />
     </>

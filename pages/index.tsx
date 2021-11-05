@@ -3,9 +3,12 @@ import { NextPage } from 'next';
 
 import Layout from '../components/layout';
 
+// Home page blocks
+import { FirstHomeBlock } from '../components/molecules/home/first-block';
+
 const Index: NextPage = () => (
   <Layout pageTitle="Home">
-    <p>This is a test page.</p>
+    <FirstHomeBlock />
   </Layout>
 );
 

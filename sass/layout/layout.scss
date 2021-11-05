@@ -3,7 +3,13 @@
 
 .page-content {
   margin: 0 auto;
+  max-width: 1280px;
   width: 90%;
+}
+
+.page-content-home {
+  margin: 0 auto;
+  width: 100%;
 }
 
 .loading-overlay {
@@ -29,4 +35,15 @@
 }
 .loader-active {
   display: block;
+}
+
+a {
+  color: variables.$blue500;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: variables.$blue300;
 }

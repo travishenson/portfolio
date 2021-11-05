@@ -1,0 +1,35 @@
+@use '../abstracts/variables';
+
+.first-home-block {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 110px);
+  justify-content: center;
+  margin: 0 auto;
+  
+
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 100;
+  }
+}
+
+.first-block-inner {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
+  top: -110px;
+  width: 90%;
+}
+
+.first-block-inner-text {
+  border-left: 5px solid variables.$blue500;
+  max-width: 800px;
+  padding-left: 25px;
+}
