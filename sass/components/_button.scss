@@ -1,6 +1,6 @@
 @use '../abstracts/variables';
 
-// Button base
+// *** BUTTON BASE ***
 .button {
   border: none;
   border-radius: 8px;
@@ -14,7 +14,7 @@
   }
 }
 
-// Button variants
+// *** BUTTON VARIANTS ***
 .primary-button {
   background-color: variables.$blue500;
   color: variables.$grey100;
@@ -28,7 +28,7 @@
   }
 }
 
-// Button sizes
+// *** BUTTON SIZES ***
 .xs-button {
   font-size: 14px;
   min-width: 75px;

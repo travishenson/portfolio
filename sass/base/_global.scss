@@ -2,6 +2,7 @@
 
 body {
   background-color: variables.$grey900;
+  z-index: variables.$base;
 }
 
 .no-scroll {

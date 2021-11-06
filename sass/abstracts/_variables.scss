@@ -14,3 +14,9 @@ $grey900: #1A1A1A;
 // *** TYPOGRAPHY ***
 $heading-text: 'Inter', sans-serif;
 $body-text: 'Inter', sans-serif;
+
+// *** Z-INDEX ***
+$backdrop: -1;
+$base: 0;
+$overlay: 1;
+$above-overlay: 2;

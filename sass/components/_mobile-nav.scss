@@ -49,7 +49,7 @@ label .mobile-menu {
   transition: .5s ease-in-out;
   -webkit-transition: .5s ease-in-out;
   width: 60px;
-  z-index: 3;
+  z-index: variables.$overlay;
 }
 
 label .hamburger {
@@ -96,7 +96,7 @@ label .hamburger {
   transition: 0.25s ease-in;
   -webkit-transition: 0.25s ease-in;
   visibility: hidden;
-  z-index: 200;
+  z-index: variables.$overlay;
   
   a {
     color: variables.$grey100;
