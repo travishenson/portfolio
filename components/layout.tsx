@@ -45,7 +45,9 @@ const Layout: React.FC<LayoutProps> = ({
 }: LayoutProps) => {
   const { isLoading, setIsLoading } = useLoadingOverlayContext();
 
-  useEffect(() => setIsLoading(false), []);
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 500)
+  }, []);
 
   return (
     <>

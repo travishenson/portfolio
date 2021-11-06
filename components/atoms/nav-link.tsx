@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
 import { useLoadingOverlayContext } from '../../context/loading-overlay-context';
@@ -6,9 +6,14 @@ import { useLoadingOverlayContext } from '../../context/loading-overlay-context'
 interface NavLinkProps {
   children: React.ReactNode;
   href: string;
+  isMobile?: boolean;
 }
 
-const NavLink: React.FC<NavLinkProps> = ({children, href}: NavLinkProps) => {
+const NavLink: React.FC<NavLinkProps> = ({
+  children,
+  href,
+  isMobile,
+}: NavLinkProps) => {
   const router = useRouter();
   const { setIsLoading } = useLoadingOverlayContext();
 
@@ -30,11 +35,19 @@ const NavLink: React.FC<NavLinkProps> = ({children, href}: NavLinkProps) => {
     return routeSlug === slug ? 'nav-link active-page' : 'nav-link';
   };
 
-  const anchorClass = parseLinkClass(router.route, href);
+  const parseMobileLinkClass = (routeSlug: string, slug: string) => {
+    return routeSlug === slug ? 'mobile-nav-link active-mobile-nav-link' : 'mobile-nav-link';
+  };
+
+  const anchorClass = !isMobile
+    ? parseLinkClass(router.route, href)
+    : parseMobileLinkClass(router.route, href);
 
   return (
-    <a onClick={handleNavClick} className={anchorClass}>{children}</a>
-  )
-}
+    <a onClick={handleNavClick} className={anchorClass}>
+      {children}
+    </a>
+  );
+};
 
-export {NavLink};
+export { NavLink };
