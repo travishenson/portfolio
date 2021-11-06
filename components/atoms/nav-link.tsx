@@ -18,6 +18,8 @@ const NavLink: React.FC<NavLinkProps> = ({
   const { setIsLoading } = useLoadingOverlayContext();
 
   const handleNavClick = () => {
+    if (router.route === href) return;
+    
     setIsLoading(true);
     setTimeout(() => router.push(href), 1000);
   }
