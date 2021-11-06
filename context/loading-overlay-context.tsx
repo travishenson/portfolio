@@ -12,7 +12,7 @@ interface LoadingOverlayContextProps {
 }
 
 const LoadingOverlayContext = createContext<LoadingOverlayContextProps>({
-  isLoading: false,
+  isLoading: true,
   setIsLoading: () => null,
 });
 
@@ -23,7 +23,7 @@ interface LoadingOverlayContextProviderProps {
 const LoadingOverlayProvider: React.FC = ({
   children,
 }: LoadingOverlayContextProviderProps) => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   return (
     <LoadingOverlayContext.Provider value={{ isLoading, setIsLoading }}>

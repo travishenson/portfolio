@@ -1,6 +1,5 @@
-import React, { ReactNode, useEffect } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { NextSeo } from 'next-seo';
-import { useRouter } from 'next/router';
 import { useLoadingOverlayContext } from '../context/loading-overlay-context';
 import Loader from 'react-loaders';
 
@@ -20,14 +19,21 @@ interface LoadingOverlayProps {
 const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
   shouldShow,
 }: LoadingOverlayProps) => {
+  const [overlayClass, setOverlayClass] = useState<string>('loading-overlay-show');
+
   const loader = <Loader type="ball-pulse" active />;
 
+  useEffect(() => {
+    if (shouldShow) {
+      setOverlayClass('loading-overlay-show');
+    } else {
+      setOverlayClass('loading-overlay-hidden');
+    }
+  }, [shouldShow]);
+
   return (
-    <div
-      className={`loading-overlay ${
-        shouldShow ? '' : 'loading-overlay-hidden'
-      }`}
-    >
+    <div className={`loading-overlay ${overlayClass}`}>
+      <img src="/images/logo.png" width="50px" height="50px" />
       <div>{loader}</div>
     </div>
   );
@@ -39,20 +45,7 @@ const Layout: React.FC<LayoutProps> = ({
 }: LayoutProps) => {
   const { isLoading, setIsLoading } = useLoadingOverlayContext();
 
-  const router = useRouter();
-
-  useEffect(() => {
-    const handleStart = () => {
-      setIsLoading(true);
-    };
-    const handleComplete = () => {
-      setTimeout(() => setIsLoading(false), 1000);
-    };
-
-    router.events.on('routeChangeStart', handleStart);
-    router.events.on('routeChangeComplete', handleComplete);
-    router.events.on('routeChangeError', handleComplete);
-  }, [router]);
+  useEffect(() => setIsLoading(false), []);
 
   return (
     <>
@@ -67,7 +60,9 @@ const Layout: React.FC<LayoutProps> = ({
       <header>
         <Navbar />
       </header>
-      <div className={pageTitle === 'Home' ? 'page-content-home' : 'page-content'}>
+      <div
+        className={pageTitle === 'Home' ? 'page-content-home' : 'page-content'}
+      >
         {children}
       </div>
       <MobileNav />
