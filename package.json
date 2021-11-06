@@ -42,5 +42,8 @@
     "lerna": "^4.0.0",
     "prettier": "^2.4.1",
     "typescript": "^4.4.4"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }

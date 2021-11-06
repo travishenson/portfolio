@@ -42,8 +42,8 @@ a {
   font-weight: 500;
   text-decoration: none;
   transition: 0.5s;
-}
 
-a:hover {
-  color: variables.$blue300;
+  &:hover {
+    color: variables.$blue300;
+  }
 }
