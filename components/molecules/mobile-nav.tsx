@@ -29,10 +29,21 @@ const MobileNav: React.FC = () => {
         </span>
         <nav className="mobile-nav-inner">
           <div className="mobile-nav-links">
-            <NavLink href="/about" isMobile>About</NavLink>
-            <NavLink href="/work" isMobile>Work</NavLink>
-            <NavLink href="/resume" isMobile>Resume</NavLink>
-            <NavLink href="/contact" isMobile>Contact</NavLink>
+            <NavLink href="/" isMobile>
+              Home
+            </NavLink>
+            <NavLink href="/about" isMobile>
+              About
+            </NavLink>
+            <NavLink href="/work" isMobile>
+              Work
+            </NavLink>
+            <NavLink href="/resume" isMobile>
+              Resume
+            </NavLink>
+            <NavLink href="/contact" isMobile>
+              Contact
+            </NavLink>
           </div>
         </nav>
       </label>
