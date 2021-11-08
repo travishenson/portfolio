@@ -19,8 +19,6 @@ const NavLink: React.FC<NavLinkProps> = ({
   const router = useRouter();
   const { setIsLoading } = useLoadingOverlayContext();
 
-  console.log(isMobile);
-
   const handleNavClick = () => {
     if (router.route === href) {
       return setIsLoading(false);
