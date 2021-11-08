@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { NavLink } from '../../atoms/nav-link';
 import { Button } from '../../atoms/button';
 
 const FirstHomeBlock: React.FC = () => {
@@ -19,13 +19,11 @@ const FirstHomeBlock: React.FC = () => {
             .
           </h2>
           <br />
-          <Link href="/work">
-            <a>
-              <Button variant="primary" size="lg">
-                My work
-              </Button>
-            </a>
-          </Link>
+          <NavLink href="/work">
+            <Button variant="primary" size="lg">
+              My work
+            </Button>
+          </NavLink>
         </div>
       </div>
     </div>

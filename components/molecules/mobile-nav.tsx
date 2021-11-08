@@ -1,53 +1,70 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from '../atoms/nav-link';
-import { useLoadingOverlayContext } from '../../context/loading-overlay-context';
 
 const MobileNav: React.FC = () => {
-  const checkboxRef = useRef<HTMLInputElement>(null);
-  const { setIsLoading } = useLoadingOverlayContext();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [showLinks, setShowLinks] = useState<boolean>(false);
 
-  const detectClick = () => {
-    if (checkboxRef.current !== null && checkboxRef.current.checked) {
-      document.getElementsByTagName('html')[0].classList.add('no-scroll');
-      setTimeout(() => setIsLoading(true), 500);
-    } else {
-      document.getElementsByTagName('html')[0].classList.remove('no-scroll');
-    }
+  const handleMobileClick = () => {
+    setIsOpen(!isOpen);
+    setShowLinks(!showLinks);
+  };
+
+  const handleButtonClick = () => {
+    setIsOpen(!isOpen);
+    setTimeout(() => setShowLinks(!showLinks), isOpen ? 0 : 500);
+  };
+
+  const innerNavClass = () => {
+    return isOpen
+      ? 'mobile-nav-inner mobile-inner-nav-open'
+      : 'mobile-nav-inner';
+  };
+
+  const mobileNavLinkClass = () => {
+    return showLinks
+      ? 'mobile-nav-links mobile-nav-links-show'
+      : 'mobile-nav-links mobile-nav-links-hide';
+  };
+
+  // Floating action button classes
+  const buttonClass = () => {
+    return isOpen
+      ? 'floating-action-button fab-open'
+      : 'floating-action-button fab-closed';
+  };
+
+  const barClass = (baseClass: string) => {
+    return isOpen ? `${baseClass} ${baseClass}-open` : baseClass;
   };
 
   return (
     <div className="mobile-nav">
-      <label>
-        <input
-          type="checkbox"
-          id="mobile-nav-checkbox"
-          onClick={detectClick}
-          ref={checkboxRef}
-        />
-        <span className="mobile-menu">
-          <span className="hamburger" />
-        </span>
-        <nav className="mobile-nav-inner">
-          <div className="mobile-nav-links">
-            <NavLink href="/" isMobile>
-              Home
-            </NavLink>
-            <NavLink href="/about" isMobile>
-              About
-            </NavLink>
-            <NavLink href="/work" isMobile>
-              Work
-            </NavLink>
-            <NavLink href="/resume" isMobile>
-              Resume
-            </NavLink>
-            <NavLink href="/contact" isMobile>
-              Contact
-            </NavLink>
-          </div>
-        </nav>
-      </label>
-      <div></div>
+      <div className="mobile-nav-border" />
+      <nav className={innerNavClass()}>
+        <div className={mobileNavLinkClass()}>
+          <NavLink href="/" isMobile mobileOnClick={handleMobileClick}>
+            Home
+          </NavLink>
+          <NavLink href="/about" isMobile mobileOnClick={handleMobileClick}>
+            About
+          </NavLink>
+          <NavLink href="/work" isMobile mobileOnClick={handleMobileClick}>
+            Work
+          </NavLink>
+          <NavLink href="/resume" isMobile mobileOnClick={handleMobileClick}>
+            Resume
+          </NavLink>
+          <NavLink href="/contact" isMobile mobileOnClick={handleMobileClick}>
+            Contact
+          </NavLink>
+        </div>
+      </nav>
+      <div className={buttonClass()} onClick={handleButtonClick}>
+        <div className={barClass('bar-1')} />
+        <div className={barClass('bar-2')} />
+        <div className={barClass('bar-3')} />
+      </div>
     </div>
   );
 };

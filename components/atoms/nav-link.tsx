@@ -7,22 +7,33 @@ interface NavLinkProps {
   children: React.ReactNode;
   href: string;
   isMobile?: boolean;
+  mobileOnClick?: () => void;
 }
 
 const NavLink: React.FC<NavLinkProps> = ({
   children,
   href,
   isMobile,
+  mobileOnClick,
 }: NavLinkProps) => {
   const router = useRouter();
   const { setIsLoading } = useLoadingOverlayContext();
 
+  console.log(isMobile);
+
   const handleNavClick = () => {
-    if (router.route === href) return;
-    
+    if (router.route === href) {
+      return setIsLoading(false);
+    }
+
+    if (mobileOnClick) {
+      setTimeout(() => mobileOnClick(), 250);
+    }
+
     setIsLoading(true);
-    setTimeout(() => router.push(href), 1000);
-  }
+
+    setTimeout(() => router.push(href), 500);
+  };
 
   useEffect(() => {
     const handleComplete = () => {
@@ -34,19 +45,16 @@ const NavLink: React.FC<NavLinkProps> = ({
   }, [router]);
 
   const parseLinkClass = (routeSlug: string, slug: string) => {
+    if (isMobile) {
+      return routeSlug === slug
+        ? 'mobile-nav-link active-mobile-nav-link'
+        : 'mobile-nav-link';
+    }
     return routeSlug === slug ? 'nav-link active-page' : 'nav-link';
   };
 
-  const parseMobileLinkClass = (routeSlug: string, slug: string) => {
-    return routeSlug === slug ? 'mobile-nav-link active-mobile-nav-link' : 'mobile-nav-link';
-  };
-
-  const anchorClass = !isMobile
-    ? parseLinkClass(router.route, href)
-    : parseMobileLinkClass(router.route, href);
-
   return (
-    <a onClick={handleNavClick} className={anchorClass}>
+    <a onClick={handleNavClick} className={parseLinkClass(router.route, href)}>
       {children}
     </a>
   );
