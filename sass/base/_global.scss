@@ -5,19 +5,19 @@ body {
   z-index: variables.$base;
 
   &::after {
-    background-image: url("/images/pattern.svg");
     background-attachment: fixed;
+    background-image: url("/images/pattern.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    bottom: 0;
     content: '';
+    height: 100vh;
+    left: 0;
+    opacity: 0.5;
     position: absolute;
     top: 0;
-    left: 0;
-    bottom: 0;
-    opacity: 0.5;
     width: 100vw;
-    height: 100vh;
     z-index: variables.$backdrop;
   }
 }
