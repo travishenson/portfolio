@@ -6,7 +6,7 @@
   height: 100vh;
   left: 50%;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -26,7 +26,7 @@
   height: 60px;
   justify-content: center;
   right: 20px;
-  position: absolute;
+  position: fixed;
   transition: all 0.5s ease-in-out;
   width: 60px;
 
@@ -63,8 +63,8 @@
 }
 
 .fab-open {
-  box-shadow: 0 0 0 calc(100vw + 20px) variables.$blue500,
-    0 0 0 calc(100vh + 20px) variables.$blue500;
+  box-shadow: 0 0 0 150vw variables.$blue500,
+    0 0 0 150vh variables.$blue500;
   position: inherit;
 }
 

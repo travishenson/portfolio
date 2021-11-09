@@ -13,6 +13,7 @@ const MobileNav: React.FC = () => {
   const handleButtonClick = () => {
     setIsOpen(!isOpen);
     setTimeout(() => setShowLinks(!showLinks), isOpen ? 0 : 500);
+    !isOpen ? document.body.classList.add('no-scroll') : document.body.classList.remove('no-scroll');
   };
 
   const innerNavClass = () => {

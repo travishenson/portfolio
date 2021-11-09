@@ -2,15 +2,15 @@
 
 footer {
   background-color: variables.$blue900;
-  width: 100%;
+  width: 100vw;
 }
 
 .footer-inner {
   display: flex;
   flex-direction: column;
   margin: 100px auto 0 auto;
+  max-width: 1280px;
   padding: 50px 0;
-  width: 1280px;
 
   .footer-logo {
     align-self: center;

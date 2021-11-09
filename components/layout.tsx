@@ -26,8 +26,10 @@ const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
   useEffect(() => {
     if (shouldShow) {
       setOverlayClass('loading-overlay-show');
+      document.body.classList.add('no-scroll');
     } else {
       setOverlayClass('loading-overlay-hidden');
+      document.body.classList.remove('no-scroll');
     }
   }, [shouldShow]);
 
