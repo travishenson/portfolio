@@ -3,6 +3,23 @@
 body {
   background-color: variables.$grey900;
   z-index: variables.$base;
+
+  &::after {
+    background-image: url("/images/pattern.svg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.5;
+    width: 100vw;
+    height: 100vh;
+    z-index: variables.$backdrop;
+  }
 }
 
 a {

@@ -16,7 +16,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => (
       <link rel="shortcut icon" href="/images/favicon.ico" />
     </Head>
     <LoadingOverlayProvider>
-      <Component {...pageProps} />
+      <Component {...pageProps}  />
     </LoadingOverlayProvider>
   </>
 );

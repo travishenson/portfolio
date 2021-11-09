@@ -19,7 +19,9 @@ interface LoadingOverlayProps {
 const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
   shouldShow,
 }: LoadingOverlayProps) => {
-  const [overlayClass, setOverlayClass] = useState<string>('loading-overlay-show');
+  const [overlayClass, setOverlayClass] = useState<string>(
+    'loading-overlay-show'
+  );
 
   const loader = <Loader type="ball-pulse" active />;
 
@@ -48,7 +50,7 @@ const Layout: React.FC<LayoutProps> = ({
   const { isLoading, setIsLoading } = useLoadingOverlayContext();
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 500)
+    setTimeout(() => setIsLoading(false), 500);
   }, []);
 
   return (
@@ -61,16 +63,20 @@ const Layout: React.FC<LayoutProps> = ({
         }
       />
       <LoadingOverlay shouldShow={isLoading} />
-      <header>
-        <Navbar />
-      </header>
-      <div
-        className={pageTitle === 'Home' ? 'page-content-home' : 'page-content'}
-      >
-        {children}
+      <div className="main-wrapper">
+        <header>
+          <Navbar />
+        </header>
+        <div
+          className={
+            pageTitle === 'Home' ? 'page-content-home' : 'page-content'
+          }
+        >
+          {children}
+        </div>
+        <MobileNav />
+        <Footer />
       </div>
-      <MobileNav />
-      <Footer />
     </>
   );
 };

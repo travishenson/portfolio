@@ -1,13 +1,21 @@
 @use '../abstracts/variables';
 @use 'loaders.css/src/animations/ball-pulse.scss';
 
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .page-content {
+  flex: 1;
   margin: 0 auto;
   max-width: 1280px;
   width: 90%;
 }
 
 .page-content-home {
+  flex: 1;
   margin: 0 auto;
   width: 100%;
 }
