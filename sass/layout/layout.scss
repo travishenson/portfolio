@@ -7,6 +7,25 @@
   min-height: 100vh;
 }
 
+.bg-pattern {
+  &::after {
+    background-attachment: fixed;
+    background-image: url("/images/pattern.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    content: '';
+    height: 100vh;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: variables.$backdrop;
+  }
+}
+
 .page-content {
   flex: 1;
   margin: 0 auto;

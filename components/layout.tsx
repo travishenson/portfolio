@@ -63,7 +63,7 @@ const Layout: React.FC<LayoutProps> = ({
         }
       />
       <LoadingOverlay shouldShow={isLoading} />
-      <div className="main-wrapper">
+      <div className={`main-wrapper ${pageTitle === 'Home' ? 'bg-pattern' : ''}`}>
         <header>
           <Navbar />
         </header>

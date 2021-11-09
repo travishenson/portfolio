@@ -6,10 +6,12 @@ import Layout from '../components/layout';
 // Home page blocks
 import { FirstHomeBlock } from '../components/molecules/home/first-block';
 
-const Index: NextPage = () => (
-  <Layout pageTitle="Home">
-    <FirstHomeBlock />
-  </Layout>
-);
+const Index: NextPage = () => {
+  return (
+    <Layout pageTitle="Home">
+      <FirstHomeBlock />
+    </Layout>
+  );
+};
 
 export default Index;
