@@ -1,0 +1,36 @@
+@use '../abstracts/variables';
+
+footer {
+  background-color: variables.$blue900;
+  width: 100%;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto 0 auto;
+  padding: 50px 0;
+  width: 1280px;
+
+  .footer-logo {
+    align-self: center;
+    margin-bottom: 25px;
+  }
+
+  .footer-links {
+    margin: 15px auto;
+
+    svg {
+      margin: 0 15px;
+
+      &:hover {
+        fill: variables.$blue500;
+      }
+    }
+  }
+
+  .footer-copyright {
+    font-size: 14px;
+    text-align: center;
+  }
+}
