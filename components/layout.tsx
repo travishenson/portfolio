@@ -51,7 +51,7 @@ const Layout: React.FC<LayoutProps> = ({
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 500);
-  }, []);
+  }, [setIsLoading]);
 
   return (
     <>

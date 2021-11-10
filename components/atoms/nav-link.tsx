@@ -40,7 +40,7 @@ const NavLink: React.FC<NavLinkProps> = ({
 
     router.events.on('routeChangeComplete', handleComplete);
     router.events.on('routeChangeError', handleComplete);
-  }, [router]);
+  }, [router, setIsLoading]);
 
   const parseLinkClass = (routeSlug: string, slug: string) => {
     if (isMobile) {
