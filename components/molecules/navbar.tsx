@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 import { NavLink } from '../atoms/nav-link';
 
@@ -7,7 +8,12 @@ const Navbar: React.FC = () => {
     <nav className="desktop-nav">
       <div className="nav-inner">
         <NavLink href="/">
-          <img src="/images/logo.png" width="50px" height="50px" />
+          <Image
+            src="/images/logo.png"
+            width="50px"
+            height="50px"
+            alt="Travis Henson logo"
+          />
         </NavLink>
         <div className="nav-links">
           <NavLink href="/about">About</NavLink>
