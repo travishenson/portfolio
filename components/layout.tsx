@@ -6,6 +6,7 @@ import Loader from 'react-loaders';
 
 import { Navbar } from './molecules/navbar';
 import { MobileNav } from './molecules/mobile-nav';
+import { MobileNavbar } from './molecules/mobile-navbar';
 import { Footer } from './molecules/footer';
 
 interface LayoutProps {
@@ -79,7 +80,8 @@ const Layout: React.FC<LayoutProps> = ({
         </div>
         <Footer />
       </div>
-      <MobileNav />
+      <MobileNavbar />
+      {/* <MobileNav /> */}
     </>
   );
 };

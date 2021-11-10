@@ -1,0 +1,50 @@
+@use '../abstracts/variables';
+
+.mobile-navbar {
+  background-color: variables.$grey900;
+  border-top: 5px solid variables.$blue500;
+  bottom: calc(0px + env(safe-area-inset-bottom));
+  box-sizing: content-box;
+  height: variables.$mobile-navbar-height;
+  position: fixed;
+  width: 100vw;
+  z-index: variables.$above-overlay;
+
+  .mobile-navbar-inner {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+
+    .hamburger-icon {
+      .bar-1,
+      .bar-2,
+      .bar-3 {
+        background: variables.$grey100;
+        display: block;
+        height: 3px;
+        margin: 5px 0;
+        transform-origin: center;
+        -webkit-transform-origin: center;
+        transition: all 0.5s;
+        width: 25px;
+      }
+    }
+
+    .hamburger-icon-open {
+      .bar-1 {
+        -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+        transform: rotate(-45deg) translate(-6px, 6px);
+      }
+
+      .bar-2 {
+        opacity: 0;
+      }
+
+      .bar-3 {
+        -webkit-transform: rotate(45deg) translate(5px, -5px);
+        transform: rotate(45deg) translate(-5px, -5px);
+      }
+    }
+  }
+}
