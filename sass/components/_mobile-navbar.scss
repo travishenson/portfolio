@@ -2,22 +2,34 @@
 
 .mobile-navbar {
   background-color: variables.$grey900;
-  border-top: 5px solid variables.$blue500;
+  border-top: 3px solid variables.$blue500;
   bottom: 0;
   box-sizing: content-box;
   height: variables.$mobile-navbar-height;
-  left: 0;
   padding-bottom: env(safe-area-inset-bottom);
   position: fixed;
-  right: 0;
   width: 100vw;
   z-index: variables.$above-overlay;
+
+  a {
+    color: variables.$grey100;
+    font-size: 12px;
+    font-weight: normal;
+  }
 
   .mobile-navbar-inner {
     align-items: center;
     display: flex;
     height: 100%;
     justify-content: space-around;
+
+    .mobile-nav-tab {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    
 
     .hamburger-icon {
       .bar-1,

@@ -1,8 +1,12 @@
 export interface IconProps {
-  color: string;
   height: string;
   width: string;
+  color?: string;
 }
+
+export {default as HomeIcon} from './home';
+export {default as AstronautIcon} from './astronaut';
+export {default as BriefcaseIcon} from './briefcase';
 
 export {default as GithubIcon} from './github';
 export {default as InstagramIcon} from './instagram';
