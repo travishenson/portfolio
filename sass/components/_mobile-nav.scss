@@ -6,6 +6,7 @@
   height: 100vh;
   left: 50%;
   overflow: hidden;
+  padding-bottom: env(safe-area-inset-bottom);
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
