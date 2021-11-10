@@ -63,7 +63,9 @@ const Layout: React.FC<LayoutProps> = ({
         }
       />
       <LoadingOverlay shouldShow={isLoading} />
-      <div className={`main-wrapper ${pageTitle === 'Home' ? 'bg-pattern' : ''}`}>
+      <div
+        className={`main-wrapper ${pageTitle === 'Home' ? 'bg-pattern' : ''}`}
+      >
         <header>
           <Navbar />
         </header>
@@ -74,9 +76,9 @@ const Layout: React.FC<LayoutProps> = ({
         >
           {children}
         </div>
-        <MobileNav />
         <Footer />
       </div>
+      <MobileNav />
     </>
   );
 };
