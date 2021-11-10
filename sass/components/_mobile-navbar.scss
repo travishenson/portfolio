@@ -3,10 +3,13 @@
 .mobile-navbar {
   background-color: variables.$grey900;
   border-top: 5px solid variables.$blue500;
-  bottom: calc(0px + env(safe-area-inset-bottom));
+  bottom: 0;
   box-sizing: content-box;
   height: variables.$mobile-navbar-height;
+  left: 0;
+  padding-bottom: env(safe-area-inset-bottom);
   position: fixed;
+  right: 0;
   width: 100vw;
   z-index: variables.$above-overlay;
 
