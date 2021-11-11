@@ -24,7 +24,7 @@ export const MobileNavTab: React.FC<MobileNavTabProps> = ({
   const router = useRouter();
 
   let tabIcon;
-  const iconSize = '30px';
+  const iconSize = '25px';
 
   switch (target.label) {
     case 'Home':
