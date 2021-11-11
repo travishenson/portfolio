@@ -2,40 +2,70 @@ import React, { useState } from 'react';
 import { NavLink } from '../atoms/nav-link';
 import { HomeIcon, AstronautIcon, BriefcaseIcon } from '../icons';
 
+interface NavTabTarget {
+  href: string;
+  label: string;
+}
+
+interface MobileNavTabProps {
+  target: NavTabTarget;
+}
+
 const MobileNavbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const handleIconTap = () => {
-    setIsOpen(!isOpen);
+  const MobileNavTab: React.FC<MobileNavTabProps> = ({
+    target,
+  }: MobileNavTabProps) => {
+    const handleIconTap = () => {
+      setIsOpen(!isOpen);
+    };
+
+    let tabIcon;
+    const iconSize = '30px';
+
+    switch (target.label) {
+      case 'Home':
+        tabIcon = <HomeIcon width={iconSize} height={iconSize} />;
+        break;
+      case 'About':
+        tabIcon = <AstronautIcon width={iconSize} height={iconSize} />;
+        break;
+      case 'Work':
+        tabIcon = <BriefcaseIcon width={iconSize} height={iconSize} />;
+    }
+
+    return (
+      <div className="mobile-nav-tab">
+        <NavLink href="/" isMobile mobileOnClick={handleIconTap}>
+          <div className="nav-tab-inner">
+            {tabIcon}
+            {target.label}
+          </div>
+        </NavLink>
+      </div>
+    );
   };
 
   return (
     <nav className="mobile-navbar">
       <div className="mobile-navbar-inner">
-        <NavLink href="/" isMobile mobileOnClick={handleIconTap}>
-          <div className="mobile-nav-tab">
-            <HomeIcon width="25px" height="25px" />
-          </div>
-        </NavLink>
-        <NavLink href="/about" isMobile mobileOnClick={handleIconTap}>
-          <div className="mobile-nav-tab">
-            <AstronautIcon width="25px" height="25px" />
-          </div>
-        </NavLink>
-        <NavLink href="/work" isMobile mobileOnClick={handleIconTap}>
-          <div className="mobile-nav-tab">
-            <BriefcaseIcon width="25px" height="25px" />
-          </div>
-        </NavLink>
+        <MobileNavTab target={{ href: '/', label: 'Home' }} />
+        <MobileNavTab target={{ href: '/about', label: 'About' }} />
+        <MobileNavTab target={{ href: '/work', label: 'Work' }} />
         <div
           className={
-            isOpen ? 'hamburger-icon hamburger-icon-open' : 'hamburger-icon'
+            isOpen
+              ? 'hamburger-icon mobile-nav-tab hamburger-icon-open'
+              : 'hamburger-icon mobile-nav-tab'
           }
-          onClick={handleIconTap}
+          // onClick={handleIconTap}
         >
-          <div className="bar-1" />
-          <div className="bar-2" />
-          <div className="bar-3" />
+          <div className="nav-tab-inner">
+            <div className="bar-1" />
+            <div className="bar-2" />
+            <div className="bar-3" />
+          </div>
         </div>
       </div>
     </nav>

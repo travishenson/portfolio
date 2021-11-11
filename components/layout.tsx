@@ -1,11 +1,12 @@
 import React, { ReactNode, useEffect, useState } from 'react';
 import { NextSeo } from 'next-seo';
 import Image from 'next/image';
-import { useLoadingOverlayContext } from '../context/loading-overlay-context';
 import Loader from 'react-loaders';
 
+import { useLoadingOverlayContext } from '../context/loading-overlay-context';
+import { useScreenSize } from '../hooks/use-screen-size';
+
 import { Navbar } from './molecules/navbar';
-// import { MobileNav } from './molecules/mobile-nav';
 import { MobileNavbar } from './molecules/mobile-navbar';
 import { Footer } from './molecules/footer';
 
@@ -39,7 +40,12 @@ const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
 
   return (
     <div className={`loading-overlay ${overlayClass}`}>
-      <Image src="/images/logo.png" width="50px" height="50px" alt="Travis Henson logo" />
+      <Image
+        src="/images/logo.png"
+        width="50px"
+        height="50px"
+        alt="Travis Henson logo"
+      />
       <div>{loader}</div>
     </div>
   );
@@ -50,6 +56,17 @@ const Layout: React.FC<LayoutProps> = ({
   children,
 }: LayoutProps) => {
   const { isLoading, setIsLoading } = useLoadingOverlayContext();
+  const { isMobile } = useScreenSize();
+
+  // Formats page title based on current route
+  const formattedPageTitle =
+    pageTitle === 'Home'
+      ? 'Travis Henson | JavaScript Developer'
+      : `${pageTitle} | Travis Henson`;
+
+  const wrapperClass = `main-wrapper ${
+    pageTitle === 'Home' ? 'bg-pattern' : ''
+  }`;
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 500);
@@ -57,19 +74,12 @@ const Layout: React.FC<LayoutProps> = ({
 
   return (
     <>
-      <NextSeo
-        title={
-          pageTitle === 'Home'
-            ? 'Travis Henson | JavaScript Developer'
-            : `${pageTitle} | Travis Henson`
-        }
-      />
+      <NextSeo title={formattedPageTitle} />
       <LoadingOverlay shouldShow={isLoading} />
-      <div
-        className={`main-wrapper ${pageTitle === 'Home' ? 'bg-pattern' : ''}`}
-      >
+      <div className={wrapperClass}>
         <header>
           <Navbar />
+          {isMobile ? <MobileNavbar /> : null}
         </header>
         <div
           className={
@@ -80,8 +90,6 @@ const Layout: React.FC<LayoutProps> = ({
         </div>
         <Footer />
       </div>
-      <MobileNavbar />
-      {/* <MobileNav /> */}
     </>
   );
 };

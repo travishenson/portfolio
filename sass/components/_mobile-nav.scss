@@ -12,6 +12,7 @@
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   transition: 0.5s ease-in;
+  -webkit-transition: 0.5 ease-in;
   transition-delay: 0.1s;
   width: 100vw;
   z-index: variables.$above-overlay;
@@ -29,6 +30,7 @@
   right: 20px;
   position: inherit;
   transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
   width: 60px;
 
   &:hover {
