@@ -4,10 +4,9 @@ import Image from 'next/image';
 import Loader from 'react-loaders';
 
 import { useLoadingOverlayContext } from '../context/loading-overlay-context';
-import { useScreenSize } from '../hooks/use-screen-size';
 
 import { Navbar } from './molecules/navbar';
-import { MobileNavbar } from './molecules/mobile-navbar';
+import { MobileNavbar } from './molecules/mobile-nav/mobile-navbar';
 import { Footer } from './molecules/footer';
 
 interface LayoutProps {
@@ -56,7 +55,6 @@ const Layout: React.FC<LayoutProps> = ({
   children,
 }: LayoutProps) => {
   const { isLoading, setIsLoading } = useLoadingOverlayContext();
-  const { isMobile } = useScreenSize();
 
   // Formats page title based on current route
   const formattedPageTitle =
@@ -79,7 +77,7 @@ const Layout: React.FC<LayoutProps> = ({
       <div className={wrapperClass}>
         <header>
           <Navbar />
-          {isMobile ? <MobileNavbar /> : null}
+          <MobileNavbar />
         </header>
         <div
           className={

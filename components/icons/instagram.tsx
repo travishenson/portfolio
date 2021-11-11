@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaInstagram } from 'react-icons/fa';
+import { AiFillInstagram} from 'react-icons/ai';
 import { IconProps } from '.';
 
 const InstagramIcon: React.FC<IconProps> = ({
@@ -12,7 +12,7 @@ const InstagramIcon: React.FC<IconProps> = ({
     target="_blank"
     rel="noreferrer"
   >
-    <FaInstagram style={{ width: width, height: height, color: color }} />
+    <AiFillInstagram style={{ width: width, height: height, color: color }} />
   </a>
 );
 
