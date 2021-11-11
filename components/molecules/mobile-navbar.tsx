@@ -37,7 +37,7 @@ const MobileNavbar: React.FC = () => {
 
     return (
       <div className="mobile-nav-tab">
-        <NavLink href="/" isMobile mobileOnClick={handleIconTap}>
+        <NavLink href={target.href} isMobile mobileOnClick={handleIconTap}>
           <div className="nav-tab-inner">
             {tabIcon}
             {target.label}
