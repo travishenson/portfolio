@@ -2,6 +2,7 @@
 @use 'loaders.css/src/animations/ball-pulse.scss';
 
 .main-wrapper {
+  border-top: 3px solid variables.$blue500;
   display: flex;
   flex-direction: column;
   min-height: 100vh;

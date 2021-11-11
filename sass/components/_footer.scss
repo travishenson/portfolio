@@ -1,7 +1,6 @@
 @use '../abstracts/variables';
 
 footer {
-  background-color: variables.$blue900;
   padding-bottom: calc(50px + env(safe-area-inset-bottom));
   padding-top: 25px;
   width: 100vw;
@@ -12,10 +11,12 @@ footer {
 }
 
 .footer-inner {
+  border-top: 2px solid variables.$grey700;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   max-width: 1280px;
+  padding-top: 25px;
 
   .footer-links {
     margin: 15px auto;
