@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
   const iconSize = '30px';
   
   return (
-    <footer className={isMobile ? 'footer-mobile' : ''}>
+    <footer className={!!isMobile ? 'footer-mobile' : 'footer-desktop'}>
       <div className="footer-inner">
         <div className="footer-links">
           <GithubIcon width={iconSize} height={iconSize} color="#F2F2F2" />

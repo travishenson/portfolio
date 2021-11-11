@@ -1,9 +1,11 @@
 @use '../abstracts/variables';
 
 footer {
-  padding-bottom: calc(50px + env(safe-area-inset-bottom));
-  padding-top: 25px;
   width: 100vw;
+}
+
+.footer-desktop {
+  padding-bottom: calc(50px + env(safe-area-inset-bottom));
 }
 
 .footer-mobile {
@@ -16,7 +18,7 @@ footer {
   flex-direction: column;
   margin: 0 auto;
   max-width: 1280px;
-  padding-top: 25px;
+  padding-top: 15px;
 
   .footer-links {
     margin: 15px auto;
