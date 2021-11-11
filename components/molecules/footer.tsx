@@ -3,11 +3,11 @@ import { useScreenSize } from '../../hooks/use-screen-size';
 import { GithubIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from '../icons';
 
 const Footer: React.FC = () => {
-  const {isMobile} = useScreenSize();
+  const { isMobile } = useScreenSize();
   const iconSize = '30px';
-  
+
   return (
-    <footer className={!!isMobile ? 'footer-mobile' : 'footer-desktop'}>
+    <footer className={isMobile ? 'footer-mobile' : 'footer-desktop'}>
       <div className="footer-inner">
         <div className="footer-links">
           <GithubIcon width={iconSize} height={iconSize} color="#F2F2F2" />
