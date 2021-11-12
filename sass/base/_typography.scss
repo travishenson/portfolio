@@ -6,7 +6,7 @@
 body {
   color: variables.$grey100;
   font-family: variables.$body-text;
-  font-size: clamp(1em, 1.2vw, 1.5em);
+  font-size: clamp(1em, 1.2vw, 1.25em);
   font-weight: 400;
   line-height: 1.5;
 }
@@ -18,5 +18,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(2em, 3.5vw, 3em);
+  font-size: clamp(2em, 3.5vw, 2.5em);
 }
