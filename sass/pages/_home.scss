@@ -13,7 +13,7 @@
   max-width: 1280px;
   padding: 25px;
   position: relative;
-  width: 90%;
+  width: max-content;
 
   &::before {
     background-color: variables.$black;
