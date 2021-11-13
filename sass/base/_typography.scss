@@ -20,3 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: clamp(2em, 3.5vw, 2.5em);
 }
+
+h2 {
+  font-size: clamp(1.75em, 3vw, 2.25em);
+}

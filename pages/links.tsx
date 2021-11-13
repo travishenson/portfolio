@@ -2,10 +2,11 @@ import React from 'react';
 import { NextPage } from 'next';
 
 import Layout from '../components/layout';
+import { PageTitle } from '../components/atoms/page-title';
 
 const Links: NextPage = () => (
   <Layout pageTitle="Links">
-    <p>This is a test page.</p>
+    <PageTitle title="Links" />
   </Layout>
 );
 

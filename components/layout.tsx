@@ -1,6 +1,5 @@
 import React, { ReactNode, useEffect, useState } from 'react';
 import { NextSeo } from 'next-seo';
-import Image from 'next/image';
 import Loader from 'react-loaders';
 
 import { useLoadingOverlayContext } from '../context/loading-overlay-context';
@@ -39,12 +38,6 @@ const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
 
   return (
     <div className={`loading-overlay ${overlayClass}`}>
-      <Image
-        src="/images/logo.png"
-        width="50px"
-        height="50px"
-        alt="Travis Henson logo"
-      />
       <div>{loader}</div>
     </div>
   );

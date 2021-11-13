@@ -2,7 +2,6 @@
 @use 'loaders.css/src/animations/ball-pulse.scss';
 
 .main-wrapper {
-  border-top: 3px solid variables.$blue500;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -30,6 +29,7 @@
   flex: 1;
   margin: 0 auto;
   max-width: 1280px;
+  padding: 5vw 0;
   width: 90%;
 }
 
@@ -39,9 +39,13 @@
   width: 100%;
 }
 
+p {
+  margin-bottom: 1.5vw;
+}
+
 .loading-overlay {
   align-items: center;
-  background-color: variables.$blue500;
+  background-color: variables.$black;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -54,6 +58,7 @@
 }
 
 .loading-overlay-show {
+  background-color: variables.$black;
   top: 0;
   transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   z-index: variables.$above-overlay;
