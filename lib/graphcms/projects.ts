@@ -18,7 +18,7 @@ export type ProjectType = {
 const getAllProjects = async () => {
   const projectsQuery: {projects: ProjectType[]} = await graphcms.request(gql`
     query GetAllProjects($stage: Stage!) {
-      projects(stage: $stage) {
+      projects(stage: $stage, orderBy: sortOrder_ASC) {
         title
         description
         featuredImage {
