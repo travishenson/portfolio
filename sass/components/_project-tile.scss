@@ -1,0 +1,23 @@
+@use '../abstracts/variables';
+
+.project-tile {
+  height: 30vw;
+  max-height: 525px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.project-tile-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.project-cover-image {
+  display: flex;
+  height: 100%;
+  justify-content: flex-start;
+  position: relative;
+  width: 50%;
+}

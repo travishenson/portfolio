@@ -1,7 +1,21 @@
 import { graphcms } from '.';
 
+type FeaturedImage = {
+  url: string;
+}
+
+export type ProjectType = {
+  id: number;
+  title: string;
+  description: string;
+  featuredImage: FeaturedImage;
+  role: string;
+  techStack: string[];
+  slug: string;
+}
+
 const getAllProjects = async () => {
-  const data = await graphcms.request(`
+  const projectsQuery: {projects: ProjectType[]} = await graphcms.request(`
     query GetAllProjects($stage: Stage!) {
       projects(stage: $stage) {
         title
@@ -11,13 +25,16 @@ const getAllProjects = async () => {
         }
         role
         techStack
+        slug
       }
     }
   `, {
     stage: 'PUBLISHED'
   });
 
-  return data;
+  const { projects } = projectsQuery;
+
+  return projects;
 };
 
 export { getAllProjects };

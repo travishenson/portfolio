@@ -3,25 +3,36 @@ import { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import Layout from '../../components/layout';
 import { PageTitle } from '../../components/atoms/page-title';
-import { getAllProjects } from '../../lib/graphcms/projects';
+import { ProjectTile } from '../../components/molecules/project-tile';
+import { getAllProjects, ProjectType } from '../../lib/graphcms/projects';
 
-const Work: NextPage = ({projects}: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Work: NextPage = ({
+  projects,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout pageTitle="Work">
       <PageTitle title="Work" />
-      <p>There are {projects.length} published projects.</p>
+      {projects.map((project: ProjectType) => (
+        <ProjectTile
+          title={project.title}
+          description={project.description}
+          imageUrl={project.featuredImage.url}
+          slug={project.slug}
+          key={project.slug}
+        />
+      ))}
     </Layout>
   );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { projects } = await getAllProjects();
+  const projects = await getAllProjects();
 
   return {
     props: {
-      projects
-    }
-  }
-}
+      projects,
+    },
+  };
+};
 
 export default Work;
