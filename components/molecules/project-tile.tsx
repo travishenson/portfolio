@@ -16,22 +16,21 @@ export const ProjectTile: React.FC<ProjectTileProps> = ({
   slug,
 }: ProjectTileProps) => {
   return (
-    <Link href={`/work/${slug}`} passHref>
-      <div className="project-tile">
-        <div className="project-tile-inner">
-          <div className="project-cover-image">
-            <Image
-              loader={() => imageUrl}
-              src={imageUrl}
-              alt={`${title} project cover image`}
-              layout="fill"
-              objectFit="contain"
-            />
-          </div>
-          <h2>{title}</h2>
-          <p>{description}</p>
+    // <Link href={`/work/${slug}`} passHref>
+    <div className="project-tile">
+      <div className="project-tile-inner">
+        <div className="project-cover-image">
+          <Image
+            src={imageUrl}
+            alt={`${title} project cover image`}
+            layout="fill"
+            objectFit="contain"
+          />
         </div>
+        <h2>{title}</h2>
+        <p>{description}</p>
       </div>
-    </Link>
+    </div>
+    // </Link>
   );
 };
