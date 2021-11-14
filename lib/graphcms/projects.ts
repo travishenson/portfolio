@@ -1,3 +1,4 @@
+import { gql } from 'graphql-request';
 import { graphcms } from '.';
 
 type FeaturedImage = {
@@ -15,7 +16,7 @@ export type ProjectType = {
 }
 
 const getAllProjects = async () => {
-  const projectsQuery: {projects: ProjectType[]} = await graphcms.request(`
+  const projectsQuery: {projects: ProjectType[]} = await graphcms.request(gql`
     query GetAllProjects($stage: Stage!) {
       projects(stage: $stage) {
         title
