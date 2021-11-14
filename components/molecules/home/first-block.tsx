@@ -4,7 +4,7 @@ import { Button } from '../../atoms/button';
 
 const FirstHomeBlock: React.FC = () => {
   return (
-    <div className="first-home-block">
+    <section className="first-home-block">
       <div className="first-block-inner">
         <div className="first-block-inner-text">
           <h1>Hey, I&apos;m Travis.</h1>
@@ -29,7 +29,7 @@ const FirstHomeBlock: React.FC = () => {
           </NavLink>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
