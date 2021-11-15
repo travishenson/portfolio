@@ -9,7 +9,6 @@ const MobileNavbar: React.FC = () => {
         <MobileNavTab target={{ href: '/about', label: 'About' }} />
         <MobileNavTab target={{ href: '/work', label: 'Work' }} />
         <MobileNavTab target={{ href: '/contact', label: 'Contact' }} />
-        <MobileNavTab target={{ href: '/resume', label: 'Resume' }} />
       </div>
     </nav>
   );

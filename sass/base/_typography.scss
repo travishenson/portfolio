@@ -14,7 +14,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: variables.$grey100;
   font-family: variables.$heading-text;
-  font-weight: 700;
 }
 
 h1 {
@@ -23,4 +22,8 @@ h1 {
 
 h2 {
   font-size: clamp(1.75em, 3vw, 2.25em);
+}
+
+h3 {
+  font-size: clamp(1.25em, 2.25vw, 1.85em);
 }

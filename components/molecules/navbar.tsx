@@ -19,7 +19,6 @@ const Navbar: React.FC = () => {
           <NavLink href="/">Home</NavLink>
           <NavLink href="/about">About</NavLink>
           <NavLink href="/work">Work</NavLink>
-          <NavLink href="/resume">Resume</NavLink>
           <NavLink href="/contact">Contact</NavLink>
         </div>
       </div>

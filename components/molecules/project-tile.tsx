@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import { NavLink } from '../atoms/nav-link';
 
 interface ProjectTileProps {
   title: string;
@@ -16,21 +15,17 @@ export const ProjectTile: React.FC<ProjectTileProps> = ({
   slug,
 }: ProjectTileProps) => {
   return (
-    <Link href={`/work/${slug}`} passHref>
-      <div className="project-tile">
-        <div className="project-tile-inner">
-          <div className="project-cover-image">
-            <Image
-              src={imageUrl}
-              alt={`${title} project cover image`}
-              layout="fill"
-              objectFit="contain"
-            />
-          </div>
-          <h2>{title}</h2>
-          <p>{description}</p>
-        </div>
+    <div className="project-tile">
+      <NavLink href={`/work/${slug}`}>
+        <div
+          className="project-tile-image"
+          style={{ backgroundImage: `url(${imageUrl})` }}
+        />
+      </NavLink>
+      <div className="project-tile-text">
+        <h3>{title}</h3>
+        <p>{description}</p>
       </div>
-    </Link>
+    </div>
   );
 };
