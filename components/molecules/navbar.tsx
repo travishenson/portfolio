@@ -1,11 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import { NavLink } from '../atoms/nav-link';
 
 const Navbar: React.FC = () => {
+  const [showNav, setShowNav] = useState<boolean>(true);
+  const [showShadow, setShowShadow] = useState<boolean>(false);
+
+  useEffect(() => {
+    let prevScrollPos = window.pageYOffset;
+
+    window.onscroll = () => {
+      let currentScrollPos = window.pageYOffset;
+
+      if (currentScrollPos === 0) {
+        console.log('show shadow')
+        setShowShadow(false);
+      } else {
+        setShowShadow(true);
+      }
+
+      if (prevScrollPos > currentScrollPos) {
+        setShowNav(true);
+      } else {
+        setShowNav(false);
+      }
+
+      prevScrollPos = currentScrollPos;
+    };
+  });
+
   return (
-    <nav className="desktop-nav">
+    <nav
+      className={`desktop-nav ${
+        !showNav ? 'desktop-nav-hidden' : 'desktop-nav-show'
+      } ${!showShadow ? 'desktop-nav-no-shadow' : 'desktop-nav-shadow'}`}
+    >
       <div className="nav-inner">
         <NavLink href="/">
           <Image

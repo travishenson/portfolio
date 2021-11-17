@@ -13,15 +13,6 @@ const FirstHomeBlock: React.FC = () => {
             I&apos;m a full-stack JavaScript developer with a passion for
             creating clean and easy-to-use sites and applications.
           </p>
-          <p>
-            Currently, I&apos;m working (remotely) as a contracted Web Engineer building and
-            maintaining{' '}
-            <a href="https://getter.com.au" target="_blank" rel="noreferrer">
-              Getter
-            </a>
-            , an on-demand tool and supply delivery service based in Australia.
-          </p>
-          <br />
           <NavLink href="/work">
             <Button variant="primary" size="md">
               My work
