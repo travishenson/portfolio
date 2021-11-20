@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useLoadingOverlayContext } from '../../context/loading-overlay-context';
 
 interface NavLinkProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   href: string;
   isMobile?: boolean;
   mobileOnClick?: () => void;

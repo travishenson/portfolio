@@ -14,12 +14,10 @@ const Work: NextPage = ({
       <PageTitle title="Work" />
       {projects.map((project: ProjectType, index: number) => (
         <ProjectTile
-          title={project.title}
-          description={project.description}
           imageUrl={project.featuredImage.url}
-          slug={project.slug}
-          key={project.slug}
           index={index}
+          key={project.slug}
+          {...project}
         />
       ))}
     </Layout>
