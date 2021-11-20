@@ -2,21 +2,26 @@
 
 .project-tile {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   height: 20vw;
-  margin: 2.5vw auto;
+  margin: 2.5vw auto 5vw auto;
   max-height: 375px;
-  max-width: 1000px;
   min-height: 200px;
   width: 100%;
 }
 
+.project-tile-left {
+  flex-direction: row;
+}
+
+.project-tile-right {
+  flex-direction: row-reverse;
+}
+
 .project-tile-image {
-  background-position: center;
+  background-position: top center;
   background-size: cover;
-  aspect-ratio: 1 / 1;
-  height: 100%;
+  flex: 2.5 1 0;
 
   &:hover {
     cursor: pointer;
@@ -25,6 +30,7 @@
 
 .project-tile-text {
   background-color: variables.$black;
+  flex: 1 1 0;
   padding: 2vw;
 
   h3 {
