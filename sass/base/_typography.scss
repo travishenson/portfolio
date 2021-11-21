@@ -1,6 +1,5 @@
 @use '../abstracts/variables';
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@use '../abstracts/mixins';
 
 // Shared styles
 body {
@@ -10,11 +9,7 @@ body {
   line-height: 1.75;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+@include mixins.headings {
   color: variables.$grey100;
   font-family: variables.$heading-text;
   font-weight: 400;
@@ -27,9 +22,17 @@ p {
   max-width: 70ch;
 }
 
+.uppercase {
+  text-transform: uppercase;
+
+  @include mixins.headings {
+    letter-spacing: 1px;
+  }
+}
+
 // Mobile styles
 html {
-  font-size: 87.5%;
+  font-size: 100%;
 }
 
 h1 {
@@ -61,7 +64,7 @@ small,
 // Non-mobile styles
 @media only screen and (min-width: 769px) {
   html {
-    font-size: 100%;
+    font-size: 18px;
   }
 
   h1 {

@@ -5,18 +5,6 @@ body {
   z-index: variables.$base;
 }
 
-a {
-  color: variables.$blue500;
-  font-weight: 500;
-  text-decoration: none;
-  transition: 0.5s;
-
-  &:hover {
-    color: variables.$blue300;
-    cursor: pointer;
-  }
-}
-
 .no-scroll {
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
