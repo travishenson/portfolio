@@ -1,7 +1,6 @@
 @use '../abstracts/variables';
 
 footer {
-  background-color: variables.$black;
   width: 100vw;
 }
 
@@ -10,7 +9,7 @@ footer {
 }
 
 .footer-mobile {
-  padding-bottom: calc(variables.$mobile-navbar-height + 50px + env(safe-area-inset-bottom));
+  padding-bottom: calc(variables.$mobile-navbar-height + 100px + env(safe-area-inset-bottom));
 }
 
 .footer-inner {

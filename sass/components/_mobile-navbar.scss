@@ -9,7 +9,7 @@
   padding-bottom: env(safe-area-inset-bottom);
   position: fixed;
   width: 100vw;
-  z-index: variables.$above-overlay;
+  z-index: variables.$overlay;
 
   .mobile-navbar-inner {
     align-items: center;
