@@ -1,5 +1,6 @@
 import React from 'react';
 import { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
+import { isMobile } from 'react-device-detect';
 
 import Layout from '../../components/layout';
 import { PageTitle } from '../../components/atoms/page-title';
@@ -9,9 +10,11 @@ import { getAllProjects, ProjectType } from '../../lib/graphcms/projects';
 const Work: NextPage = ({
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  
   return (
     <Layout pageTitle="Work">
       <PageTitle title="Work" />
+      {isMobile ? 'Mobile' : 'Not Mobile'}
       {projects.map((project: ProjectType, index: number) => (
         <div key={project.slug} style={{marginBottom: '35px'}}>
           <ProjectTile

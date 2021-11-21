@@ -1,9 +1,8 @@
 import React from 'react';
-import { useScreenSize } from '../../hooks/use-screen-size';
+import { isMobile } from 'react-device-detect';
 import { GithubIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from '../icons';
 
 const Footer: React.FC = () => {
-  const { isMobile } = useScreenSize();
   const iconSize = '30px';
 
   return (

@@ -1,10 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
+import { isMobile } from 'react-device-detect';
 
 import { NavLink } from '../atoms/nav-link';
 import { Button } from '../atoms/button';
-
-import { useScreenSize } from '../../hooks/use-screen-size';
 
 export interface ProjectTileProps {
   title: string;
@@ -27,8 +26,6 @@ export const ProjectTile: React.FC<ProjectTileProps> = ({
   slug,
   index,
 }: ProjectTileProps) => {
-  const { isMobile } = useScreenSize();
-
   let tileTextColor;
 
   switch (slug) {
