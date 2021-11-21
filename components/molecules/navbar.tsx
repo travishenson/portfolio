@@ -13,14 +13,13 @@ const Navbar: React.FC = () => {
     window.onscroll = () => {
       let currentScrollPos = window.pageYOffset;
 
-      if (currentScrollPos === 0) {
-        console.log('show shadow')
+      if (currentScrollPos <= 0) {
         setShowShadow(false);
       } else {
         setShowShadow(true);
       }
 
-      if (prevScrollPos > currentScrollPos) {
+      if (prevScrollPos > currentScrollPos || prevScrollPos < 0) {
         setShowNav(true);
       } else {
         setShowNav(false);

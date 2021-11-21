@@ -5,6 +5,10 @@ type FeaturedImage = {
   url: string;
 };
 
+type TileBgColor = {
+  hex: string;
+}
+
 export type ProjectType = {
   id: number;
   title: string;
@@ -12,6 +16,7 @@ export type ProjectType = {
   featuredImage: FeaturedImage;
   role: string;
   techStack: string[];
+  tileBgColor: TileBgColor;
   slug: string;
 };
 
@@ -27,6 +32,9 @@ const getAllProjects = async () => {
           }
           role
           techStack
+          tileBgColor {
+            hex
+          }
           slug
         }
       }

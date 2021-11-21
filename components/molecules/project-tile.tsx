@@ -1,12 +1,17 @@
 import React from 'react';
+import Image from 'next/image';
+
 import { NavLink } from '../atoms/nav-link';
 import { Button } from '../atoms/button';
 
-interface ProjectTileProps {
+import { useScreenSize } from '../../hooks/use-screen-size';
+
+export interface ProjectTileProps {
   title: string;
   description: string;
   imageUrl: string;
   techStack: string[];
+  tileBgColorHex: string;
   slug: string;
   index: number;
 }
@@ -16,35 +21,43 @@ export const ProjectTile: React.FC<ProjectTileProps> = ({
   description,
   imageUrl,
   techStack,
+  tileBgColorHex,
   slug,
   index,
 }: ProjectTileProps) => {
-  const backgroundPosition = () => {
-    switch (slug) {
-      case 'pirates-plunder':
-        return 'bottom center';
-      default:
-        return 'top center';
-    }
-  };
+  const {isMobile} = useScreenSize();
+
+  let tileTextColor;
+
+  switch (slug) {
+    case 'getter':
+      tileTextColor = 'tile-light-text';
+      break;
+    default:
+      tileTextColor = 'tile-dark-text';
+  }
 
   return (
     <div
       className={`project-tile ${
-        index % 2 === 0 ? 'project-tile-left' : 'project-tile-right'
+        index % 2 === 0 && !isMobile ? 'project-tile-left' : 'project-tile-right'
       }`}
+      style={{backgroundColor: tileBgColorHex}}
     >
-      <div
-        className="project-tile-image"
-        style={{
-          backgroundImage: `url(${imageUrl})`,
-          backgroundPosition: backgroundPosition(),
-        }}
-      />
-      <div className="project-tile-text">
-        <h3>{title}</h3>
-        <p>{description}</p>
-        <p>
+      <div className="project-image">
+        <Image
+          src={imageUrl}
+          layout="responsive"
+          width="100%"
+          height={isMobile ? '65%' : '70%'}
+          objectFit="contain"
+          alt={`${title} featured image mockup`}
+        />
+      </div>
+      <div className={`project-text ${tileTextColor}`}>
+        <h2 className="project-title">{title}</h2>
+        <p className="project-description">{description}</p>
+        <p className="project-tech">
           {techStack.map(
             (tech, index) =>
               `${tech} ${index !== techStack.length - 1 ? '/' : ''} `

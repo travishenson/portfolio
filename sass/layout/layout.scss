@@ -29,12 +29,12 @@
 .page-content {
   flex: 1;
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: variables.$max-content;
   padding: 3vw 0;
   width: 90%;
 }
 
-.page-content-home {
+.page-content-full {
   flex: 1;
   margin: 0 auto;
   width: 100%;

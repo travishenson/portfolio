@@ -63,6 +63,16 @@ const Layout: React.FC<LayoutProps> = ({
     setTimeout(() => setIsLoading(false), 500);
   }, [setIsLoading]);
 
+  let contentClass;
+
+  switch (pageTitle) {
+    case 'Home':
+      contentClass = 'page-content-full';
+      break;
+    default:
+      contentClass = 'page-content';
+  }
+
   return (
     <>
       <NextSeo title={formattedPageTitle} />
@@ -72,13 +82,7 @@ const Layout: React.FC<LayoutProps> = ({
           <Navbar />
           <MobileNavbar />
         </header>
-        <div
-          className={
-            pageTitle === 'Home' ? 'page-content-home' : 'page-content'
-          }
-        >
-          {children}
-        </div>
+        <div className={contentClass}>{children}</div>
         <Footer />
       </div>
     </>

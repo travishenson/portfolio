@@ -15,6 +15,7 @@ const Work: NextPage = ({
       {projects.map((project: ProjectType, index: number) => (
         <ProjectTile
           imageUrl={project.featuredImage.url}
+          tileBgColorHex={project.tileBgColor.hex}
           index={index}
           key={project.slug}
           {...project}
