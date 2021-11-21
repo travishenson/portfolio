@@ -11,8 +11,7 @@
 .bg-pattern {
   &::after {
     background-attachment: fixed;
-    background-color: variables.$grey900;
-    background-image: variables.$pattern;
+    background-color: variables.$black;
     background-size: 50%;
     bottom: 0;
     content: '';
