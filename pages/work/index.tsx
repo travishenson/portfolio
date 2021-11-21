@@ -13,13 +13,15 @@ const Work: NextPage = ({
     <Layout pageTitle="Work">
       <PageTitle title="Work" />
       {projects.map((project: ProjectType, index: number) => (
-        <ProjectTile
-          imageUrl={project.featuredImage.url}
-          tileBgColorHex={project.tileBgColor.hex}
-          index={index}
-          key={project.slug}
-          {...project}
-        />
+        <div key={project.slug} style={{marginBottom: '35px'}}>
+          <ProjectTile
+            imageUrl={project.featuredImage.url}
+            tileBgColorHex={project.tileBgColor.hex}
+            index={index}
+            key={project.slug}
+            {...project}
+          />
+        </div>
       ))}
     </Layout>
   );

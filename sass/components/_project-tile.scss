@@ -1,10 +1,15 @@
 @use '../abstracts/variables';
 
 .project-tile {
+  height: max-content;
+}
+
+.project-tile-inner {
   align-items: center;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  margin-bottom: 35px;
+  margin: 0 auto;
+  max-width: variables.$max-content;
   padding: 25px 50px;
 }
 

@@ -49,6 +49,36 @@ const getAllProjects = async () => {
   return projects;
 };
 
+const getFeaturedProjects = async () => {
+  const featuredProjectsQuery: { projects: ProjectType[] } = await graphcms.request(
+    gql`
+      query GetFeaturedProjects($stage: Stage!) {
+        projects(stage: $stage, orderBy: sortOrder_ASC, where: {featuredProject: true}) {
+          title
+          description
+          featuredImage {
+            url
+          }
+          role
+          techStack
+          tileBgColor {
+            hex
+          }
+          slug
+          featuredProject
+        }
+      }
+    `,
+    {
+      stage: 'PUBLISHED',
+    }
+  );
+
+  const featuredProjects = featuredProjectsQuery.projects;
+
+  return featuredProjects;
+};
+
 const getProject = async (slug: any) => {
   console.log(slug);
   const projectQuery: { project: ProjectType } = await graphcms.request(
@@ -72,4 +102,4 @@ const getProject = async (slug: any) => {
   return project;
 };
 
-export { getAllProjects, getProject };
+export { getAllProjects, getFeaturedProjects, getProject };

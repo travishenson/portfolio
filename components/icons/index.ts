@@ -11,6 +11,7 @@ export {default as PersonIcon} from './person';
 export {default as BriefcaseIcon} from './briefcase';
 export {default as MailIcon} from './mail';
 export {default as DocumentIcon} from './document';
+export {default as DownArrowIcon} from './down-arrow';
 
 // Social network icons
 export {default as GithubIcon} from './github';

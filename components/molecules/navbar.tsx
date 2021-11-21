@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
         setShowShadow(true);
       }
 
-      if (prevScrollPos > currentScrollPos || prevScrollPos < 0) {
+      if (prevScrollPos > currentScrollPos || prevScrollPos <= 0) {
         setShowNav(true);
       } else {
         setShowNav(false);
