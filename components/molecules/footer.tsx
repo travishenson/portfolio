@@ -14,9 +14,10 @@ const Footer: React.FC = () => {
           <LinkedinIcon width={iconSize} height={iconSize} color="#F2F2F2" />
           <TwitterIcon width={iconSize} height={iconSize} color="#F2F2F2" />
         </div>
-        <div className="footer-copyright">
-          <p>&copy; Travis Henson {new Date().getFullYear()}</p>
-          <p>Designed and Developed by Travis Henson.</p>
+        <div className="footer-copyright text-small">
+          <span>&copy; Travis Henson {new Date().getFullYear()}</span> 
+          <br />
+          <span>Designed and Developed by Travis Henson.</span>
         </div>
       </div>
     </footer>

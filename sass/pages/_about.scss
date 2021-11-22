@@ -1,0 +1,9 @@
+@use '../abstracts/variables';
+
+.portrait-image-container {
+  box-sizing: border-box;
+  filter: drop-shadow(12px 12px 0 variables.$blue500);
+  height: 300px;
+  position: relative;
+  width: 300px;
+}

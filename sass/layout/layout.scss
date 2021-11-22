@@ -5,13 +5,29 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: 100px;
+  padding-top: variables.$navbar-height;
+  width: 100%;
+}
+
+.content-full {
+  width: 100%;
+}
+
+.content {
+  margin: 0 auto;
+  width: 95%;
+
+  & > div {
+    margin: 0 auto;
+    max-width: max-content;
+    width: 95%;
+  }
 }
 
 .bg-pattern {
   &::after {
     background-attachment: fixed;
-    background-color: variables.$black;
+    background-color: variables.$grey900;
     background-size: 50%;
     bottom: 0;
     content: '';
@@ -23,25 +39,6 @@
     width: 100vw;
     z-index: calc(variables.$backdrop - 1);
   }
-}
-
-.page-content {
-  flex: 1;
-  margin: 0 auto;
-  max-width: variables.$max-content;
-  padding: 3vw 0;
-  width: 90%;
-}
-
-.page-content-full {
-  flex: 1;
-  margin: 0 auto;
-  width: 100%;
-}
-
-p {
-  line-height: 2;
-  margin-bottom: 1.5vw;
 }
 
 .loading-overlay {

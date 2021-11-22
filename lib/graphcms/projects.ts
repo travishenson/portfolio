@@ -80,7 +80,6 @@ const getFeaturedProjects = async () => {
 };
 
 const getProject = async (slug: any) => {
-  console.log(slug);
   const projectQuery: { project: ProjectType } = await graphcms.request(
     gql`
       {

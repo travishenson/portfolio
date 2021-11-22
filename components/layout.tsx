@@ -67,10 +67,10 @@ const Layout: React.FC<LayoutProps> = ({
 
   switch (pageTitle) {
     case 'Home':
-      contentClass = 'page-content-full';
+      contentClass = 'content-full';
       break;
     default:
-      contentClass = 'page-content';
+      contentClass = 'content';
   }
 
   return (
@@ -82,7 +82,9 @@ const Layout: React.FC<LayoutProps> = ({
           <Navbar />
           <MobileNavbar />
         </header>
-        <div className={contentClass}>{children}</div>
+        <div className={contentClass}>
+          <div>{children}</div>
+        </div>
         <Footer />
       </div>
     </>

@@ -13,7 +13,7 @@ const Index: NextPage = ({
   return (
     <Layout pageTitle="Home">
       <FirstHomeBlock />
-      <SecondHomeBlock featuredProjects={featuredProjects}/>
+      <SecondHomeBlock featuredProjects={featuredProjects} />
     </Layout>
   );
 };
