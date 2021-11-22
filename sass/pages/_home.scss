@@ -18,4 +18,8 @@
   margin: 0 auto;
   max-width: 100%;
   width: max-content;
+
+  h4 {
+    color: variables.$grey300;
+  }
 }

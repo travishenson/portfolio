@@ -19,7 +19,7 @@ const FirstHomeBlock: React.FC = () => {
             clean and easy-to-use sites and applications.
           </h4>
           <NavLink href="/work">
-            <Button variant="primary" size={isMobile ? 'md' : 'lg'}>
+            <Button variant="primary" size={isMobile ? 'sm' : 'md'}>
               My work
             </Button>
           </NavLink>
