@@ -19,6 +19,8 @@ body {
 }
 
 a {
+  color: variables.$blue300;
+
   &:hover {
     cursor: pointer;
   }
