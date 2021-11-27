@@ -20,6 +20,7 @@ body {
 
 a {
   color: variables.$blue300;
+  text-underline-offset: 2px;
 
   &:hover {
     cursor: pointer;

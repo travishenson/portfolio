@@ -14,15 +14,15 @@
 }
 
 .project-tile-left {
-  direction: ltr;
-
   .project-text {
     text-align: right;
   }
 }
 
 .project-tile-right {
-  direction: rtl;
+  .project-image {
+    grid-column-start: 1;
+  }
 
   .project-text {
     text-align: left;
@@ -40,7 +40,7 @@
     margin-bottom: 15px;
   }
 
-  .project-description {
+  .project-overview {
     align-self: flex-end;
     font-size: 18px;
     line-height: 1.5;
@@ -56,7 +56,7 @@
 
 .tile-light-text {
   .project-title,
-  .project-description,
+  .project-overview,
   .project-tech {
     color: variables.$grey100;
   }
@@ -64,7 +64,7 @@
 
 .tile-dark-text {
   .project-title,
-  .project-description,
+  .project-overview,
   .project-tech {
     color: variables.$black;
   }

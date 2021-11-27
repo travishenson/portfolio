@@ -5,7 +5,7 @@ import { isMobile } from 'react-device-detect';
 import Layout from '../../components/layout';
 import { PageTitle } from '../../components/atoms/page-title';
 import { ProjectTile } from '../../components/molecules/project-tile';
-import { getAllProjects, ProjectType } from '../../lib/graphcms/projects';
+import { getProjects, ProjectType } from '../../lib/graphcms/projects';
 
 const Work: NextPage = ({
   projects,
@@ -31,7 +31,7 @@ const Work: NextPage = ({
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const projects = await getAllProjects();
+  const projects = await getProjects();
 
   return {
     props: {

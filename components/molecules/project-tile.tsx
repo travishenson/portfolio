@@ -7,7 +7,7 @@ import { Button } from '../atoms/button';
 
 export interface ProjectTileProps {
   title: string;
-  description: string;
+  overview: string;
   imageUrl: string;
   techStack: string[];
   tileBgColorHex: string;
@@ -18,7 +18,7 @@ export interface ProjectTileProps {
 
 export const ProjectTile: React.FC<ProjectTileProps> = ({
   title,
-  description,
+  overview,
   imageUrl,
   techStack,
   tileBgColorHex,
@@ -36,16 +36,23 @@ export const ProjectTile: React.FC<ProjectTileProps> = ({
       tileTextColor = 'tile-dark-text';
   }
 
+  console.log(overview);
+
   return (
     <div
-      className={`project-tile ${
-        index % 2 === 0 && !isMobile
-          ? 'project-tile-left'
-          : 'project-tile-right'
-      }`}
-      style={{ backgroundColor: tileBgColorHex, padding: homePage ? '100px 0' : '0' }}
+      className="project-tile"
+      style={{
+        backgroundColor: tileBgColorHex,
+        padding: homePage ? '100px 0' : '0',
+      }}
     >
-      <div className="project-tile-inner">
+      <div
+        className={`project-tile-inner  ${
+          index % 2 === 0 && !isMobile
+            ? 'project-tile-left'
+            : 'project-tile-right'
+        }`}
+      >
         <div className="project-image">
           <Image
             src={imageUrl}
@@ -58,7 +65,7 @@ export const ProjectTile: React.FC<ProjectTileProps> = ({
         </div>
         <div className={`project-text ${tileTextColor}`}>
           <h2 className="project-title">{title}</h2>
-          <p className="project-description">{description}</p>
+          <p className="project-overview">{overview}</p>
           <p className="project-tech">
             {techStack.map(
               (tech, index) =>

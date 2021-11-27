@@ -28,7 +28,8 @@ export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const projectName = context?.params?.projectName;
+  const projectName = context.params?.projectName as string;
+  
   const project = await getProject(projectName);
 
   return {

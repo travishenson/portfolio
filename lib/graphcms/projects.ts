@@ -7,11 +7,12 @@ type FeaturedImage = {
 
 type TileBgColor = {
   hex: string;
-}
+};
 
 export type ProjectType = {
   id: number;
   title: string;
+  overview: string;
   description: string;
   featuredImage: FeaturedImage;
   role: string;
@@ -20,12 +21,21 @@ export type ProjectType = {
   slug: string;
 };
 
-const getAllProjects = async () => {
+const getProjects = async (isFeatured?: boolean) => {
+  const featuredQuery = isFeatured
+    ? 'where: {featuredProject: true},'
+    : '';
+
   const projectsQuery: { projects: ProjectType[] } = await graphcms.request(
     gql`
       query GetAllProjects($stage: Stage!) {
-        projects(stage: $stage, orderBy: sortOrder_ASC) {
+        projects(
+          ${featuredQuery}
+          stage: $stage
+          orderBy: sortOrder_ASC
+        ) {
           title
+          overview
           description
           featuredImage {
             url
@@ -49,37 +59,9 @@ const getAllProjects = async () => {
   return projects;
 };
 
-const getFeaturedProjects = async () => {
-  const featuredProjectsQuery: { projects: ProjectType[] } = await graphcms.request(
-    gql`
-      query GetFeaturedProjects($stage: Stage!) {
-        projects(stage: $stage, orderBy: sortOrder_ASC, where: {featuredProject: true}) {
-          title
-          description
-          featuredImage {
-            url
-          }
-          role
-          techStack
-          tileBgColor {
-            hex
-          }
-          slug
-          featuredProject
-        }
-      }
-    `,
-    {
-      stage: 'PUBLISHED',
-    }
-  );
+const getProject = async (slug: string | undefined) => {
+  if (!slug) return null;
 
-  const featuredProjects = featuredProjectsQuery.projects;
-
-  return featuredProjects;
-};
-
-const getProject = async (slug: any) => {
   const projectQuery: { project: ProjectType } = await graphcms.request(
     gql`
       {
@@ -88,17 +70,23 @@ const getProject = async (slug: any) => {
           featuredImage {
             url
           }
+          client
+          liveProjectUrl
+          startDate
+          finishDate
+          description
           pageContent
           role
           techStack
           title
         }
       }
-  `);
+  `
+  );
 
   const { project } = projectQuery;
 
   return project;
 };
 
-export { getAllProjects, getFeaturedProjects, getProject };
+export { getProjects, getProject };
