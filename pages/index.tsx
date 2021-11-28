@@ -2,7 +2,7 @@ import React from 'react';
 import { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import Layout from '../components/layout';
-import { getFeaturedProjects } from '../lib/graphcms/projects';
+import { getProjects } from '../lib/graphcms/projects';
 
 // Home page blocks
 import { FirstHomeBlock, SecondHomeBlock } from '../components/molecules/home';
@@ -19,7 +19,7 @@ const Index: NextPage = ({
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const featuredProjects = await getFeaturedProjects();
+  const featuredProjects = await getProjects(true);
 
   return {
     props: {

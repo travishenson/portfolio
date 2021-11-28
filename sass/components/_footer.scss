@@ -1,6 +1,9 @@
 @use '../abstracts/variables';
 
 footer {
+  bottom: 0;
+  height: variables.$footer-height;
+  position: absolute;
   width: 100vw;
 }
 

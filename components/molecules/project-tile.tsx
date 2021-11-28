@@ -36,8 +36,6 @@ export const ProjectTile: React.FC<ProjectTileProps> = ({
       tileTextColor = 'tile-dark-text';
   }
 
-  console.log(overview);
-
   return (
     <div
       className="project-tile"

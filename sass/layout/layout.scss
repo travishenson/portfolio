@@ -6,6 +6,8 @@
   flex-direction: column;
   min-height: 100vh;
   padding-top: variables.$navbar-height;
+  padding-bottom: variables.$footer-height;
+  position: relative;
   width: 100%;
 }
 

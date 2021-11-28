@@ -13,9 +13,25 @@ import { getProject } from '../../lib/graphcms/projects';
 const Project: NextPage = ({
   project,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const {
+    client,
+    description,
+    liveProjectUrl,
+    startDate,
+    role,
+    techStack,
+    title,
+  } = project;
+
   return (
-    <Layout pageTitle={project.title}>
-      <PageTitle title={project.title} />
+    <Layout pageTitle={title}>
+      <PageTitle title={title} />
+      <p>Client: {client}</p>
+      <p>{liveProjectUrl}</p>
+      <p>{startDate}</p>
+      <p>{role}</p>
+      <p>{techStack[0]}</p>
+      <p>{description}</p>
     </Layout>
   );
 };
@@ -29,7 +45,6 @@ export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const projectName = context.params?.projectName as string;
-  
   const project = await getProject(projectName);
 
   return {

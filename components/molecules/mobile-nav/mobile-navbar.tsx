@@ -7,7 +7,7 @@ const MobileNavbar: React.FC = () => {
       <div className="mobile-navbar-inner">
         <MobileNavTab target={{ href: '/', label: 'Home' }} />
         <MobileNavTab target={{ href: '/about', label: 'About' }} />
-        <MobileNavTab target={{ href: '/work', label: 'Work' }} />
+        <MobileNavTab target={{ href: '/projects', label: 'Projects' }} />
         <MobileNavTab target={{ href: '/contact', label: 'Contact' }} />
       </div>
     </nav>
