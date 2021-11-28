@@ -71,7 +71,7 @@ export const ProjectTile: React.FC<ProjectTileProps> = ({
             )}
           </p>
           <div className="project-button">
-            <NavLink href={`/work/${slug}`}>
+            <NavLink href={`/projects/${slug}`}>
               <Button variant="primary" size="md">
                 View Project
               </Button>
