@@ -10,7 +10,7 @@ const getPortraitImage = async () => {
   const portraitImageQuery: { asset: ImageAsset } = await graphcms.request(
     gql`
       {
-        asset(where: { id: "ckw9ufgj4hiao0a70dpku99bp" }) {
+        asset(where: { id: "ckw9x2loourij0c78l43f7pkr" }) {
           id
           url
         }

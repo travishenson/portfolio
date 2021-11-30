@@ -5,9 +5,12 @@ import {
   GetStaticPaths,
   InferGetStaticPropsType,
 } from 'next';
+import dayjs from 'dayjs';
+import ReactMarkdown from 'react-markdown';
 
 import Layout from '../../components/layout';
 import { PageTitle } from '../../components/atoms/page-title';
+// import { ProjectParagraph } from '../../components/molecules/projects/project-paragraph';
 import { getProject } from '../../lib/graphcms/projects';
 
 const Project: NextPage = ({
@@ -17,7 +20,9 @@ const Project: NextPage = ({
     client,
     description,
     liveProjectUrl,
+    pageContent,
     startDate,
+    finishDate,
     role,
     techStack,
     title,
@@ -26,12 +31,31 @@ const Project: NextPage = ({
   return (
     <Layout pageTitle={title}>
       <PageTitle title={title} />
-      <p>Client: {client}</p>
-      <p>{liveProjectUrl}</p>
-      <p>{startDate}</p>
-      <p>{role}</p>
-      <p>{techStack[0]}</p>
-      <p>{description}</p>
+      <div className="project-info">
+        <p>Client: {client}</p>
+        <p>{liveProjectUrl}</p>
+        <p>
+          {dayjs(startDate).format('MMMM YYYY')} &ndash;{' '}
+          {finishDate ? dayjs(finishDate).format('MMMM YYYY') : 'Present'}
+        </p>
+        <p>{role}</p>
+        <p>
+          {techStack.map((tech: string) => (
+            <span style={{ marginRight: '1rem' }} key={tech}>
+              {tech}
+            </span>
+          ))}
+        </p>
+        <p>{description}</p>
+        <ReactMarkdown
+          className="project-content"
+          // components={{
+          //   h3: ({ ...props }) => <ProjectParagraph {...props} />,
+          // }}
+        >
+          {pageContent}
+        </ReactMarkdown>
+      </div>
     </Layout>
   );
 };
