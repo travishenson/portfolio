@@ -15,6 +15,7 @@
     "@babel/core": "^7.16.0",
     "babel-preset-next": "^1.4.0",
     "dayjs": "^1.10.7",
+    "formik": "^2.2.9",
     "graphql": "^15.6.1",
     "graphql-request": "^3.6.1",
     "loaders.css": "^0.1.2",
