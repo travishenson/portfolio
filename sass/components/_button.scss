@@ -2,8 +2,12 @@
 
 // *** BUTTON BASE ***
 .button {
+  align-items: center;
   border: none;
   border-radius: 8px;
+  display: flex;
+  font-family: variables.$heading-text;
+  justify-content: center;
   margin: 10px 5px;
   text-transform: capitalize;
   transition: all 0.2s;
@@ -41,7 +45,7 @@
 }
 
 .medium-button {
-  font-size: 16px;
+  font-size: 18px;
   min-width: 150px;
   padding: 8px;
 }
