@@ -20,7 +20,7 @@ const FirstHomeBlock: React.FC = () => {
             . I enjoy working across the full stack and have a passion for
             creating clean and easy-to-use sites and applications.
           </h4>
-          <NavLink href="/work">
+          <NavLink href="/projects">
             <Button variant="primary" size={isMobile ? 'sm' : 'md'}>
               My Projects{' '}
               <HiOutlineArrowNarrowRight style={{ marginLeft: '5px' }} />

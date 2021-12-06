@@ -4,6 +4,7 @@ footer {
   bottom: 0;
   color: variables.$grey300;
   height: variables.$footer-height;
+  padding-top: 50px;
   position: absolute;
   width: 100vw;
 }
@@ -22,7 +23,6 @@ footer {
   justify-content: center;
   margin: 0 auto;
   max-width: 1280px;
-  padding: 50px 0;
 
   .footer-links {
     margin: 15px auto;

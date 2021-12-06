@@ -12,11 +12,12 @@
 }
 
 .content-full {
+  margin-bottom: 5rem;
   width: 100%;
 }
 
 .content {
-  margin: 0 auto;
+  margin: 0 auto 5rem auto;
   width: 95%;
 
   & > div {

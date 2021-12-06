@@ -1,4 +1,3 @@
-import React from 'react';
 import { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import Image from 'next/dist/client/image';
 import ReactMarkdown from 'react-markdown';
