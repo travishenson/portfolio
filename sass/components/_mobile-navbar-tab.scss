@@ -15,5 +15,9 @@
     height: 100%;
     justify-content: space-evenly;
     padding: 0.5rem 0;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

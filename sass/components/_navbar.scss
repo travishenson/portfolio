@@ -17,7 +17,7 @@
 }
 
 .desktop-nav-no-shadow {
-  // background-color: transparent;
+  background-color: transparent;
   filter: none;
 }
 
@@ -33,12 +33,25 @@
   align-items: center;
   display: flex;
   flex-direction: row;
+  height: 100%;
   justify-content: space-between;
   margin: 0 auto;
-  max-width: 1920px;
+  max-width: 1366px;
+}
+
+.nav-right {
+  display: flex;
+}
+
+.nav-link {
+  display: flex;
 }
 
 .nav-links {
+  display: flex;
+  margin-right: 50px;
+  flex-direction: row;
+
   a {
     color: variables.$grey300;
     letter-spacing: 1px;

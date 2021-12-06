@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import { NavLink } from '../atoms/nav-link';
+import { EmailButton } from '../atoms/email-button';
 
 const Navbar: React.FC = () => {
   const [showNav, setShowNav] = useState<boolean>(true);
@@ -39,16 +40,18 @@ const Navbar: React.FC = () => {
         <NavLink href="/">
           <Image
             src="/images/logo.png"
-            width="50px"
-            height="50px"
+            width="45px"
+            height="45px"
             alt="Travis Henson logo"
           />
         </NavLink>
-        <div className="nav-links">
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/about">About</NavLink>
-          <NavLink href="/projects">Projects</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
+        <div className="nav-right">
+          <div className="nav-links">
+            <NavLink href="/">Home</NavLink>
+            <NavLink href="/about">About</NavLink>
+            <NavLink href="/projects">Projects</NavLink>
+          </div>
+          <EmailButton />
         </div>
       </div>
     </nav>

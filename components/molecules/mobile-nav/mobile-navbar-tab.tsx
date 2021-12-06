@@ -45,12 +45,12 @@ export const MobileNavTab: React.FC<MobileNavTabProps> = ({
         />
       );
       break;
-    case 'Work':
+    case 'Projects':
       tabIcon = (
         <BriefcaseIcon
           width={iconSize}
           height={iconSize}
-          style={router.route === '/work' ? 'filled' : 'outline'}
+          style={router.route === '/projects' ? 'filled' : 'outline'}
         />
       );
       break;
@@ -75,12 +75,19 @@ export const MobileNavTab: React.FC<MobileNavTabProps> = ({
 
   return (
     <div className="mobile-nav-tab">
-      <NavLink href={target.href} isMobile>
-        <div className="nav-tab-inner">
+      {target.label === 'Contact' ? (
+        <div className="nav-tab-inner" onClick={() => router.replace(target.href)}>
           {tabIcon}
           {target.label}
         </div>
-      </NavLink>
+      ) : (
+        <NavLink href={target.href} isMobile>
+          <div className="nav-tab-inner">
+            {tabIcon}
+            {target.label}
+          </div>
+        </NavLink>
+      )}
     </div>
   );
 };

@@ -3,10 +3,11 @@ import React from 'react';
 interface ButtonProps {
   children: React.ReactNode;
   variant: 'primary' | 'secondary';
+  onClick?: () => void;
   size?: 'xs' | 'sm' | 'md' | 'lg';
 }
 
-const Button: React.FC<ButtonProps> = ({variant, size = 'md', children}: ButtonProps) => {
+const Button: React.FC<ButtonProps> = ({variant, onClick, size = 'md', children}: ButtonProps) => {
   const variantClass = variant === 'primary' ? 'primary-button' : 'secondary-button';
 
   let sizeClass;
@@ -28,7 +29,7 @@ const Button: React.FC<ButtonProps> = ({variant, size = 'md', children}: ButtonP
   }
 
   return (
-    <button className={`button ${variantClass} ${sizeClass}`}>
+    <button className={`button ${variantClass} ${sizeClass}`} onClick={onClick}>
       {children}
     </button>
   )

@@ -5,6 +5,12 @@ body {
   z-index: variables.$base;
 }
 
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .no-scroll {
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
