@@ -2,13 +2,14 @@
 
 footer {
   bottom: 0;
+  color: variables.$grey300;
   height: variables.$footer-height;
   position: absolute;
   width: 100vw;
 }
 
 .footer-desktop {
-  padding-bottom: calc(50px + env(safe-area-inset-bottom));
+  padding-bottom: calc(150px + env(safe-area-inset-bottom));
 }
 
 .footer-mobile {
@@ -18,18 +19,23 @@ footer {
 .footer-inner {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: 0 auto;
   max-width: 1280px;
-  padding: 15px 0;
+  padding: 50px 0;
 
   .footer-links {
     margin: 15px auto;
 
-    svg {
+    a {
       margin: 0 15px;
+    }
+
+    svg {
+      fill: variables.$grey300;
 
       &:hover {
-        fill: variables.$blue500;
+        fill: variables.$grey100;
       }
     }
   }
