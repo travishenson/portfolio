@@ -9,8 +9,6 @@ import dayjs from 'dayjs';
 import ReactMarkdown from 'react-markdown';
 
 import Layout from '../../components/layout';
-import { PageTitle } from '../../components/atoms/page-title';
-// import { ProjectParagraph } from '../../components/molecules/projects/project-paragraph';
 import { getProject } from '../../lib/graphcms/projects';
 
 const Project: NextPage = ({
@@ -30,7 +28,6 @@ const Project: NextPage = ({
 
   return (
     <Layout pageTitle={title}>
-      <PageTitle title={title} />
       <div className="project-info">
         <p>Client: {client}</p>
         <p>{liveProjectUrl}</p>
@@ -47,14 +44,7 @@ const Project: NextPage = ({
           ))}
         </p>
         <p>{description}</p>
-        <ReactMarkdown
-          className="project-content"
-          // components={{
-          //   h3: ({ ...props }) => <ProjectParagraph {...props} />,
-          // }}
-        >
-          {pageContent}
-        </ReactMarkdown>
+        <ReactMarkdown className="project-content">{pageContent}</ReactMarkdown>
       </div>
     </Layout>
   );

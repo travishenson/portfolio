@@ -11,6 +11,11 @@
   width: 100%;
 }
 
+.container {
+  border: 1px solid red;
+  max-width: variables.$max-content;
+}
+
 .content-full {
   margin-bottom: 5rem;
   width: 100%;

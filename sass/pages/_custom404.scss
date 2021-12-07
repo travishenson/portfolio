@@ -1,17 +1,24 @@
 .error-page {
   padding-top: 2.5rem;
 
-  h3 {
-    text-align: center;
-  }
-
-  .err-paragraphs {
-    margin: 5rem auto;
+  .err-gif {
+    margin: 0 auto;
+    max-width: 100%;
     width: max-content;
   }
-}
 
-.err-gif {
-  margin: 0 auto;
-  width: max-content;
-};
+  .err-text {
+    width: 100%;
+
+    h2 {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .err-paragraphs {
+      margin: 1rem auto;
+      max-width: 100%;
+      width: max-content;
+    }
+  }
+}

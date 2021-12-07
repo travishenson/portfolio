@@ -3,7 +3,6 @@ import Image from 'next/dist/client/image';
 import ReactMarkdown from 'react-markdown';
 
 import Layout from '../components/layout';
-import { PageTitle } from '../components/atoms/page-title';
 import { getPortraitImage } from '../lib/graphcms/assets';
 import { getPageContent } from '../lib/graphcms/pageContent';
 
@@ -13,7 +12,6 @@ const About: NextPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout pageTitle="About Me">
-      <PageTitle title="About Me" />
       <div className="portrait-image-container">
         <Image
           src={portraitImage}
@@ -23,7 +21,7 @@ const About: NextPage = ({
         />
       </div>
 
-      <main className="about-text">
+      <main>
         <ReactMarkdown>{pageContent.content}</ReactMarkdown>
       </main>
     </Layout>
