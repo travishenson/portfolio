@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaGithub } from 'react-icons/fa';
-import { IconProps } from '.';
+import {FaGithub} from 'react-icons/fa';
+import {IconProps} from '.';
 
 const GithubIcon: React.FC<IconProps> = ({
   width,
@@ -8,7 +8,7 @@ const GithubIcon: React.FC<IconProps> = ({
   color,
 }: IconProps) => (
   <a href="https://github.com/travishenson" target="_blank" rel="noreferrer">
-    <FaGithub style={{ width: width, height: height, color: color }} />
+    <FaGithub style={{width: width, height: height, color: color}} />
   </a>
 );
 

@@ -1,5 +1,5 @@
-import { gql } from 'graphql-request';
-import { graphcms } from '.';
+import {gql} from 'graphql-request';
+import {graphcms} from '.';
 
 type ImageAsset = {
   id: string;
@@ -18,9 +18,9 @@ const getPortraitImage = async () => {
     `
   );
 
-  const { url } = portraitImageQuery.asset;
+  const {url} = portraitImageQuery.asset;
 
   return url;
 };
 
-export { getPortraitImage };
+export {getPortraitImage};

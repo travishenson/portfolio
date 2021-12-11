@@ -1,6 +1,6 @@
 import React from 'react';
-import { useRouter } from 'next/router';
-import { NavLink } from '../../atoms/nav-link';
+import {useRouter} from 'next/router';
+import {NavLink} from '../../atoms/nav-link';
 import {
   HomeIcon,
   PersonIcon,

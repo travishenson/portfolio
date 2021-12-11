@@ -1,9 +1,9 @@
 import React from 'react';
-import { isMobile } from 'react-device-detect';
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import {isMobile} from 'react-device-detect';
+import {HiOutlineArrowNarrowRight} from 'react-icons/hi';
 
-import { NavLink } from '../../atoms/nav-link';
-import { Button } from '../../atoms/button';
+import {NavLink} from '../../atoms/nav-link';
+import {Button} from '../../atoms/button';
 
 const FirstHomeBlock: React.FC = () => {
   return (
@@ -23,7 +23,7 @@ const FirstHomeBlock: React.FC = () => {
           <NavLink href="/projects">
             <Button variant="primary" size={isMobile ? 'sm' : 'md'}>
               My Projects{' '}
-              <HiOutlineArrowNarrowRight style={{ marginLeft: '5px' }} />
+              <HiOutlineArrowNarrowRight style={{marginLeft: '5px'}} />
             </Button>
           </NavLink>
         </div>
@@ -32,4 +32,4 @@ const FirstHomeBlock: React.FC = () => {
   );
 };
 
-export { FirstHomeBlock };
+export {FirstHomeBlock};

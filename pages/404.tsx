@@ -1,4 +1,4 @@
-import { NextPage } from 'next';
+import {NextPage} from 'next';
 import Link from 'next/link';
 import Image from 'next/dist/client/image';
 

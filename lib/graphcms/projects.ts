@@ -1,5 +1,5 @@
-import { gql } from 'graphql-request';
-import { graphcms } from '.';
+import {gql} from 'graphql-request';
+import {graphcms} from '.';
 
 type FeaturedImage = {
   url: string;
@@ -54,7 +54,7 @@ const getProjects = async (isFeatured?: boolean) => {
     }
   );
 
-  const { projects } = projectsQuery;
+  const {projects} = projectsQuery;
 
   return projects;
 };
@@ -84,9 +84,9 @@ const getProject = async (slug: string | undefined) => {
   `
   );
 
-  const { project } = projectQuery;
+  const {project} = projectQuery;
 
   return project;
 };
 
-export { getProjects, getProject };
+export {getProjects, getProject};

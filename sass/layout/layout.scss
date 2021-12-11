@@ -49,29 +49,32 @@
   }
 }
 
-.loading-overlay {
-  align-items: center;
-  background-color: variables.$black;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  opacity: 1;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: variables.$above-overlay;
+// Animation Classes
+.page-move-to-top {
+  -webkit-animation: moveToTop .6s ease both;
+	animation: moveToTop .6s ease both;
 }
 
-.loading-overlay-show {
-  background-color: variables.$black;
-  top: 0;
-  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-  z-index: variables.$above-overlay;
+.page-move-from-bottom {
+  -webkit-animation: moveFromBottom .6s ease both;
+	animation: moveFromBottom .6s ease both;
 }
 
-.loading-overlay-hidden {
-  top: -100vh;
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  z-index: variables.$above-overlay;
+// Animations Keyframes
+@keyframes moveToTop {
+	from { }
+	to { -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+
+@-webkit-keyframes moveToTop {
+	from { }
+	to { -webkit-transform: translateY(-100%); }
+}
+
+@keyframes moveFromBottom {
+	from { -webkit-transform: translateY(100%); transform: translateY(100%); }
+}
+
+@-webkit-keyframes moveFromBottom {
+	from { -webkit-transform: translateY(100%); }
 }

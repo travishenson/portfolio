@@ -1,5 +1,5 @@
 import React from 'react';
-import { isMobile } from 'react-device-detect';
+import {isMobile} from 'react-device-detect';
 import {
   GithubIcon,
   InstagramIcon,
@@ -33,4 +33,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export { Footer };
+export {Footer};

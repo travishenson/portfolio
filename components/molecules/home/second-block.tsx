@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { ProjectType } from '../../../lib/graphcms/projects';
-import { ProjectTile } from '../project-tile';
+import {ProjectType} from '../../../lib/graphcms/projects';
+import {ProjectTile} from '../project-tile';
 
 interface SecondHomeBlockProps {
   featuredProjects: ProjectType[];
@@ -28,4 +28,4 @@ const SecondHomeBlock: React.FC<SecondHomeBlockProps> = ({
   );
 };
 
-export { SecondHomeBlock };
+export {SecondHomeBlock};

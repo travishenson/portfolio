@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import Image from 'next/image';
 
-import { NavLink } from '../atoms/nav-link';
-import { EmailButton } from '../atoms/email-button';
+import {NavLink} from '../atoms/nav-link';
+import {EmailButton} from '../atoms/email-button';
 
 const Navbar: React.FC = () => {
   const [showNav, setShowNav] = useState<boolean>(true);
@@ -58,4 +58,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export { Navbar };
+export {Navbar};

@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaTwitter } from 'react-icons/fa';
-import { IconProps } from '.';
+import {FaTwitter} from 'react-icons/fa';
+import {IconProps} from '.';
 
 const TwitterIcon: React.FC<IconProps> = ({
   width,
@@ -8,7 +8,7 @@ const TwitterIcon: React.FC<IconProps> = ({
   color,
 }: IconProps) => (
   <a href="https://twitter.com/travishenson" target="_blank" rel="noreferrer">
-    <FaTwitter style={{ width: width, height: height, color: color }} />
+    <FaTwitter style={{width: width, height: height, color: color}} />
   </a>
 );
 

@@ -1,5 +1,5 @@
-import { gql } from 'graphql-request';
-import { graphcms } from '.';
+import {gql} from 'graphql-request';
+import {graphcms} from '.';
 
 const getPageContent = async (slug: string | undefined) => {
   if (!slug) return null;
@@ -15,9 +15,9 @@ const getPageContent = async (slug: string | undefined) => {
   `
   );
 
-  const { pageContent } = pageContentQuery;
+  const {pageContent} = pageContentQuery;
 
   return pageContent;
 };
 
-export { getPageContent };
+export {getPageContent};

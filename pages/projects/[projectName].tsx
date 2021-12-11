@@ -9,7 +9,7 @@ import dayjs from 'dayjs';
 import ReactMarkdown from 'react-markdown';
 
 import Layout from '../../components/layout';
-import { getProject } from '../../lib/graphcms/projects';
+import {getProject} from '../../lib/graphcms/projects';
 
 const Project: NextPage = ({
   project,
@@ -38,7 +38,7 @@ const Project: NextPage = ({
         <p>{role}</p>
         <p>
           {techStack.map((tech: string) => (
-            <span style={{ marginRight: '1rem' }} key={tech}>
+            <span style={{marginRight: '1rem'}} key={tech}>
               {tech}
             </span>
           ))}

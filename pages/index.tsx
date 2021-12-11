@@ -1,11 +1,11 @@
 import React from 'react';
-import { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
+import {NextPage, GetStaticProps, InferGetStaticPropsType} from 'next';
 
 import Layout from '../components/layout';
-import { getProjects } from '../lib/graphcms/projects';
+import {getProjects} from '../lib/graphcms/projects';
 
 // Home page blocks
-import { FirstHomeBlock, SecondHomeBlock } from '../components/molecules/home';
+import {FirstHomeBlock, SecondHomeBlock} from '../components/molecules/home';
 
 const Index: NextPage = ({
   featuredProjects,

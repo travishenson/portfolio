@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
-import { isMobile } from 'react-device-detect';
+import {isMobile} from 'react-device-detect';
 
-import { NavLink } from '../atoms/nav-link';
-import { Button } from '../atoms/button';
+import {NavLink} from '../atoms/nav-link';
+import {Button} from '../atoms/button';
 
 export interface ProjectTileProps {
   title: string;

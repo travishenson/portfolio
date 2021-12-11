@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { MailIcon } from '../icons';
+import React, {useState} from 'react';
+import {MailIcon} from '../icons';
 
 const EmailButton: React.FC = () => {
   const [emailButtonText, setEmailButtonText] = useState('Copy Email');
@@ -25,4 +25,4 @@ const EmailButton: React.FC = () => {
   );
 };
 
-export { EmailButton };
+export {EmailButton};

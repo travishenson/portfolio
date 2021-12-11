@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaLinkedin } from 'react-icons/fa';
-import { IconProps } from '.';
+import {FaLinkedin} from 'react-icons/fa';
+import {IconProps} from '.';
 
 const LinkedinIcon: React.FC<IconProps> = ({
   width,
@@ -12,7 +12,7 @@ const LinkedinIcon: React.FC<IconProps> = ({
     target="_blank"
     rel="noreferrer"
   >
-    <FaLinkedin style={{ width: width, height: height, color: color }} />
+    <FaLinkedin style={{width: width, height: height, color: color}} />
   </a>
 );
 

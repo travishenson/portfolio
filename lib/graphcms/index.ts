@@ -1,4 +1,4 @@
-import { GraphQLClient } from 'graphql-request';
+import {GraphQLClient} from 'graphql-request';
 
 // Setting up GraphCMS Connection
 export const graphcms = new GraphQLClient(process.env.GRAPHCMS_ENDPOINT!, {

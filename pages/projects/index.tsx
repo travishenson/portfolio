@@ -1,9 +1,9 @@
 import React from 'react';
-import { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
+import {NextPage, GetStaticProps, InferGetStaticPropsType} from 'next';
 
 import Layout from '../../components/layout';
-import { ProjectTile } from '../../components/molecules/project-tile';
-import { getProjects, ProjectType } from '../../lib/graphcms/projects';
+import {ProjectTile} from '../../components/molecules/project-tile';
+import {getProjects, ProjectType} from '../../lib/graphcms/projects';
 
 const Projects: NextPage = ({
   projects,

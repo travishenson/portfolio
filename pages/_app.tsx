@@ -1,13 +1,13 @@
 import React from 'react';
-import { AppProps } from 'next/app';
+import {AppProps} from 'next/app';
 import Head from 'next/head';
 
-import { LoadingOverlayProvider } from '../context/loading-overlay-context';
+import {LoadingOverlayProvider} from '../context/loading-overlay-context';
 
 // Sass import
 import '../sass/app.scss';
 
-const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => (
+const App: React.FC<AppProps> = ({Component, pageProps}: AppProps) => (
   <>
     <Head>
       <meta charSet="UTF-8" />

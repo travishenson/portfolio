@@ -1,10 +1,10 @@
-import { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
+import {NextPage, GetStaticProps, InferGetStaticPropsType} from 'next';
 import Image from 'next/dist/client/image';
 import ReactMarkdown from 'react-markdown';
 
 import Layout from '../components/layout';
-import { getPortraitImage } from '../lib/graphcms/assets';
-import { getPageContent } from '../lib/graphcms/pageContent';
+import {getPortraitImage} from '../lib/graphcms/assets';
+import {getPageContent} from '../lib/graphcms/pageContent';
 
 const About: NextPage = ({
   portraitImage,

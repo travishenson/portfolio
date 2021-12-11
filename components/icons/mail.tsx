@@ -1,15 +1,15 @@
 import React from 'react';
 import {IoMail, IoMailOutline} from 'react-icons/io5';
-import { IconProps } from '.';
+import {IconProps} from '.';
 
-const MailIcon: React.FC<IconProps> = ({ width, height, color, style }: IconProps) => {
+const MailIcon: React.FC<IconProps> = ({width, height, color, style}: IconProps) => {
   if (style === 'outline') {
     return (
-      <IoMailOutline style={{ width: width, height: height, color: color }} />
+      <IoMailOutline style={{width: width, height: height, color: color}} />
     );
   }
   return (
-    <IoMail style={{ width: width, height: height, color: color }} />
+    <IoMail style={{width: width, height: height, color: color}} />
   );
 };
 

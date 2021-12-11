@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import React, {useEffect} from 'react';
+import {useRouter} from 'next/router';
 
-import { useLoadingOverlayContext } from '../../context/loading-overlay-context';
+import {useLoadingOverlayContext} from '../../context/loading-overlay-context';
 
 interface NavLinkProps {
   children?: React.ReactNode;
@@ -17,7 +17,7 @@ const NavLink: React.FC<NavLinkProps> = ({
   mobileOnClick,
 }: NavLinkProps) => {
   const router = useRouter();
-  const { setIsLoading } = useLoadingOverlayContext();
+  const {setIsLoading} = useLoadingOverlayContext();
 
   const handleNavClick = () => {
     if (router.route === href) {
@@ -58,4 +58,4 @@ const NavLink: React.FC<NavLinkProps> = ({
   );
 };
 
-export { NavLink };
+export {NavLink};
