@@ -26,7 +26,7 @@ const LoadingOverlayProvider: React.FC = ({
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <LoadingOverlayContext.Provider value={{ isLoading, setIsLoading }}>
+    <LoadingOverlayContext.Provider value={{isLoading, setIsLoading}}>
       {children}
     </LoadingOverlayContext.Provider>
   );
@@ -35,4 +35,4 @@ const LoadingOverlayProvider: React.FC = ({
 const useLoadingOverlayContext: () => LoadingOverlayContextProps = () =>
   useContext(LoadingOverlayContext);
 
-export { LoadingOverlayProvider, useLoadingOverlayContext };
+export {LoadingOverlayProvider, useLoadingOverlayContext};

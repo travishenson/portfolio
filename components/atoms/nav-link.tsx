@@ -1,7 +1,5 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {useRouter} from 'next/router';
-
-import {useLoadingOverlayContext} from '../../context/loading-overlay-context';
 
 interface NavLinkProps {
   children?: React.ReactNode;
@@ -14,33 +12,8 @@ const NavLink: React.FC<NavLinkProps> = ({
   children,
   href,
   isMobile,
-  mobileOnClick,
 }: NavLinkProps) => {
   const router = useRouter();
-  const {setIsLoading} = useLoadingOverlayContext();
-
-  const handleNavClick = () => {
-    if (router.route === href) {
-      return setIsLoading(false);
-    }
-
-    if (mobileOnClick) {
-      setTimeout(() => mobileOnClick(), 250);
-    }
-
-    setIsLoading(true);
-
-    setTimeout(() => router.push(href), 500);
-  };
-
-  useEffect(() => {
-    const handleComplete = () => {
-      setTimeout(() => setIsLoading(false), 1000);
-    };
-
-    router.events.on('routeChangeComplete', handleComplete);
-    router.events.on('routeChangeError', handleComplete);
-  }, [router, setIsLoading]);
 
   const parseLinkClass = (routeSlug: string, slug: string) => {
     if (isMobile) {
@@ -52,7 +25,7 @@ const NavLink: React.FC<NavLinkProps> = ({
   };
 
   return (
-    <a onClick={handleNavClick} className={parseLinkClass(router.route, href)}>
+    <a onClick={() => router.push(href)} className={parseLinkClass(router.route, href)}>
       {children}
     </a>
   );
