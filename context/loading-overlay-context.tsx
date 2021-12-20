@@ -4,7 +4,9 @@ import React, {
   useState,
   Dispatch,
   SetStateAction,
+  useEffect,
 } from 'react';
+import {useRouter} from 'next/router';
 
 interface LoadingOverlayContextProps {
   isLoading: boolean;
@@ -23,7 +25,15 @@ interface LoadingOverlayContextProviderProps {
 const LoadingOverlayProvider: React.FC = ({
   children,
 }: LoadingOverlayContextProviderProps) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
+
+  useEffect(() => {
+    router.events.on('routeChangeStart', () => setIsLoading(true));
+    router.events.on('routeChangeComplete', () => setIsLoading(false));
+  }, [router.events]);
+
+  useEffect(() => setIsLoading(false), [])
 
   return (
     <LoadingOverlayContext.Provider value={{isLoading, setIsLoading}}>

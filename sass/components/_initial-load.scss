@@ -1,0 +1,9 @@
+@use '../abstracts/variables';
+
+.initial-load {
+  background-color: variables.$black;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+  z-index: variables.$above-overlay;
+}

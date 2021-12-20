@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import Image from 'next/image';
 
 import {NavLink} from '../atoms/nav-link';
 import {EmailButton} from '../atoms/email-button';
+import Logo from '../atoms/logo';
 
 const Navbar: React.FC = () => {
   const [showNav, setShowNav] = useState<boolean>(true);
@@ -38,12 +38,9 @@ const Navbar: React.FC = () => {
     >
       <div className="nav-inner">
         <NavLink href="/">
-          <Image
-            src="/images/logo.png"
-            width="45px"
-            height="45px"
-            alt="Travis Henson logo"
-          />
+          <div className="navbar-logo">
+            <Logo />
+          </div>
         </NavLink>
         <div className="nav-right">
           <div className="nav-links">
