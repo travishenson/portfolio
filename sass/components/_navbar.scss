@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use '../abstracts/variables';
 
 .navbar-logo {
@@ -6,32 +7,24 @@
 }
 
 .desktop-nav {
-  background-color: variables.$grey900;
   font-family: variables.$heading-text;
   height: 100px;
-  padding: 20px 50px;
+  padding: 0px 50px;
   position: fixed;
   top: 0;
-  transition: all 0.5s;
+  transition: all 0.25s;
   width: 100%;
   z-index: variables.$overlay;
 }
 
 .desktop-nav-shadow {
-  filter: drop-shadow(0px -10px 25px variables.$black);
+  background-color: variables.$black;
+  height: 75px;
+  padding: 0px 50px;
 }
 
 .desktop-nav-no-shadow {
-  background-color: transparent;
   filter: none;
-}
-
-.desktop-nav-show {
-  top: 0px;
-}
-
-.desktop-nav-hidden {
-  top: -110px;
 }
 
 .nav-inner {
@@ -50,6 +43,7 @@
 
 .nav-link {
   display: flex;
+  font-size: 0.9rem;
 }
 
 .nav-links {

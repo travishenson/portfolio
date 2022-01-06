@@ -2,6 +2,8 @@
 
 .first-home-block {
   align-items: center;
+  // background-image: variables.$hero-pattern;
+  background-color: variables.$grey900;
   display: flex;
   flex-direction: column;
   min-height: 85vh;
@@ -11,15 +13,6 @@
 
 .first-block-inner {
   max-width: variables.$max-content;
+  padding: 2em;
   width: 100%;
-}
-
-.first-block-inner-text {
-  margin: 0 auto;
-  max-width: 100%;
-  width: max-content;
-
-  h4 {
-    color: variables.$grey300;
-  }
 }

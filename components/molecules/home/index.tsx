@@ -3,5 +3,5 @@ import {SecondHomeBlock} from './second-block';
 
 export {
   FirstHomeBlock,
-  SecondHomeBlock
+  SecondHomeBlock,
 }
