@@ -3,10 +3,10 @@
 .first-home-block {
   background-color: variables.$grey900;
   display: flex;
+  
 }
 
 .first-block-inner {
+  margin: 0 auto;
   max-width: variables.$max-content;
-  padding: 2em;
-  width: 100%;
 }

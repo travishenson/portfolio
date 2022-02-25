@@ -24,16 +24,6 @@ const Layout: React.FC<LayoutProps> = ({
     pageTitle === 'Home' ? 'bg-pattern' : ''
   }`;
 
-  let contentClass;
-
-  switch (pageTitle) {
-    case 'Home':
-      contentClass = 'content-full';
-      break;
-    default:
-      contentClass = 'content';
-  }
-
   return (
     <>
       <NextSeo title={formattedPageTitle} />
@@ -42,7 +32,7 @@ const Layout: React.FC<LayoutProps> = ({
           <Navbar />
           <MobileNavbar />
         </header>
-        <div className={contentClass}>
+        <div className="content">
           <div>{children}</div>
         </div>
         <Footer />
