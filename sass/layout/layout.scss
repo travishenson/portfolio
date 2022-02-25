@@ -28,20 +28,3 @@
     width: 95%;
   }
 }
-
-.bg-pattern {
-  &::after {
-    background-attachment: fixed;
-    background-color: variables.$grey900;
-    background-size: 50%;
-    bottom: 0;
-    content: '';
-    height: 95vh;
-    left: 0;
-    opacity: 0.4;
-    position: absolute;
-    transform: scaleX(-1);
-    width: 100vw;
-    z-index: calc(variables.$backdrop - 1);
-  }
-}

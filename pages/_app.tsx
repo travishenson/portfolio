@@ -2,8 +2,6 @@ import React from 'react';
 import {AppProps} from 'next/app';
 import Head from 'next/head';
 
-import {LoadingOverlayProvider} from '../context/loading-overlay-context';
-
 // Sass import
 import '../sass/app.scss';
 
@@ -16,9 +14,7 @@ const App: React.FC<AppProps> = ({Component, pageProps}: AppProps) => (
       <title>Travis Henson | JavaScript Developer</title>
       <link rel="shortcut icon" href="/images/favicon.ico" />
     </Head>
-    <LoadingOverlayProvider>
-      <Component {...pageProps} />
-    </LoadingOverlayProvider>
+    <Component {...pageProps} />
   </>
 );
 
