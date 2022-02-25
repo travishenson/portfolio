@@ -4,18 +4,11 @@ footer {
   background-color: variables.$black;
   bottom: 0;
   color: variables.$grey300;
+  display: flex;
   height: variables.$footer-height;
-  padding-top: 50px;
+  margin-top: 50px;
   position: absolute;
   width: 100%;
-}
-
-.footer-desktop {
-  padding-bottom: calc(150px + env(safe-area-inset-bottom));
-}
-
-.footer-mobile {
-  padding-bottom: calc(variables.$mobile-navbar-height + 100px + env(safe-area-inset-bottom));
 }
 
 .footer-inner {

@@ -5,6 +5,9 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  margin-top: variables.$navbar-height;
+  padding-bottom: variables.$footer-height;
+  padding-top: 1rem;
   position: relative;
   width: 100%;
 }
@@ -14,7 +17,6 @@
 }
 
 .content-full {
-  margin-bottom: 5rem;
   width: 100%;
 }
 
@@ -26,5 +28,11 @@
     margin: 0 auto;
     max-width: max-content;
     width: 95%;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .main-wrapper {
+    padding-top: variables.$navbar-height;
   }
 }
