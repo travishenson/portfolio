@@ -47,6 +47,7 @@
 }
 
 .nav-links {
+  align-items: center;
   display: flex;
   margin-right: 50px;
   flex-direction: row;
@@ -55,7 +56,6 @@
     color: variables.$grey300;
     letter-spacing: 1px;
     margin-left: 50px;
-    padding-bottom: 5px;
     position: relative;
     text-decoration: none;
     transition: color 300ms;
