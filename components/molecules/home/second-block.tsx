@@ -13,8 +13,10 @@ const SecondHomeBlock: React.FC<SecondHomeBlockProps> = ({
   return (
     <section className="second-home-block">
       <div className="second-block-inner">
+        <h3>Featured Projects</h3>
+        
         {featuredProjects.map((project: ProjectType, index: number) => (
-          <p key={index}>{project.title}</p>
+          <div key={index}>{project.title}</div>
         ))}
       </div>
     </section>

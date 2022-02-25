@@ -1,12 +1,14 @@
 @use '../abstracts/variables';
 
 .first-home-block {
-  background-color: variables.$grey900;
   display: flex;
-  
+  padding-bottom: 5rem;
 }
 
-.first-block-inner {
-  margin: 0 auto;
-  max-width: variables.$max-content;
+.second-home-block {
+  display: flex;
+
+  .second-block-inner {
+    // margin: 0 auto;
+  }
 }
