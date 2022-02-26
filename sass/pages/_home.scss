@@ -3,12 +3,18 @@
 .first-home-block {
   display: flex;
   padding-bottom: 5rem;
+
+  .first-block-inner {
+    margin: 0 auto;
+
+    .first-block-button {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
 }
 
 .second-home-block {
   display: flex;
-
-  .second-block-inner {
-    // margin: 0 auto;
-  }
 }

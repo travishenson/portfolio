@@ -21,6 +21,8 @@ const FirstHomeBlock: React.FC = () => {
             . I enjoy working across the full stack and have a passion for
             creating clean and easy-to-use sites and applications.
           </h4>
+        </div>
+        <div className="first-block-button">
           <Button
             variant="primary"
             size={isMobile ? 'sm' : 'md'}

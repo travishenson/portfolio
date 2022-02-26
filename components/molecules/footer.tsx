@@ -2,10 +2,10 @@ import React from 'react';
 import {isMobile} from 'react-device-detect';
 import {
   GithubIcon,
-  InstagramIcon,
+  // InstagramIcon,
   LinkedinIcon,
   MailIcon,
-  TwitterIcon,
+  // TwitterIcon,
 } from '../icons';
 
 const Footer: React.FC = () => {
@@ -19,9 +19,9 @@ const Footer: React.FC = () => {
             <MailIcon width={iconSize} height={iconSize} color="#F2F2F2" />
           </a>
           <GithubIcon width={iconSize} height={iconSize} color="#F2F2F2" />
-          <InstagramIcon width={iconSize} height={iconSize} color="#F2F2F2" />
+          {/* <InstagramIcon width={iconSize} height={iconSize} color="#F2F2F2" /> */}
           <LinkedinIcon width={iconSize} height={iconSize} color="#F2F2F2" />
-          <TwitterIcon width={iconSize} height={iconSize} color="#F2F2F2" />
+          {/* <TwitterIcon width={iconSize} height={iconSize} color="#F2F2F2" /> */}
         </div>
         <div className="footer-copyright text-small">
           <span>&copy; Travis Henson {new Date().getFullYear()}</span>
