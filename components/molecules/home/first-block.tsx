@@ -1,11 +1,12 @@
 import React from 'react';
 import {isMobile} from 'react-device-detect';
-import {HiOutlineArrowNarrowRight} from 'react-icons/hi';
+import {useRouter} from 'next/router';
 
-import {NavLink} from '../../atoms/nav-link';
 import {Button} from '../../atoms/button';
 
 const FirstHomeBlock: React.FC = () => {
+  const router = useRouter();
+
   return (
     <section className="first-home-block">
       <div className="first-block-inner">
@@ -20,12 +21,13 @@ const FirstHomeBlock: React.FC = () => {
             . I enjoy working across the full stack and have a passion for
             creating clean and easy-to-use sites and applications.
           </h4>
-          <NavLink href="/projects">
-            <Button variant="primary" size={isMobile ? 'sm' : 'md'}>
-              My Projects{' '}
-              <HiOutlineArrowNarrowRight style={{marginLeft: '5px'}} />
-            </Button>
-          </NavLink>
+          <Button
+            variant="primary"
+            size={isMobile ? 'sm' : 'md'}
+            onClick={() => router.push('/projects')}
+          >
+            My Projects
+          </Button>
         </div>
       </div>
     </section>
