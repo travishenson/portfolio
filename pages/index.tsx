@@ -5,7 +5,7 @@ import Layout from '../components/layout';
 import {getProjects} from '../lib/graphcms/projects';
 
 // Home page blocks
-import {FirstHomeBlock, SecondHomeBlock} from '../components/molecules/home';
+import {FirstHomeBlock, SecondHomeBlock, ThirdHomeBlock} from '../components/molecules/home';
 
 const Index: NextPage = ({
   featuredProjects,
@@ -15,6 +15,7 @@ const Index: NextPage = ({
       <FirstHomeBlock />
       <hr />
       <SecondHomeBlock featuredProjects={featuredProjects} />
+      <ThirdHomeBlock />
     </Layout>
   );
 };
