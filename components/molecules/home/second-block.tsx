@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {ProjectType} from '../../../lib/graphcms/projects';
-// import {ProjectTile} from '../project-tile';
+import {ProjectTile} from '../project-tile';
 
 interface SecondHomeBlockProps {
   featuredProjects: ProjectType[];
@@ -14,10 +14,15 @@ const SecondHomeBlock: React.FC<SecondHomeBlockProps> = ({
     <section className="second-home-block">
       <div className="second-block-inner">
         <h3>Featured Projects</h3>
-        
-        {featuredProjects.map((project: ProjectType, index: number) => (
-          <div key={index}>{project.title}</div>
-        ))}
+        <div className="featured-projects">
+          {featuredProjects.map((project: ProjectType) => (
+            <ProjectTile
+              {...project}
+              key={project.slug}
+              imageUrl={project.featuredImage.url}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );

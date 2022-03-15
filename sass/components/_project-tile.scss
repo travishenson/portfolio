@@ -1,101 +1,45 @@
 @use '../abstracts/variables';
 
 .project-tile {
-  height: max-content;
+  margin: 0 auto 5rem auto;
+  max-width: 875px;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .project-tile-inner {
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  margin: 0 auto;
-  max-width: variables.$max-content;
-  padding: 25px 50px;
-}
-
-.project-tile-left {
-  .project-text {
-    text-align: right;
-  }
-}
-
-.project-tile-right {
-  .project-image {
-    grid-column-start: 1;
-  }
-
-  .project-text {
-    text-align: left;
-  }
-}
-
-.project-text {
+  background-color: variables.$grey100;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  height: max-content;
+  padding: 1.5rem 3rem;
+  width: 100%;
 
-  .project-title {
-    color: variables.$black;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-  }
-
-  .project-overview {
-    align-self: flex-end;
-    font-size: 18px;
-    line-height: 1.5;
-    max-width: 500px;
+  .project-image {
+    margin: 0 auto;
+    max-width: 768px;
     width: 100%;
   }
 
-  .project-tech {
-    color: variables.$grey500;
-    font-size: 15px;
-  }
-}
-
-.tile-light-text {
-  .project-title,
-  .project-overview,
-  .project-tech {
-    color: variables.$grey100;
-  }
-}
-
-.tile-dark-text {
-  .project-title,
-  .project-overview,
-  .project-tech {
-    color: variables.$black;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .project-tile {
+  .project-text {
     align-items: center;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-    margin-bottom: 35px;
-    padding: 0;
-
-    .project-text {
-      padding: 0px 8vw 15px 8vw;
-      text-align: left;
-    }
+    color: variables.$black;
 
     .project-title {
-      font-size: 28px;
-    }
-
-    .project-description {
-      font-size: 16px;
-      width: 100%;
+      color: variables.$black;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
     }
 
     .project-tech {
-      font-size: 14px;
-      line-height: 1.25;
-      margin-top: 15px;
+      color: variables.$grey700;
+      font-size: 15px;
     }
   }
 }

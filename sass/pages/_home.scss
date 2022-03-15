@@ -2,7 +2,7 @@
 
 .first-home-block {
   display: flex;
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
 
   .first-block-inner {
     margin: 0 auto;
@@ -17,4 +17,19 @@
 
 .second-home-block {
   display: flex;
+
+  .second-block-inner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    > h3 {
+      text-align: center;
+    }
+
+    .featured-projects {
+      width: 100%;
+    }
+  }
 }
