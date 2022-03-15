@@ -9,7 +9,7 @@
 .desktop-nav {
   font-family: variables.$heading-text;
   height: 100px;
-  padding: 0px 50px;
+  padding: 0px 65px;
   position: fixed;
   top: 0;
   transition: all 0.25s;
@@ -20,7 +20,7 @@
 .desktop-nav-shadow {
   background-color: variables.$black;
   height: 75px;
-  padding: 0px 50px;
+  padding: 0px 65px;
 }
 
 .desktop-nav-no-shadow {

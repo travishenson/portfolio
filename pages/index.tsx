@@ -13,7 +13,6 @@ const Index: NextPage = ({
   return (
     <Layout pageTitle="Home">
       <FirstHomeBlock />
-      <hr />
       <SecondHomeBlock featuredProjects={featuredProjects} />
       <ThirdHomeBlock />
     </Layout>
