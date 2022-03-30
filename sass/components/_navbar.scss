@@ -1,0 +1,112 @@
+@use 'sass:color';
+@use '../abstracts/variables';
+
+.navbar-logo {
+  height: 45px;
+  width: 45px;
+}
+
+.desktop-nav {
+  font-family: variables.$heading-text;
+  height: 100px;
+  padding: 0px 65px;
+  position: fixed;
+  top: 0;
+  transition: all 0.25s;
+  width: 100%;
+  z-index: variables.$overlay;
+}
+
+.desktop-nav-shadow {
+  background-color: variables.$black;
+  height: 75px;
+  padding: 0px 65px;
+}
+
+.desktop-nav-no-shadow {
+  filter: none;
+}
+
+.nav-inner {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1366px;
+}
+
+.nav-right {
+  display: flex;
+}
+
+.nav-link {
+  display: flex;
+  font-size: 0.9rem;
+}
+
+.nav-links {
+  align-items: center;
+  display: flex;
+  margin-right: 50px;
+  flex-direction: row;
+
+  a {
+    color: variables.$grey300;
+    letter-spacing: 1px;
+    margin-left: 50px;
+    position: relative;
+    text-decoration: none;
+    transition: color 300ms;
+  }
+
+  a:hover {
+    color: variables.$grey100;
+  }
+
+  .active-page {
+    color: variables.$grey100;
+  }
+
+  .active-page::after {
+    background-color: variables.$grey100;
+    bottom: 0;
+    content: '';
+    left: 0;
+    height: 2px;
+    opacity: 1;
+    position: absolute;
+    transition: opacity 300ms, transform 300ms;
+    transform: translate3d(0, 0.1em, 0);
+    width: 100%;
+  }
+
+  a::after {
+    background-color: variables.$grey100;
+    bottom: 0;
+    content: '';
+    left: 0;
+    height: 2px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 300ms, transform 300ms;
+    width: 100%;
+  }
+
+  a:hover::after,
+  a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.1em, 0);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-inner {
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}

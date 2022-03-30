@@ -1,0 +1,35 @@
+@use '../abstracts/variables';
+
+.first-home-block {
+  display: flex;
+  padding-bottom: 10rem;
+
+  .first-block-inner {
+    margin: 0 auto;
+
+    .first-block-button {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
+}
+
+.second-home-block {
+  display: flex;
+
+  .second-block-inner {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    > h3 {
+      text-align: center;
+    }
+
+    .featured-projects {
+      width: 100%;
+    }
+  }
+}

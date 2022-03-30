@@ -1,0 +1,9 @@
+@use '../abstracts/variables';
+
+.about-main {
+  div {
+    margin: 0 auto;
+    max-width: 100%;
+    width: max-content;
+  }
+}

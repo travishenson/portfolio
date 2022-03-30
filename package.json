@@ -8,17 +8,57 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "lint": "next lint",
     "start": "next start"
   },
   "dependencies": {
-    "next": "^10.2.0",
+    "@babel/core": "^7.16.0",
+    "babel-preset-next": "^1.4.0",
+    "dayjs": "^1.10.7",
+    "emailjs-com": "^3.2.0",
+    "formik": "^2.2.9",
+    "framer-motion": "^5.5.5",
+    "graphql": "^15.6.1",
+    "graphql-request": "^3.6.1",
+    "loaders.css": "^0.1.2",
+    "next": "^11.1.2",
+    "next-seo": "^4.28.1",
+    "prop-types": "^15.7.2",
+    "query-string": "^7.0.1",
     "react": "^17.0.2",
+    "react-device-detect": "^2.1.2",
     "react-dom": "^17.0.2",
-    "react-ionicons": "^4.2.0"
+    "react-icons": "^4.3.1",
+    "react-loaders": "^3.0.1",
+    "react-loading-skeleton": "^3.0.1",
+    "react-markdown": "^7.1.0",
+    "remark-unwrap-images": "^3.0.1",
+    "sass": "^1.43.3"
   },
   "devDependencies": {
-    "@types/react": "^17.0.5",
-    "@types/react-dom": "^17.0.5",
-    "typescript": "^4.2.4"
+    "@next/eslint-plugin-next": "^12.0.3",
+    "@types/react": "^17.0.31",
+    "@types/react-dom": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "babel-plugin-styled-components": "^1.13.3",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-next": "^12.0.3",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "install-peers": "^1.0.3",
+    "lerna": "^4.0.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.4"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "tabWidth": 2
   }
 }

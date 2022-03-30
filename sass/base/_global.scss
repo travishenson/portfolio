@@ -1,0 +1,21 @@
+@use '../abstracts/variables';
+
+body {
+  background-color: variables.$grey900;
+  z-index: variables.$base;
+
+  @media screen and (max-width: 769px) {
+    padding-bottom: variables.$mobile-navbar-height;
+  }
+}
+
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}

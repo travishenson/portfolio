@@ -1,0 +1,26 @@
+@use '../abstracts/variables';
+
+.mobile-navbar {
+  background-color: variables.$grey900;
+  border-top: 2px solid variables.$grey700;
+  bottom: 0;
+  box-sizing: content-box;
+  height: variables.$mobile-navbar-height;
+  padding-bottom: env(safe-area-inset-bottom);
+  position: fixed;
+  width: 100vw;
+  z-index: variables.$overlay;
+
+  .mobile-navbar-inner {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .mobile-navbar {
+    display: none;
+  }
+}

@@ -1,0 +1,30 @@
+@use '../abstracts/variables';
+
+.email-button {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid variables.$grey300;
+  border-radius: 15px;
+  color: variables.$grey300;
+  display: inline-flex;
+  font-size: 0.8rem;
+  justify-content: center;
+  padding: 2.5px 20px;
+  transition: all 0.2s;
+
+  span {
+    margin-left: 7.5px;
+  }
+
+  &:hover {
+    background-color: variables.$grey100;
+    border-color: variables.$grey100;
+    color: variables.$grey900;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .email-button {
+    display: none;
+  }
+}
