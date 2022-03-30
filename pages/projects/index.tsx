@@ -8,14 +8,13 @@ import {getProjects, ProjectType} from '../../lib/graphcms/projects';
 const Projects: NextPage = ({
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  console.log(projects)
   return (
     <Layout pageTitle="Projects">
-      {projects.map((project: ProjectType, index: number) => (
+      {projects.map((project: ProjectType) => (
         <div key={project.slug} style={{marginBottom: '35px'}}>
           <ProjectTile
             imageUrl={project.featuredImage.url}
-            tileBgColorHex={project.tileBgColor.hex}
-            index={index}
             key={project.slug}
             {...project}
           />

@@ -19,6 +19,7 @@ export type ProjectType = {
   techStack: string[];
   tileBgColor: TileBgColor;
   slug: string;
+  liveProjectUrl: string;
 };
 
 const getProjects = async (isFeatured?: boolean) => {
@@ -40,6 +41,7 @@ const getProjects = async (isFeatured?: boolean) => {
           featuredImage {
             url
           }
+          liveProjectUrl
           role
           techStack
           tileBgColor {
