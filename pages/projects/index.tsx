@@ -8,7 +8,6 @@ import {getProjects, ProjectType} from '../../lib/graphcms/projects';
 const Projects: NextPage = ({
   projects,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  console.log(projects)
   return (
     <Layout pageTitle="Projects">
       {projects.map((project: ProjectType) => (

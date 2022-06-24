@@ -7,6 +7,7 @@ import {
   BriefcaseIcon,
   MailIcon,
   DocumentIcon,
+  ReaderIcon,
 } from '../../icons';
 
 interface NavTabTarget {
@@ -54,6 +55,15 @@ export const MobileNavTab: React.FC<MobileNavTabProps> = ({
         />
       );
       break;
+    case 'Blog':
+      tabIcon = (
+        <ReaderIcon
+          width={iconSize}
+          height={iconSize}
+          style={router.route === '/blog' ? 'filled' : 'outline'}
+        />
+      );
+      break;
     case 'Contact':
       tabIcon = (
         <MailIcon
@@ -76,7 +86,10 @@ export const MobileNavTab: React.FC<MobileNavTabProps> = ({
   return (
     <div className="mobile-nav-tab">
       {target.label === 'Contact' ? (
-        <div className="nav-tab-inner" onClick={() => router.replace(target.href)}>
+        <div
+          className="nav-tab-inner"
+          onClick={() => router.replace(target.href)}
+        >
           {tabIcon}
           {target.label}
         </div>
