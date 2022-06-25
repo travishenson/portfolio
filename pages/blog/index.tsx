@@ -9,6 +9,7 @@ const Blog: NextPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout pageTitle="Blog">
+      {blogPosts.length <= 0 && <div>Posts will be added here soon.</div>}
       {blogPosts.map((post: any) => (
         <div key={post.id}>{post.title}</div>
       ))}

@@ -12,7 +12,7 @@ const FirstHomeBlock: React.FC = () => {
       <div className="first-block-inner">
         <div className="first-block-inner-text">
           <h2>Hey, I&apos;m Travis.</h2>
-          <h4>
+          <p>
             I&apos;m a JavaScript developer currently working as a web engineer
             for{' '}
             <a href="https://getter.com.au" target="_blank" rel="noreferrer">
@@ -20,7 +20,7 @@ const FirstHomeBlock: React.FC = () => {
             </a>
             . I enjoy working across the full stack and have a passion for
             creating clean and easy-to-use sites and applications.
-          </h4>
+          </p>
         </div>
         <div className="first-block-button">
           <Button

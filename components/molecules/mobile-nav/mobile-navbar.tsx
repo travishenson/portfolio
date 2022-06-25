@@ -8,7 +8,7 @@ const MobileNavbar: React.FC = () => {
         <MobileNavTab target={{href: '/', label: 'Home'}} />
         <MobileNavTab target={{href: '/about', label: 'About'}} />
         <MobileNavTab target={{href: '/projects', label: 'Projects'}} />
-        <MobileNavTab target={{href: '/blog', label: 'Blog'}} />
+        {/* <MobileNavTab target={{href: '/blog', label: 'Blog'}} /> */}
         <MobileNavTab target={{href: 'mailto:hello@travishenson.com', label: 'Contact'}} />
       </div>
     </nav>
