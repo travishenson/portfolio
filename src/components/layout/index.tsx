@@ -12,15 +12,17 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({path, children}: LayoutProps) => {
+  console.log('What are you doing here? 🤨');
   const currentSlug = path ? path.split('/')[1] : '/';
 
   return (
-    <div className="bg-brand-grey-900 text-brand-grey-100 flex flex-col min-h-screen pt-4 relative w-full z-0">
+    <div className="bg-brand-grey-900 text-brand-grey-100 flex flex-col min-h-screen relative w-full z-0">
       <header>
         <Navbar currentSlug={currentSlug} />
-        {/* <MobileNavbar />  */}
       </header>
-      <main className="flex-1 my-8 mx-auto px-16 pt-[100px] pb-20 w-full max-w-content z-0">{children}</main>
+      <main className="flex-1 my-8 mx-auto px-16 pt-[100px] pb-20 w-full max-w-content z-0">
+        {children}
+      </main>
       <Footer />
     </div>
   );

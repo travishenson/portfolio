@@ -14,8 +14,6 @@ const BlogCard: React.FC<BlogCardProps> = ({
   slug,
   title,
 }) => {
-  console.log(title);
-
   return (
     <div>
       <div>

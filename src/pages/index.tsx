@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 
 const IndexPage = ({path, data}: PageProps<Queries.HomePageQuery>) => {
   const {edges: featuredProjects} = data.featuredProjects;
-  console.log(featuredProjects);
+
   return (
     <>
       <Helmet>

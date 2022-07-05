@@ -8,10 +8,8 @@ import {Button} from '../components/button';
 
 const AboutPage = ({
   path,
-  location,
   data,
 }: PageProps<Queries.AboutPageQuery>) => {
-  console.log(location);
   const pageContent = data?.aboutMe?.content as string;
 
   return (
