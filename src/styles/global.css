@@ -1,0 +1,43 @@
+@tailwind base;
+
+@layer base {
+  body {
+    @apply font-inter font-normal text-brand-grey-100 leading-[1.75];
+  }
+
+  /* Typography */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-outfit leading-[1.3];
+  }
+
+  h1 {
+    @apply mt-0 text-[2.488rem] md:text-[4.209rem];
+  }
+
+  h2 {
+    @apply text-[2.074rem] md:text-[3.157rem];
+  }
+
+  h3 {
+    @apply text-[1.728rem] md:text-[2.369rem];
+  }
+
+  h4 {
+    @apply text-[1.44rem] md:text-[1.777rem];
+  }
+
+  h5 {
+    @apply text-[1.2rem] md:text-[1.333rem];
+  }
+
+  p {
+    @apply mb-4 w-full max-w-text;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;

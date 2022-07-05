@@ -1,1 +1,0 @@
-export {default as InitialLoad} from './initial-load';
