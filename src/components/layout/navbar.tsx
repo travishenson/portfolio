@@ -16,6 +16,7 @@ interface NavLinkProps {
 
 interface NavbarProps {
   currentSlug: string;
+  isFullWidthPage: boolean;
 }
 
 const NavLink: React.FC<NavLinkProps> = ({
@@ -44,9 +45,15 @@ const NavLink: React.FC<NavLinkProps> = ({
   );
 };
 
-const Navbar: React.FC<NavbarProps> = ({currentSlug}) => {
+const Navbar: React.FC<NavbarProps> = ({currentSlug, isFullWidthPage}) => {
   return (
-    <Popover className="fixed w-full bg-brand-grey-900 z-30 border-b border-brand-grey-700">
+    <Popover
+      className={`fixed w-full z-30 ${
+        isFullWidthPage
+          ? 'bg-brand-black border-b border-brand-grey-900'
+          : 'bg-brand-black border-b border-brand-grey-900'
+      }`}
+    >
       <div
         className="absolute inset-0 pointer-events-none"
         aria-hidden="true"
