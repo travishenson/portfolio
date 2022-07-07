@@ -1233,6 +1233,7 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.liveProjectUrl'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.overview'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.pageContent'
+  | 'featuredImageBlogPost.featuredImage.featuredImageProject.projectType'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.publishedAt'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.remoteId'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.remoteTypeName'
@@ -1587,6 +1588,7 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageProject.featuredImage.featuredImageProject.liveProjectUrl'
   | 'featuredImageProject.featuredImage.featuredImageProject.overview'
   | 'featuredImageProject.featuredImage.featuredImageProject.pageContent'
+  | 'featuredImageProject.featuredImage.featuredImageProject.projectType'
   | 'featuredImageProject.featuredImage.featuredImageProject.publishedAt'
   | 'featuredImageProject.featuredImage.featuredImageProject.remoteId'
   | 'featuredImageProject.featuredImage.featuredImageProject.remoteTypeName'
@@ -1727,6 +1729,7 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageProject.parent.internal.type'
   | 'featuredImageProject.parent.parent.children'
   | 'featuredImageProject.parent.parent.id'
+  | 'featuredImageProject.projectType'
   | 'featuredImageProject.publishedAt'
   | 'featuredImageProject.publishedBy.children'
   | 'featuredImageProject.publishedBy.children.children'
@@ -2817,6 +2820,7 @@ type GraphCMS_BlogPostFieldsEnum =
   | 'featuredImage.featuredImageProject.pageContent'
   | 'featuredImage.featuredImageProject.parent.children'
   | 'featuredImage.featuredImageProject.parent.id'
+  | 'featuredImage.featuredImageProject.projectType'
   | 'featuredImage.featuredImageProject.publishedAt'
   | 'featuredImage.featuredImageProject.publishedBy.children'
   | 'featuredImage.featuredImageProject.publishedBy.createdAt'
@@ -4114,6 +4118,7 @@ type GraphCMS_Project = Node & {
   readonly overview: Scalars['String'];
   readonly pageContent: Maybe<Scalars['String']>;
   readonly parent: Maybe<Node>;
+  readonly projectType: Scalars['String'];
   readonly publishedAt: Maybe<Scalars['JSON']>;
   readonly publishedBy: Maybe<GraphCMS_User>;
   readonly remoteId: Scalars['ID'];
@@ -4461,6 +4466,7 @@ type GraphCMS_ProjectFieldsEnum =
   | 'featuredImage.featuredImageProject.pageContent'
   | 'featuredImage.featuredImageProject.parent.children'
   | 'featuredImage.featuredImageProject.parent.id'
+  | 'featuredImage.featuredImageProject.projectType'
   | 'featuredImage.featuredImageProject.publishedAt'
   | 'featuredImage.featuredImageProject.publishedBy.children'
   | 'featuredImage.featuredImageProject.publishedBy.createdAt'
@@ -4782,6 +4788,7 @@ type GraphCMS_ProjectFieldsEnum =
   | 'parent.parent.internal.type'
   | 'parent.parent.parent.children'
   | 'parent.parent.parent.id'
+  | 'projectType'
   | 'publishedAt'
   | 'publishedBy.children'
   | 'publishedBy.children.children'
@@ -5111,6 +5118,7 @@ type GraphCMS_ProjectFilterInput = {
   readonly overview: InputMaybe<StringQueryOperatorInput>;
   readonly pageContent: InputMaybe<StringQueryOperatorInput>;
   readonly parent: InputMaybe<NodeFilterInput>;
+  readonly projectType: InputMaybe<StringQueryOperatorInput>;
   readonly publishedAt: InputMaybe<JSONQueryOperatorInput>;
   readonly publishedBy: InputMaybe<GraphCMS_UserFilterInput>;
   readonly remoteId: InputMaybe<IDQueryOperatorInput>;
@@ -7834,6 +7842,7 @@ type Query_graphCmsProjectArgs = {
   overview: InputMaybe<StringQueryOperatorInput>;
   pageContent: InputMaybe<StringQueryOperatorInput>;
   parent: InputMaybe<NodeFilterInput>;
+  projectType: InputMaybe<StringQueryOperatorInput>;
   publishedAt: InputMaybe<JSONQueryOperatorInput>;
   publishedBy: InputMaybe<GraphCMS_UserFilterInput>;
   remoteId: InputMaybe<IDQueryOperatorInput>;
@@ -9627,7 +9636,7 @@ type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: 
 type HomePageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type HomePageQuery = { readonly featuredProjects: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly description: string, readonly featuredProject: boolean, readonly liveProjectUrl: string, readonly overview: string, readonly role: string | null, readonly slug: string, readonly techStack: ReadonlyArray<string>, readonly title: string, readonly featuredImage: { readonly url: string } } }> } };
+type HomePageQuery = { readonly featuredProjects: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly description: string, readonly featuredProject: boolean, readonly finishDate: Record<string, unknown> | null, readonly liveProjectUrl: string, readonly overview: string, readonly projectType: string, readonly role: string | null, readonly slug: string, readonly startDate: Record<string, unknown>, readonly techStack: ReadonlyArray<string>, readonly title: string, readonly featuredImage: { readonly gatsbyImageData: Record<string, unknown> | null }, readonly tileBgColor: { readonly hex: Record<string, unknown> } | null } }> } };
 
 type ProjectPageQueryVariables = Exact<{
   slug: Scalars['String'];

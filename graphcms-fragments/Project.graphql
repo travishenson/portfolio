@@ -16,6 +16,7 @@ fragment Project on Project {
   role
   techStack
   slug
+  sortOrder
   tileBgColor {
     ... on Color {
       hex
@@ -30,7 +31,7 @@ fragment Project on Project {
       css
     }
   }
-  sortOrder
+  projectType
   createdBy {
     ... on User {
       remoteTypeName: __typename

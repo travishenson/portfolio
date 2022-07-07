@@ -48,6 +48,7 @@ const IndexPage = ({path, data}: PageProps<Queries.HomePageQuery>) => {
                   src="../images/undraw_stars.svg"
                   alt="space illustration with moon and stars"
                   title="'Stars' illustration from undraw.co"
+                  loading="eager"
                 />
               </div>
             </div>
@@ -55,18 +56,22 @@ const IndexPage = ({path, data}: PageProps<Queries.HomePageQuery>) => {
         </Hero>
         <ContentWrapper>
           <section>
-            <h3 className="text-center">Featured Projects</h3>
-            {featuredProjects.map((project) => {
-              const {featuredImage, slug} = project.node;
+            <h3 className="text-center tracking-wide">Featured Projects</h3>
+            <div className="flex flex-col mt-12 px-8 gap-16">
+              {featuredProjects.map((project, index) => {
+                const {featuredImage, projectType, slug} = project.node;
 
-              return (
-                <ProjectCard
-                  {...project.node}
-                  key={slug}
-                  image={featuredImage}
-                />
-              );
-            })}
+                return (
+                  <ProjectCard
+                    {...project.node}
+                    key={slug}
+                    index={index}
+                    image={featuredImage}
+                    type={projectType}
+                  />
+                );
+              })}
+            </div>
           </section>
         </ContentWrapper>
       </Layout>
@@ -85,14 +90,20 @@ export const pageQuery = graphql`
           id
           description
           featuredImage {
-            url
+            gatsbyImageData(width: 1500, layout: FIXED, placeholder: BLURRED)
           }
           featuredProject
+          finishDate
           liveProjectUrl
           overview
+          projectType
           role
           slug
+          startDate
           techStack
+          tileBgColor {
+            hex
+          }
           title
         }
       }
