@@ -26,17 +26,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const isImageLeft = index % 2 === 0;
 
   const imageLeftStyles = {
-    card: 'flex-row rounded-l-xl rounded-r-lg',
-    image: 'rounded-l-lg',
+    card: 'flex md:flex-row rounded-t-xl rounded-b-xl md:rounded-l-xl md:rounded-r-lg',
+    image: 'rounded-t-lg md:rounded-tr-none md:rounded-l-lg',
   };
   const imageRightStyles = {
-    card: 'flex-row-reverse rounded-r-xl rounded-l-lg',
-    image: 'rounded-r-lg',
+    card: 'flex md:flex-row-reverse rounded-t-xl rounded-b-xl md:rounded-r-xl md:rounded-l-lg',
+    image: 'w-full rounded-t-lg md:rounded-tl-none md:rounded-r-lg ',
   };
 
   return (
     <div
-      className={`w-full h-[450px] flex bg-brand-grey-100 shadow-lg shadow-brand-black justify-start text-brand-grey-900 ${
+      className={`w-full h-full md:h-[450px] flex flex-col md:flex-row bg-brand-grey-100 shadow-lg shadow-brand-black justify-start text-brand-grey-900 ${
         isImageLeft ? imageLeftStyles.card : imageRightStyles.card
       }`}
     >
@@ -47,13 +47,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           isImageLeft ? imageLeftStyles.image : imageRightStyles.image
         }`}
       /> */}
-      <img
-        src="https://images.unsplash.com/photo-1461301214746-1e109215d6d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-        className={`w-3/5 object-cover ${
-          isImageLeft ? imageLeftStyles.image : imageRightStyles.image
-        }`}
-      />
-      <div className="flex flex-col h-full justify-center  w-2/5 p-8">
+      <Link to={`/projects/${slug}`} className="w-full md:w-3/5 h-full">
+        <img
+          src="https://images.unsplash.com/photo-1461301214746-1e109215d6d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+          className={`w-full h-full object-cover ${
+            isImageLeft ? imageLeftStyles.image : imageRightStyles.image
+          }`}
+        />
+      </Link>
+      <div className="flex flex-col h-full justify-center w-full md:w-2/5 p-8">
         <span className="flex flex-row text-sm italic text-brand-grey-700">
           {type} &mdash; {role}
         </span>
@@ -68,10 +70,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
         <Link
           to={`/projects/${slug}`}
-          className="flex gap-1 h-8 items-center mt-4 max-w-max hover:cursor-pointer hover:text-brand-blue-500"
+          className="group flex h-8 items-center mt-4 max-w-max hover:cursor-pointer hover:text-brand-blue-500"
         >
-          <div className="h-full font-outfit text-base flex items-center">View Project</div>
-          <ArrowNarrowRightIcon className="h-6 mt-0.5" />
+          <div className="h-full font-outfit text-base flex items-center">
+            View Project
+          </div>
+          <ArrowNarrowRightIcon className="h-6 mt-0.5 ml-0.5 group-hover:translate-x-1 transition-all duration-500" />
         </Link>
       </div>
     </div>

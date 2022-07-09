@@ -15,8 +15,8 @@ const BlogPage = ({path, data}: PageProps<Queries.BlogPageQuery>) => {
         <title>Blog | Travis Henson</title>
         <link rel="canonical" href="https://travishenson.com/blog" />
       </Helmet>
-      <Layout path={path}>
-        <div>
+      <Layout path={path} title="Blog">
+        <div className="flex flex-col mt-12 gap-16">
           {blogPosts.map((blogPost) => (
             <BlogCard
               {...blogPost}

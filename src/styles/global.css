@@ -1,8 +1,12 @@
 @tailwind base;
 
 @layer base {
+  html {
+    @apply h-screen bg-brand-grey-900;
+  }
+
   body {
-    @apply font-inter font-normal text-brand-grey-100 leading-[1.75];
+    @apply h-screen font-inter font-normal text-brand-grey-100 leading-[1.75] overscroll-none;
   }
 
   /* Typography */

@@ -48,7 +48,7 @@ const NavLink: React.FC<NavLinkProps> = ({
 const Navbar: React.FC<NavbarProps> = ({currentSlug, isFullWidthPage}) => {
   return (
     <Popover
-      className={`fixed w-full z-30 ${
+      className={`fixed w-full z-30 shadow-md shadow-brand-grey-900 ${
         isFullWidthPage
           ? 'bg-brand-black border-b border-brand-grey-900'
           : 'bg-brand-black border-b border-brand-grey-900'
@@ -115,8 +115,11 @@ const Navbar: React.FC<NavbarProps> = ({currentSlug, isFullWidthPage}) => {
                   </Popover.Button>
                 </div>
               </div>
-              <div className="mt-8 sm:mt-10">
+              <div className="mt-8 px-4 sm:mt-10">
                 <nav className="flex flex-col items-end gap-12 text-xl md:hidden">
+                  <NavLink href="/" currentSlug={currentSlug}>
+                    Home
+                  </NavLink>
                   <NavLink href="/about" currentSlug={currentSlug}>
                     About
                   </NavLink>

@@ -7,7 +7,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({children}) => {
   return (
     <div className="w-full bg-brand-black">
-      <div className="w-full max-w-content h-[70vh] mx-auto">{children}</div>
+      <div className="w-full max-w-content h-screen mx-auto px-8">{children}</div>
     </div>
   );
 };

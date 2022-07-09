@@ -21,29 +21,29 @@ const IndexPage = ({path, data}: PageProps<Queries.HomePageQuery>) => {
       <Layout path={path}>
         <Hero>
           <section className="flex flex-1 h-full items-center">
-            <div className="flex flex-row flex-wrap w-full justify-between items-center gap-6 px-8">
-              <div className="mx-auto">
+            <div className="flex flex-row flex-wrap w-full justify-between items-center gap-6 px-8 mt-8 md:mt-0">
+              <div className="mx-auto max-w-text">
                 <h1 className="mb-6">Hey, I&apos;m Travis.</h1>
-                <p className="text-lg md:text-xl font-light">
+                <p className="text-lg md:text-xl">
                   I&apos;m a JavaScript developer who enjoys working across the
                   full stack and has a passion for creating clean and
                   easy-to-use sites and applications.
                 </p>
-                <p className="text-lg md:text-xl font-light max-w-text">
-                  Currently, I'm part of the team that is building and
+                <p className="text-lg md:text-xl">
+                  Currently, I'm part of the team building and
                   maintaining
                   <a
                     href="https://getter.com.au"
                     target="_blank"
                     rel="noreferrer"
-                    className="ml-1.5 font-medium tracking-wider underline underline-offset-2 text-brand-grey-100 hover:text-brand-grey-300"
+                    className="ml-1.5 font-medium underline underline-offset-2 text-brand-grey-100 hover:text-brand-grey-300"
                   >
                     Getter
                   </a>
                   .
                 </p>
               </div>
-              <div className="w-[450px] mx-auto">
+              <div className="w-10/12 md:w-[30vw] mt-8 mx-auto">
                 <StaticImage
                   src="../images/undraw_stars.svg"
                   alt="space illustration with moon and stars"

@@ -6,7 +6,7 @@ import Layout from '../../components/layout';
 import {ProjectCard} from '../../components/cards';
 
 const ProjectsPage = ({path, data}: PageProps<Queries.ProjectsPageQuery>) => {
-  const projects = [...data.allGraphCmsProject.nodes];
+  const {edges: projects} = data.projects;
 
   return (
     <>
@@ -15,15 +15,21 @@ const ProjectsPage = ({path, data}: PageProps<Queries.ProjectsPageQuery>) => {
         <title>Projects | Travis Henson</title>
         <link rel="canonical" href="https://travishenson.com/projects" />
       </Helmet>
-      <Layout path={path}>
-        <div>
-          {projects.map((project) => (
-            <ProjectCard
-              {...project}
-              key={project.slug}
-              image={project.featuredImage?.localFile?.childImageSharp?.gatsbyImageData ?? null}
-            />
-          ))}
+      <Layout path={path} title="Projects">
+        <div className="flex flex-col mt-12 gap-16">
+          {projects.map((project, index) => {
+            const {featuredImage, projectType, slug} = project.node;
+
+            return (
+              <ProjectCard
+                {...project.node}
+                key={slug}
+                index={index}
+                image={featuredImage}
+                type={projectType}
+              />
+            );
+          })}
         </div>
       </Layout>
     </>
@@ -32,28 +38,28 @@ const ProjectsPage = ({path, data}: PageProps<Queries.ProjectsPageQuery>) => {
 
 export const pageQuery = graphql`
   query ProjectsPage {
-    allGraphCmsProject(filter: {stage: {eq: PUBLISHED}}) {
-      nodes {
-        description
-        featuredImage {
-          localFile {
-            childImageSharp {
-              gatsbyImageData(
-                width: 560
-                layout: CONSTRAINED
-                placeholder: DOMINANT_COLOR
-              )
-            }
+    projects: allGraphCmsProject(
+      filter: {stage: {eq: PUBLISHED}}
+      sort: {fields: finishDate, order: DESC}
+    ) {
+      edges {
+        node {
+          id
+          description
+          featuredImage {
+            gatsbyImageData(width: 1500, layout: FIXED, placeholder: BLURRED)
           }
+          featuredProject
+          finishDate
+          liveProjectUrl
+          overview
+          projectType
+          role
+          slug
+          startDate
+          techStack
+          title
         }
-        finishDate
-        liveProjectUrl
-        overview
-        role
-        slug
-        startDate
-        techStack
-        title
       }
     }
   }

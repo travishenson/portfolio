@@ -9648,7 +9648,7 @@ type ProjectPageQuery = { readonly graphCmsProject: { readonly description: stri
 type ProjectsPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type ProjectsPageQuery = { readonly allGraphCmsProject: { readonly nodes: ReadonlyArray<{ readonly description: string, readonly finishDate: Record<string, unknown> | null, readonly liveProjectUrl: string, readonly overview: string, readonly role: string | null, readonly slug: string, readonly startDate: Record<string, unknown>, readonly techStack: ReadonlyArray<string>, readonly title: string, readonly featuredImage: { readonly localFile: { readonly childImageSharp: { readonly gatsbyImageData: import('gatsby-plugin-image').IGatsbyImageData } | null } | null } }> } };
+type ProjectsPageQuery = { readonly projects: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly description: string, readonly featuredProject: boolean, readonly finishDate: Record<string, unknown> | null, readonly liveProjectUrl: string, readonly overview: string, readonly projectType: string, readonly role: string | null, readonly slug: string, readonly startDate: Record<string, unknown>, readonly techStack: ReadonlyArray<string>, readonly title: string, readonly featuredImage: { readonly gatsbyImageData: Record<string, unknown> | null } } }> } };
 
 
 }

@@ -9,9 +9,14 @@ import {Footer} from './footer';
 interface LayoutProps {
   path: string;
   children: ReactNode;
+  title?: string;
 }
 
-const Layout: React.FC<LayoutProps> = ({path, children}: LayoutProps) => {
+const Layout: React.FC<LayoutProps> = ({
+  path,
+  children,
+  title,
+}: LayoutProps) => {
   console.log('What are you doing here? 🤨');
   const currentSlug = path ? path.split('/')[1] : '/';
 
@@ -25,9 +30,12 @@ const Layout: React.FC<LayoutProps> = ({path, children}: LayoutProps) => {
       </header>
       <main
         className={`flex-1 mx-auto pb-20 w-full z-0 ${
-          isFullWidthPage ? '' : 'max-w-content my-8 px-16 pt-[100px]'
+          isFullWidthPage ? '' : 'max-w-content my-8 px-12 pt-[100px]'
         }`}
       >
+        {title ? (
+          <h1 className="text-[2.074rem] md:text-[3.157rem]">{title}</h1>
+        ) : null}
         {children}
       </main>
       <Footer />
