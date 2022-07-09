@@ -18,7 +18,7 @@ const IndexPage = ({path, data}: PageProps<Queries.HomePageQuery>) => {
         <title>Travis Henson | JavaScript Developer</title>
         <link rel="canonical" href="https://travishenson.com" />
       </Helmet>
-      <Layout path={path}>
+      <Layout path={path} isFullWidth>
         <Hero>
           <section className="flex flex-1 h-full items-center">
             <div className="flex flex-row flex-wrap w-full justify-between items-center gap-6 px-8 mt-8 md:mt-0">
@@ -43,7 +43,7 @@ const IndexPage = ({path, data}: PageProps<Queries.HomePageQuery>) => {
                   .
                 </p>
               </div>
-              <div className="w-10/12 md:w-[30vw] mt-8 mx-auto">
+              <div className="w-9/12 md:w-[25vw] lg:w-[30vw] mt-8 mx-auto">
                 <StaticImage
                   src="../images/undraw_stars.svg"
                   alt="space illustration with moon and stars"

@@ -19,7 +19,7 @@
   }
 
   h1 {
-    @apply mt-0 text-[2.488rem] md:text-[4.209rem];
+    @apply mt-0 text-[2.488rem] md:text-[3.357rem] lg:text-[4.209rem];
   }
 
   h2 {

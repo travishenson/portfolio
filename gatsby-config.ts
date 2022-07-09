@@ -2,6 +2,9 @@ import type {GatsbyConfig} from 'gatsby';
 import 'dotenv/config';
 
 const config: GatsbyConfig = {
+  flags: {
+    DEV_SSR: true,
+  },
   siteMetadata: {
     title: `Travis Henson - JavaScript Developer`,
     siteUrl: `https://www.travishenson.com`,

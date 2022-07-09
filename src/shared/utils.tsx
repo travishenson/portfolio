@@ -6,6 +6,8 @@ import {
   SiTailwindcss,
   SiGraphql,
   SiSupabase,
+  SiExpo,
+  SiGatsby,
 } from 'react-icons/si';
 
 export const parseProjectDates = (
@@ -24,7 +26,7 @@ export const parseProjectDates = (
 export const textToIcon = (text: string): JSX.Element | null => {
   const iconStyle = {
     fontSize: '150%',
-    margin: '0 5px'
+    margin: '0 5px',
   };
 
   let icon: JSX.Element | null;
@@ -45,14 +47,20 @@ export const textToIcon = (text: string): JSX.Element | null => {
     case 'Supabase':
       icon = <SiSupabase title="Supabase" />;
       break;
+    case 'Gatsby':
+      icon = <SiGatsby title="Gatsby" />;
+      break;
+    case 'Expo':
+      icon = <SiExpo title="Expo" />;
+      break;
     default:
       return null;
   }
 
   return (
-    <div className="flex flex-row items-center text-sm">
+    <div className="flex flex-row items-center px-4">
       <div style={iconStyle}>{icon}</div>
-      <div className="font-outfit">{text}</div>
+      <div className="font-outfit ml-1">{text}</div>
     </div>
   );
 };

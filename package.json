@@ -33,6 +33,7 @@
     "gatsby-plugin-sass": "^5.17.0",
     "gatsby-plugin-sharp": "^4.17.0",
     "gatsby-plugin-sitemap": "^5.17.0",
+    "gatsby-plugin-styled-components": "^5.18.0",
     "gatsby-source-filesystem": "^4.17.0",
     "gatsby-source-graphcms": "^2.8.0",
     "gatsby-transformer-sharp": "^4.17.0",

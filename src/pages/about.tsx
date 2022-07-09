@@ -17,7 +17,7 @@ const AboutPage = ({path, data}: PageProps<Queries.AboutPageQuery>) => {
         <link rel="canonical" href="https://travishenson.com/about" />
       </Helmet>
       <Layout path={path}>
-        <div className="max-w-text mx-auto">
+        <div className="max-w-text mx-auto mt-8">
           <ReactMarkdown
             components={{
               p({node, className, children, ...props}) {
@@ -36,7 +36,7 @@ const AboutPage = ({path, data}: PageProps<Queries.AboutPageQuery>) => {
               },
               ul({children}) {
                 return (
-                  <div className="flex flex-row flex-wrap gap-8 justify-center mt-4 mb-12">
+                  <div className="flex flex-row flex-wrap gap-4 justify-center mt-4 mb-12">
                     {children}
                   </div>
                 );

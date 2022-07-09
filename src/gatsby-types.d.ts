@@ -7962,6 +7962,7 @@ type Query_mdxArgs = {
 type Query_siteArgs = {
   buildTime: InputMaybe<DateQueryOperatorInput>;
   children: InputMaybe<NodeFilterListInput>;
+  flags: InputMaybe<SiteFlagsFilterInput>;
   graphqlTypegen: InputMaybe<BooleanQueryOperatorInput>;
   host: InputMaybe<StringQueryOperatorInput>;
   id: InputMaybe<StringQueryOperatorInput>;
@@ -8074,6 +8075,7 @@ type Query_staticImageArgs = {
 type Site = Node & {
   readonly buildTime: Maybe<Scalars['Date']>;
   readonly children: ReadonlyArray<Node>;
+  readonly flags: Maybe<SiteFlags>;
   readonly graphqlTypegen: Maybe<Scalars['Boolean']>;
   readonly host: Maybe<Scalars['String']>;
   readonly id: Scalars['ID'];
@@ -8385,6 +8387,7 @@ type SiteFieldsEnum =
   | 'children.parent.internal.type'
   | 'children.parent.parent.children'
   | 'children.parent.parent.id'
+  | 'flags.DEV_SSR'
   | 'graphqlTypegen'
   | 'host'
   | 'id'
@@ -8446,6 +8449,7 @@ type SiteFieldsEnum =
 type SiteFilterInput = {
   readonly buildTime: InputMaybe<DateQueryOperatorInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
+  readonly flags: InputMaybe<SiteFlagsFilterInput>;
   readonly graphqlTypegen: InputMaybe<BooleanQueryOperatorInput>;
   readonly host: InputMaybe<StringQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
@@ -8457,6 +8461,14 @@ type SiteFilterInput = {
   readonly port: InputMaybe<IntQueryOperatorInput>;
   readonly siteMetadata: InputMaybe<SiteSiteMetadataFilterInput>;
   readonly trailingSlash: InputMaybe<StringQueryOperatorInput>;
+};
+
+type SiteFlags = {
+  readonly DEV_SSR: Maybe<Scalars['Boolean']>;
+};
+
+type SiteFlagsFilterInput = {
+  readonly DEV_SSR: InputMaybe<BooleanQueryOperatorInput>;
 };
 
 type SiteFunction = Node & {
