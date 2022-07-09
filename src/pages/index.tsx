@@ -90,7 +90,7 @@ export const pageQuery = graphql`
           id
           description
           featuredImage {
-            gatsbyImageData(width: 1500, layout: FIXED, placeholder: BLURRED)
+            gatsbyImageData(width: 1500, layout: CONSTRAINED, placeholder: BLURRED)
           }
           featuredProject
           finishDate

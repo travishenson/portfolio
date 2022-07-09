@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/pages/*.{js,jsx,ts,tsx}',
+    './src/pages/**/*.{js,jsx,ts,tsx}',
     './src/components/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
@@ -28,13 +28,13 @@ module.exports = {
         'brand-black': '#080808',
       },
       maxWidth: {
-        'content': '1400px',
-        'text': '70ch',
+        content: '1400px',
+        text: '70ch',
       },
     },
   },
   variants: {
     fill: ['hover', 'focus'],
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 };

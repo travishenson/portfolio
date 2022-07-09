@@ -23,6 +23,16 @@ export const parseProjectDates = (
   };
 };
 
+export const parseBlogPostDate = (
+  publishedAt: Record<string, unknown> | null
+): string => {
+  const rawPublishedDate = String(publishedAt);
+
+  console.log(rawPublishedDate);
+
+  return publishedAt ? dayjs(rawPublishedDate).format('MMM D, YYYY') : '';
+};
+
 export const textToIcon = (text: string): JSX.Element | null => {
   const iconStyle = {
     fontSize: '150%',

@@ -5,6 +5,8 @@ import {Helmet} from 'react-helmet';
 import Layout from '../../components/layout';
 import BlogCard from '../../components/cards/blog-card';
 
+import {parseBlogPostDate} from '../../shared/utils';
+
 const BlogPage = ({path, data}: PageProps<Queries.BlogPageQuery>) => {
   const blogPosts = [...data.allGraphCmsBlogPost.nodes];
 
@@ -16,11 +18,12 @@ const BlogPage = ({path, data}: PageProps<Queries.BlogPageQuery>) => {
         <link rel="canonical" href="https://travishenson.com/blog" />
       </Helmet>
       <Layout path={path} title="Blog">
-        <div className="flex flex-col mt-12 gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
           {blogPosts.map((blogPost) => (
             <BlogCard
               {...blogPost}
               key={blogPost.slug}
+              publishedAt={parseBlogPostDate(blogPost.publishedAt)}
               image={
                 blogPost.featuredImage?.localFile?.childImageSharp
                   ?.gatsbyImageData ?? null
@@ -43,12 +46,13 @@ export const pageQuery = graphql`
               gatsbyImageData(
                 width: 560
                 layout: CONSTRAINED
-                placeholder: DOMINANT_COLOR
+                placeholder: BLURRED
               )
             }
           }
         }
         overview
+        publishedAt
         slug
         title
       }
