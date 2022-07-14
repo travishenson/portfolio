@@ -32,6 +32,14 @@ fragment Project on Project {
     }
   }
   projectType
+  content {
+    ... on RichText {
+      raw
+      html
+      markdown
+      text
+    }
+  }
   createdBy {
     ... on User {
       remoteTypeName: __typename

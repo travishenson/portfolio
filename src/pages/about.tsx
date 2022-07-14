@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 import {graphql, PageProps} from 'gatsby';
 import {Helmet} from 'react-helmet';
 import ReactMarkdown from 'react-markdown';

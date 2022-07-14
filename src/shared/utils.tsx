@@ -11,8 +11,8 @@ import {
 } from 'react-icons/si';
 
 export const parseProjectDates = (
-  startDate: Record<string, unknown>,
-  finishDate: Record<string, unknown> | null
+  startDate?: Record<string, unknown>,
+  finishDate?: Record<string, unknown> | null
 ): {start: string; finish: string} => {
   const rawStartDate = String(startDate);
   const rawFinishDate = String(finishDate);

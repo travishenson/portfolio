@@ -1519,6 +1519,11 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageProject.children.parent.children'
   | 'featuredImageProject.children.parent.id'
   | 'featuredImageProject.client'
+  | 'featuredImageProject.content.html'
+  | 'featuredImageProject.content.markdown'
+  | 'featuredImageProject.content.raw'
+  | 'featuredImageProject.content.remoteTypeName'
+  | 'featuredImageProject.content.text'
   | 'featuredImageProject.createdAt'
   | 'featuredImageProject.createdBy.children'
   | 'featuredImageProject.createdBy.children.children'
@@ -2770,6 +2775,11 @@ type GraphCMS_BlogPostFieldsEnum =
   | 'featuredImage.featuredImageProject.children.children'
   | 'featuredImage.featuredImageProject.children.id'
   | 'featuredImage.featuredImageProject.client'
+  | 'featuredImage.featuredImageProject.content.html'
+  | 'featuredImage.featuredImageProject.content.markdown'
+  | 'featuredImage.featuredImageProject.content.raw'
+  | 'featuredImage.featuredImageProject.content.remoteTypeName'
+  | 'featuredImage.featuredImageProject.content.text'
   | 'featuredImage.featuredImageProject.createdAt'
   | 'featuredImage.featuredImageProject.createdBy.children'
   | 'featuredImage.featuredImageProject.createdBy.createdAt'
@@ -4105,6 +4115,7 @@ type GraphCMS_PageContentSortInput = {
 type GraphCMS_Project = Node & {
   readonly children: ReadonlyArray<Node>;
   readonly client: Scalars['String'];
+  readonly content: GraphCMS_RichText;
   readonly createdAt: Scalars['JSON'];
   readonly createdBy: Maybe<GraphCMS_User>;
   readonly description: Scalars['String'];
@@ -4227,6 +4238,11 @@ type GraphCMS_ProjectFieldsEnum =
   | 'children.parent.parent.children'
   | 'children.parent.parent.id'
   | 'client'
+  | 'content.html'
+  | 'content.markdown'
+  | 'content.raw'
+  | 'content.remoteTypeName'
+  | 'content.text'
   | 'createdAt'
   | 'createdBy.children'
   | 'createdBy.children.children'
@@ -4416,6 +4432,11 @@ type GraphCMS_ProjectFieldsEnum =
   | 'featuredImage.featuredImageProject.children.children'
   | 'featuredImage.featuredImageProject.children.id'
   | 'featuredImage.featuredImageProject.client'
+  | 'featuredImage.featuredImageProject.content.html'
+  | 'featuredImage.featuredImageProject.content.markdown'
+  | 'featuredImage.featuredImageProject.content.raw'
+  | 'featuredImage.featuredImageProject.content.remoteTypeName'
+  | 'featuredImage.featuredImageProject.content.text'
   | 'featuredImage.featuredImageProject.createdAt'
   | 'featuredImage.featuredImageProject.createdBy.children'
   | 'featuredImage.featuredImageProject.createdBy.createdAt'
@@ -5105,6 +5126,7 @@ type GraphCMS_ProjectFieldsEnum =
 type GraphCMS_ProjectFilterInput = {
   readonly children: InputMaybe<NodeFilterListInput>;
   readonly client: InputMaybe<StringQueryOperatorInput>;
+  readonly content: InputMaybe<GraphCMS_RichTextFilterInput>;
   readonly createdAt: InputMaybe<JSONQueryOperatorInput>;
   readonly createdBy: InputMaybe<GraphCMS_UserFilterInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
@@ -5200,6 +5222,22 @@ type GraphCMS_RGBAFilterInput = {
   readonly g: InputMaybe<JSONQueryOperatorInput>;
   readonly r: InputMaybe<JSONQueryOperatorInput>;
   readonly remoteTypeName: InputMaybe<StringQueryOperatorInput>;
+};
+
+type GraphCMS_RichText = {
+  readonly html: Scalars['String'];
+  readonly markdown: Scalars['String'];
+  readonly raw: Scalars['JSON'];
+  readonly remoteTypeName: Scalars['String'];
+  readonly text: Scalars['String'];
+};
+
+type GraphCMS_RichTextFilterInput = {
+  readonly html: InputMaybe<StringQueryOperatorInput>;
+  readonly markdown: InputMaybe<StringQueryOperatorInput>;
+  readonly raw: InputMaybe<JSONQueryOperatorInput>;
+  readonly remoteTypeName: InputMaybe<StringQueryOperatorInput>;
+  readonly text: InputMaybe<StringQueryOperatorInput>;
 };
 
 type GraphCMS_ScheduledOperation = Node & {
@@ -7829,6 +7867,7 @@ type Query_graphCmsPageContentArgs = {
 type Query_graphCmsProjectArgs = {
   children: InputMaybe<NodeFilterListInput>;
   client: InputMaybe<StringQueryOperatorInput>;
+  content: InputMaybe<GraphCMS_RichTextFilterInput>;
   createdAt: InputMaybe<JSONQueryOperatorInput>;
   createdBy: InputMaybe<GraphCMS_UserFilterInput>;
   description: InputMaybe<StringQueryOperatorInput>;
@@ -9643,7 +9682,7 @@ type ProjectPageQueryVariables = Exact<{
 }>;
 
 
-type ProjectPageQuery = { readonly graphCmsProject: { readonly description: string, readonly finishDate: Record<string, unknown> | null, readonly liveProjectUrl: string, readonly overview: string, readonly pageContent: string | null, readonly role: string | null, readonly slug: string, readonly startDate: Record<string, unknown>, readonly techStack: ReadonlyArray<string>, readonly title: string, readonly featuredImage: { readonly url: string } } | null };
+type ProjectPageQuery = { readonly graphCmsProject: { readonly description: string, readonly finishDate: Record<string, unknown> | null, readonly liveProjectUrl: string, readonly overview: string, readonly pageContent: string | null, readonly projectType: string, readonly role: string | null, readonly slug: string, readonly startDate: Record<string, unknown>, readonly techStack: ReadonlyArray<string>, readonly title: string, readonly content: { readonly raw: Record<string, unknown> }, readonly featuredImage: { readonly url: string } } | null };
 
 type ProjectsPageQueryVariables = Exact<{ [key: string]: never; }>;
 
