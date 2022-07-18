@@ -1,7 +1,7 @@
 import React from 'react';
 import {graphql, PageProps} from 'gatsby';
 import {Helmet} from 'react-helmet';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'markdown-to-jsx';
 
 import Layout from '../../components/layout';
 
@@ -16,7 +16,7 @@ const BlogPost = ({data, path}: PageProps<Queries.BlogPostQuery>) => {
         <link rel="canonical" href="https://travishenson.com" />
       </Helmet>
       <Layout path={path}>
-        <ReactMarkdown>{blogPost.content as string}</ReactMarkdown>
+        <Markdown>{blogPost.content as string}</Markdown>
       </Layout>
     </>
   );
