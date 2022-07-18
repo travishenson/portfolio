@@ -30,7 +30,10 @@ const ProjectPage = (props: PageProps<Queries.ProjectPageQuery>) => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>{project.title} | Travis Henson</title>
-        <link rel="canonical" href="https://travishenson.com" />
+        <link
+          rel="canonical"
+          href={`https://travishenson.com/projects/${project.slug}`}
+        />
       </Helmet>
       <Layout path={props.path} isFullWidth>
         <div className="w-full h-[55vh] bg-brand-black text-brand-grey-100 px-8">

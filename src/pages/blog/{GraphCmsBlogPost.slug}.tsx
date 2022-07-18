@@ -13,7 +13,10 @@ const BlogPost = ({data, path}: PageProps<Queries.BlogPostQuery>) => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>{blogPost.title} | Travis Henson</title>
-        <link rel="canonical" href="https://travishenson.com" />
+        <link
+          rel="canonical"
+          href={`https://travishenson.com/blog/${blogPost.slug}`}
+        />
       </Helmet>
       <Layout path={path}>
         <Markdown>{blogPost.content as string}</Markdown>
