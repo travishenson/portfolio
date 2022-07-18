@@ -43,7 +43,7 @@ const IndexPage = ({path, data}: PageProps<Queries.HomePageQuery>) => {
                   .
                 </p>
               </div>
-              <div className="w-9/12 md:w-[25vw] lg:w-[30vw] mt-8 mx-auto">
+              <div className="w-9/12 md:w-[25vw] lg:w-[30vw] lg:max-w-lg mt-8 mx-auto">
                 <StaticImage
                   src="../images/undraw_stars.svg"
                   alt="space illustration with moon and stars"
