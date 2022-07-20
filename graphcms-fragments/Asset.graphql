@@ -11,6 +11,8 @@ fragment Asset on Asset {
   width
   size
   mimeType
+  altText
+  slug
   createdBy {
     ... on User {
       remoteTypeName: __typename
@@ -41,6 +43,13 @@ fragment Asset on Asset {
   }
   featuredImageBlogPost {
     ... on BlogPost {
+      remoteTypeName: __typename
+      remoteId: id
+      stage
+    }
+  }
+  projectImagesProject {
+    ... on Project {
       remoteTypeName: __typename
       remoteId: id
       stage
