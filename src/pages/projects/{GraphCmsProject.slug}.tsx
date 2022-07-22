@@ -49,7 +49,7 @@ const ProjectPage = (props: PageProps<Queries.ProjectPageQuery>) => {
         />
       </Helmet>
       <Layout path={props.path} isFullWidth>
-        <div className="w-full h-auto min-h-[35vh] bg-brand-black text-brand-grey-100 px-8 ">
+        <div className="w-full h-auto min-h-[35vh] bg-brand-black text-brand-grey-100 px-8">
           <div className="flex w-full h-full max-w-content mx-auto pt-[10vh] sm:pt-[15vh] pb-[5vh] sm:pb-0">
             <div className="grid grid-cols-1 gap-y-8 sm:grid-cols-2 w-full max-w-text mx-auto">
               <HeaderData label="Project" value={String(project.title)} />
@@ -71,12 +71,25 @@ const ProjectPage = (props: PageProps<Queries.ProjectPageQuery>) => {
                   <h2>{children}</h2>
                 </div>
               ),
-              p: ({children}) => (
-                <p className="mx-auto mt-4 text-lg">{children}</p>
+              img: ({src, altText}) => (
+                <img src={src} alt={altText} className="mx-auto my-12" />
               ),
-              class: ({children, className}) => {
+              a: ({children, href, openInNewTab}) => (
+                <a
+                  href={href}
+                  className="underline underline-offset-2 text-brand-grey-100 hover:text-brand-grey-300"
+                  target={openInNewTab ? '_blank' : ''}
+                  rel="noreferrer"
+                >
+                  {children}
+                </a>
+              ),
+              p: ({children}) => (
+                <p className="mx-auto my-8 text-lg leading-8">{children}</p>
+              ),
+              class: ({className}) => {
                 if (className === 'section-break') {
-                  return <div className=" h-12" />;
+                  return <div className="h-12" />;
                 }
 
                 const imageIdx = projectImages.findIndex(

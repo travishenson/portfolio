@@ -52,7 +52,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
               <div className="h-full font-outfit text-base flex items-center">
                 View Post
               </div>
-              <ArrowNarrowRightIcon className="h-6 mt-0.5 ml-0.5 group-hover:translate-x-1 transition-all duration-500" />
+              <ArrowNarrowRightIcon className="h-6 mt-0.5 ml-0.5 group-hover:translate-x-1 transition-transform duration-500" />
             </Link>
           </div>
         </div>
