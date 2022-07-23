@@ -10,27 +10,11 @@ fragment Project on Project {
   liveProjectUrl
   startDate
   finishDate
-  description
   featuredProject
-  pageContent
   role
   techStack
   slug
   sortOrder
-  tileBgColor {
-    ... on Color {
-      hex
-      rgba {
-        ... on RGBA {
-          r
-          g
-          b
-          a
-        }
-      }
-      css
-    }
-  }
   projectType
   content {
     ... on RichText {

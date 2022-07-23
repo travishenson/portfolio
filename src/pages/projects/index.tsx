@@ -45,7 +45,6 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          description
           featuredImage {
             gatsbyImageData(width: 1500, layout: CONSTRAINED, placeholder: BLURRED)
           }

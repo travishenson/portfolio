@@ -47,7 +47,7 @@ const ProjectPage = (props: PageProps<Queries.ProjectPageQuery>) => {
       </Helmet>
       <Layout path={props.path} isFullWidth>
         <div className="w-full h-auto min-h-[35vh] bg-brand-black text-brand-grey-100 px-8">
-          <div className="flex w-full h-full max-w-content mx-auto pt-[10vh] sm:pt-[15vh] pb-[5vh]">
+          <div className="flex w-full h-full max-w-content mx-auto pt-[10vh] pb-[5vh]">
             <div className="grid grid-cols-1 gap-y-8 sm:grid-cols-2 w-full max-w-text mx-auto">
               <HeaderData label="Project" value={String(project.title)} />
               <HeaderData
@@ -128,14 +128,12 @@ export const query = graphql`
       content {
         raw
       }
-      description
       featuredImage {
         url
       }
       finishDate
       liveProjectUrl
       overview
-      pageContent
       projectImages {
         altText
         gatsbyImageData(width: 1500, layout: CONSTRAINED, placeholder: BLURRED)

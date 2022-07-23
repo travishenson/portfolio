@@ -1230,14 +1230,12 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.children'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.client'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.createdAt'
-  | 'featuredImageBlogPost.featuredImage.featuredImageProject.description'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.featuredProject'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.finishDate'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.gatsbyPath'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.id'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.liveProjectUrl'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.overview'
-  | 'featuredImageBlogPost.featuredImage.featuredImageProject.pageContent'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.projectImages'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.projectType'
   | 'featuredImageBlogPost.featuredImage.featuredImageProject.publishedAt'
@@ -1310,14 +1308,12 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageBlogPost.featuredImage.projectImagesProject.children'
   | 'featuredImageBlogPost.featuredImage.projectImagesProject.client'
   | 'featuredImageBlogPost.featuredImage.projectImagesProject.createdAt'
-  | 'featuredImageBlogPost.featuredImage.projectImagesProject.description'
   | 'featuredImageBlogPost.featuredImage.projectImagesProject.featuredProject'
   | 'featuredImageBlogPost.featuredImage.projectImagesProject.finishDate'
   | 'featuredImageBlogPost.featuredImage.projectImagesProject.gatsbyPath'
   | 'featuredImageBlogPost.featuredImage.projectImagesProject.id'
   | 'featuredImageBlogPost.featuredImage.projectImagesProject.liveProjectUrl'
   | 'featuredImageBlogPost.featuredImage.projectImagesProject.overview'
-  | 'featuredImageBlogPost.featuredImage.projectImagesProject.pageContent'
   | 'featuredImageBlogPost.featuredImage.projectImagesProject.projectImages'
   | 'featuredImageBlogPost.featuredImage.projectImagesProject.projectType'
   | 'featuredImageBlogPost.featuredImage.projectImagesProject.publishedAt'
@@ -1582,7 +1578,6 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageProject.createdBy.remoteTypeName'
   | 'featuredImageProject.createdBy.stage'
   | 'featuredImageProject.createdBy.updatedAt'
-  | 'featuredImageProject.description'
   | 'featuredImageProject.featuredImage.altText'
   | 'featuredImageProject.featuredImage.children'
   | 'featuredImageProject.featuredImage.children.children'
@@ -1619,14 +1614,12 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageProject.featuredImage.featuredImageProject.children'
   | 'featuredImageProject.featuredImage.featuredImageProject.client'
   | 'featuredImageProject.featuredImage.featuredImageProject.createdAt'
-  | 'featuredImageProject.featuredImage.featuredImageProject.description'
   | 'featuredImageProject.featuredImage.featuredImageProject.featuredProject'
   | 'featuredImageProject.featuredImage.featuredImageProject.finishDate'
   | 'featuredImageProject.featuredImage.featuredImageProject.gatsbyPath'
   | 'featuredImageProject.featuredImage.featuredImageProject.id'
   | 'featuredImageProject.featuredImage.featuredImageProject.liveProjectUrl'
   | 'featuredImageProject.featuredImage.featuredImageProject.overview'
-  | 'featuredImageProject.featuredImage.featuredImageProject.pageContent'
   | 'featuredImageProject.featuredImage.featuredImageProject.projectImages'
   | 'featuredImageProject.featuredImage.featuredImageProject.projectType'
   | 'featuredImageProject.featuredImage.featuredImageProject.publishedAt'
@@ -1699,14 +1692,12 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageProject.featuredImage.projectImagesProject.children'
   | 'featuredImageProject.featuredImage.projectImagesProject.client'
   | 'featuredImageProject.featuredImage.projectImagesProject.createdAt'
-  | 'featuredImageProject.featuredImage.projectImagesProject.description'
   | 'featuredImageProject.featuredImage.projectImagesProject.featuredProject'
   | 'featuredImageProject.featuredImage.projectImagesProject.finishDate'
   | 'featuredImageProject.featuredImage.projectImagesProject.gatsbyPath'
   | 'featuredImageProject.featuredImage.projectImagesProject.id'
   | 'featuredImageProject.featuredImage.projectImagesProject.liveProjectUrl'
   | 'featuredImageProject.featuredImage.projectImagesProject.overview'
-  | 'featuredImageProject.featuredImage.projectImagesProject.pageContent'
   | 'featuredImageProject.featuredImage.projectImagesProject.projectImages'
   | 'featuredImageProject.featuredImage.projectImagesProject.projectType'
   | 'featuredImageProject.featuredImage.projectImagesProject.publishedAt'
@@ -1781,7 +1772,6 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageProject.internal.type'
   | 'featuredImageProject.liveProjectUrl'
   | 'featuredImageProject.overview'
-  | 'featuredImageProject.pageContent'
   | 'featuredImageProject.parent.children'
   | 'featuredImageProject.parent.children.children'
   | 'featuredImageProject.parent.children.id'
@@ -1833,14 +1823,12 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageProject.projectImages.featuredImageProject.children'
   | 'featuredImageProject.projectImages.featuredImageProject.client'
   | 'featuredImageProject.projectImages.featuredImageProject.createdAt'
-  | 'featuredImageProject.projectImages.featuredImageProject.description'
   | 'featuredImageProject.projectImages.featuredImageProject.featuredProject'
   | 'featuredImageProject.projectImages.featuredImageProject.finishDate'
   | 'featuredImageProject.projectImages.featuredImageProject.gatsbyPath'
   | 'featuredImageProject.projectImages.featuredImageProject.id'
   | 'featuredImageProject.projectImages.featuredImageProject.liveProjectUrl'
   | 'featuredImageProject.projectImages.featuredImageProject.overview'
-  | 'featuredImageProject.projectImages.featuredImageProject.pageContent'
   | 'featuredImageProject.projectImages.featuredImageProject.projectImages'
   | 'featuredImageProject.projectImages.featuredImageProject.projectType'
   | 'featuredImageProject.projectImages.featuredImageProject.publishedAt'
@@ -1913,14 +1901,12 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageProject.projectImages.projectImagesProject.children'
   | 'featuredImageProject.projectImages.projectImagesProject.client'
   | 'featuredImageProject.projectImages.projectImagesProject.createdAt'
-  | 'featuredImageProject.projectImages.projectImagesProject.description'
   | 'featuredImageProject.projectImages.projectImagesProject.featuredProject'
   | 'featuredImageProject.projectImages.projectImagesProject.finishDate'
   | 'featuredImageProject.projectImages.projectImagesProject.gatsbyPath'
   | 'featuredImageProject.projectImages.projectImagesProject.id'
   | 'featuredImageProject.projectImages.projectImagesProject.liveProjectUrl'
   | 'featuredImageProject.projectImages.projectImagesProject.overview'
-  | 'featuredImageProject.projectImages.projectImagesProject.pageContent'
   | 'featuredImageProject.projectImages.projectImagesProject.projectImages'
   | 'featuredImageProject.projectImages.projectImagesProject.projectType'
   | 'featuredImageProject.projectImages.projectImagesProject.publishedAt'
@@ -2092,14 +2078,6 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageProject.stage'
   | 'featuredImageProject.startDate'
   | 'featuredImageProject.techStack'
-  | 'featuredImageProject.tileBgColor.css'
-  | 'featuredImageProject.tileBgColor.hex'
-  | 'featuredImageProject.tileBgColor.remoteTypeName'
-  | 'featuredImageProject.tileBgColor.rgba.a'
-  | 'featuredImageProject.tileBgColor.rgba.b'
-  | 'featuredImageProject.tileBgColor.rgba.g'
-  | 'featuredImageProject.tileBgColor.rgba.r'
-  | 'featuredImageProject.tileBgColor.rgba.remoteTypeName'
   | 'featuredImageProject.title'
   | 'featuredImageProject.updatedAt'
   | 'featuredImageProject.updatedBy.children'
@@ -2391,7 +2369,6 @@ type GraphCMS_AssetFieldsEnum =
   | 'projectImagesProject.createdBy.remoteTypeName'
   | 'projectImagesProject.createdBy.stage'
   | 'projectImagesProject.createdBy.updatedAt'
-  | 'projectImagesProject.description'
   | 'projectImagesProject.featuredImage.altText'
   | 'projectImagesProject.featuredImage.children'
   | 'projectImagesProject.featuredImage.children.children'
@@ -2428,14 +2405,12 @@ type GraphCMS_AssetFieldsEnum =
   | 'projectImagesProject.featuredImage.featuredImageProject.children'
   | 'projectImagesProject.featuredImage.featuredImageProject.client'
   | 'projectImagesProject.featuredImage.featuredImageProject.createdAt'
-  | 'projectImagesProject.featuredImage.featuredImageProject.description'
   | 'projectImagesProject.featuredImage.featuredImageProject.featuredProject'
   | 'projectImagesProject.featuredImage.featuredImageProject.finishDate'
   | 'projectImagesProject.featuredImage.featuredImageProject.gatsbyPath'
   | 'projectImagesProject.featuredImage.featuredImageProject.id'
   | 'projectImagesProject.featuredImage.featuredImageProject.liveProjectUrl'
   | 'projectImagesProject.featuredImage.featuredImageProject.overview'
-  | 'projectImagesProject.featuredImage.featuredImageProject.pageContent'
   | 'projectImagesProject.featuredImage.featuredImageProject.projectImages'
   | 'projectImagesProject.featuredImage.featuredImageProject.projectType'
   | 'projectImagesProject.featuredImage.featuredImageProject.publishedAt'
@@ -2508,14 +2483,12 @@ type GraphCMS_AssetFieldsEnum =
   | 'projectImagesProject.featuredImage.projectImagesProject.children'
   | 'projectImagesProject.featuredImage.projectImagesProject.client'
   | 'projectImagesProject.featuredImage.projectImagesProject.createdAt'
-  | 'projectImagesProject.featuredImage.projectImagesProject.description'
   | 'projectImagesProject.featuredImage.projectImagesProject.featuredProject'
   | 'projectImagesProject.featuredImage.projectImagesProject.finishDate'
   | 'projectImagesProject.featuredImage.projectImagesProject.gatsbyPath'
   | 'projectImagesProject.featuredImage.projectImagesProject.id'
   | 'projectImagesProject.featuredImage.projectImagesProject.liveProjectUrl'
   | 'projectImagesProject.featuredImage.projectImagesProject.overview'
-  | 'projectImagesProject.featuredImage.projectImagesProject.pageContent'
   | 'projectImagesProject.featuredImage.projectImagesProject.projectImages'
   | 'projectImagesProject.featuredImage.projectImagesProject.projectType'
   | 'projectImagesProject.featuredImage.projectImagesProject.publishedAt'
@@ -2590,7 +2563,6 @@ type GraphCMS_AssetFieldsEnum =
   | 'projectImagesProject.internal.type'
   | 'projectImagesProject.liveProjectUrl'
   | 'projectImagesProject.overview'
-  | 'projectImagesProject.pageContent'
   | 'projectImagesProject.parent.children'
   | 'projectImagesProject.parent.children.children'
   | 'projectImagesProject.parent.children.id'
@@ -2642,14 +2614,12 @@ type GraphCMS_AssetFieldsEnum =
   | 'projectImagesProject.projectImages.featuredImageProject.children'
   | 'projectImagesProject.projectImages.featuredImageProject.client'
   | 'projectImagesProject.projectImages.featuredImageProject.createdAt'
-  | 'projectImagesProject.projectImages.featuredImageProject.description'
   | 'projectImagesProject.projectImages.featuredImageProject.featuredProject'
   | 'projectImagesProject.projectImages.featuredImageProject.finishDate'
   | 'projectImagesProject.projectImages.featuredImageProject.gatsbyPath'
   | 'projectImagesProject.projectImages.featuredImageProject.id'
   | 'projectImagesProject.projectImages.featuredImageProject.liveProjectUrl'
   | 'projectImagesProject.projectImages.featuredImageProject.overview'
-  | 'projectImagesProject.projectImages.featuredImageProject.pageContent'
   | 'projectImagesProject.projectImages.featuredImageProject.projectImages'
   | 'projectImagesProject.projectImages.featuredImageProject.projectType'
   | 'projectImagesProject.projectImages.featuredImageProject.publishedAt'
@@ -2722,14 +2692,12 @@ type GraphCMS_AssetFieldsEnum =
   | 'projectImagesProject.projectImages.projectImagesProject.children'
   | 'projectImagesProject.projectImages.projectImagesProject.client'
   | 'projectImagesProject.projectImages.projectImagesProject.createdAt'
-  | 'projectImagesProject.projectImages.projectImagesProject.description'
   | 'projectImagesProject.projectImages.projectImagesProject.featuredProject'
   | 'projectImagesProject.projectImages.projectImagesProject.finishDate'
   | 'projectImagesProject.projectImages.projectImagesProject.gatsbyPath'
   | 'projectImagesProject.projectImages.projectImagesProject.id'
   | 'projectImagesProject.projectImages.projectImagesProject.liveProjectUrl'
   | 'projectImagesProject.projectImages.projectImagesProject.overview'
-  | 'projectImagesProject.projectImages.projectImagesProject.pageContent'
   | 'projectImagesProject.projectImages.projectImagesProject.projectImages'
   | 'projectImagesProject.projectImages.projectImagesProject.projectType'
   | 'projectImagesProject.projectImages.projectImagesProject.publishedAt'
@@ -2901,14 +2869,6 @@ type GraphCMS_AssetFieldsEnum =
   | 'projectImagesProject.stage'
   | 'projectImagesProject.startDate'
   | 'projectImagesProject.techStack'
-  | 'projectImagesProject.tileBgColor.css'
-  | 'projectImagesProject.tileBgColor.hex'
-  | 'projectImagesProject.tileBgColor.remoteTypeName'
-  | 'projectImagesProject.tileBgColor.rgba.a'
-  | 'projectImagesProject.tileBgColor.rgba.b'
-  | 'projectImagesProject.tileBgColor.rgba.g'
-  | 'projectImagesProject.tileBgColor.rgba.r'
-  | 'projectImagesProject.tileBgColor.rgba.remoteTypeName'
   | 'projectImagesProject.title'
   | 'projectImagesProject.updatedAt'
   | 'projectImagesProject.updatedBy.children'
@@ -3643,7 +3603,6 @@ type GraphCMS_BlogPostFieldsEnum =
   | 'featuredImage.featuredImageProject.createdBy.remoteTypeName'
   | 'featuredImage.featuredImageProject.createdBy.stage'
   | 'featuredImage.featuredImageProject.createdBy.updatedAt'
-  | 'featuredImage.featuredImageProject.description'
   | 'featuredImage.featuredImageProject.featuredImage.altText'
   | 'featuredImage.featuredImageProject.featuredImage.children'
   | 'featuredImage.featuredImageProject.featuredImage.createdAt'
@@ -3680,7 +3639,6 @@ type GraphCMS_BlogPostFieldsEnum =
   | 'featuredImage.featuredImageProject.internal.type'
   | 'featuredImage.featuredImageProject.liveProjectUrl'
   | 'featuredImage.featuredImageProject.overview'
-  | 'featuredImage.featuredImageProject.pageContent'
   | 'featuredImage.featuredImageProject.parent.children'
   | 'featuredImage.featuredImageProject.parent.id'
   | 'featuredImage.featuredImageProject.projectImages'
@@ -3741,9 +3699,6 @@ type GraphCMS_BlogPostFieldsEnum =
   | 'featuredImage.featuredImageProject.stage'
   | 'featuredImage.featuredImageProject.startDate'
   | 'featuredImage.featuredImageProject.techStack'
-  | 'featuredImage.featuredImageProject.tileBgColor.css'
-  | 'featuredImage.featuredImageProject.tileBgColor.hex'
-  | 'featuredImage.featuredImageProject.tileBgColor.remoteTypeName'
   | 'featuredImage.featuredImageProject.title'
   | 'featuredImage.featuredImageProject.updatedAt'
   | 'featuredImage.featuredImageProject.updatedBy.children'
@@ -3865,7 +3820,6 @@ type GraphCMS_BlogPostFieldsEnum =
   | 'featuredImage.projectImagesProject.createdBy.remoteTypeName'
   | 'featuredImage.projectImagesProject.createdBy.stage'
   | 'featuredImage.projectImagesProject.createdBy.updatedAt'
-  | 'featuredImage.projectImagesProject.description'
   | 'featuredImage.projectImagesProject.featuredImage.altText'
   | 'featuredImage.projectImagesProject.featuredImage.children'
   | 'featuredImage.projectImagesProject.featuredImage.createdAt'
@@ -3902,7 +3856,6 @@ type GraphCMS_BlogPostFieldsEnum =
   | 'featuredImage.projectImagesProject.internal.type'
   | 'featuredImage.projectImagesProject.liveProjectUrl'
   | 'featuredImage.projectImagesProject.overview'
-  | 'featuredImage.projectImagesProject.pageContent'
   | 'featuredImage.projectImagesProject.parent.children'
   | 'featuredImage.projectImagesProject.parent.id'
   | 'featuredImage.projectImagesProject.projectImages'
@@ -3963,9 +3916,6 @@ type GraphCMS_BlogPostFieldsEnum =
   | 'featuredImage.projectImagesProject.stage'
   | 'featuredImage.projectImagesProject.startDate'
   | 'featuredImage.projectImagesProject.techStack'
-  | 'featuredImage.projectImagesProject.tileBgColor.css'
-  | 'featuredImage.projectImagesProject.tileBgColor.hex'
-  | 'featuredImage.projectImagesProject.tileBgColor.remoteTypeName'
   | 'featuredImage.projectImagesProject.title'
   | 'featuredImage.projectImagesProject.updatedAt'
   | 'featuredImage.projectImagesProject.updatedBy.children'
@@ -4537,20 +4487,6 @@ type GraphCMS_BlogPostSortInput = {
   readonly order: InputMaybe<ReadonlyArray<InputMaybe<SortOrderEnum>>>;
 };
 
-type GraphCMS_Color = {
-  readonly css: Scalars['String'];
-  readonly hex: Scalars['JSON'];
-  readonly remoteTypeName: Scalars['String'];
-  readonly rgba: GraphCMS_RGBA;
-};
-
-type GraphCMS_ColorFilterInput = {
-  readonly css: InputMaybe<StringQueryOperatorInput>;
-  readonly hex: InputMaybe<JSONQueryOperatorInput>;
-  readonly remoteTypeName: InputMaybe<StringQueryOperatorInput>;
-  readonly rgba: InputMaybe<GraphCMS_RGBAFilterInput>;
-};
-
 type GraphCMS_Locale =
   | 'en';
 
@@ -4561,579 +4497,12 @@ type GraphCMS_LocaleQueryOperatorInput = {
   readonly nin: InputMaybe<ReadonlyArray<InputMaybe<GraphCMS_Locale>>>;
 };
 
-type GraphCMS_PageContent = Node & {
-  readonly children: ReadonlyArray<Node>;
-  readonly content: Scalars['String'];
-  readonly createdAt: Scalars['JSON'];
-  readonly createdBy: Maybe<GraphCMS_User>;
-  readonly id: Scalars['ID'];
-  readonly internal: Internal;
-  readonly pageSlug: Scalars['String'];
-  readonly parent: Maybe<Node>;
-  readonly publishedAt: Maybe<Scalars['JSON']>;
-  readonly publishedBy: Maybe<GraphCMS_User>;
-  readonly remoteId: Scalars['ID'];
-  readonly remoteTypeName: Scalars['String'];
-  readonly scheduledIn: ReadonlyArray<GraphCMS_ScheduledOperation>;
-  readonly stage: GraphCMS_Stage;
-  readonly updatedAt: Scalars['JSON'];
-  readonly updatedBy: Maybe<GraphCMS_User>;
-};
-
-type GraphCMS_PageContentConnection = {
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<GraphCMS_PageContentEdge>;
-  readonly group: ReadonlyArray<GraphCMS_PageContentGroupConnection>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<GraphCMS_PageContent>;
-  readonly pageInfo: PageInfo;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly totalCount: Scalars['Int'];
-};
-
-
-type GraphCMS_PageContentConnection_distinctArgs = {
-  field: GraphCMS_PageContentFieldsEnum;
-};
-
-
-type GraphCMS_PageContentConnection_groupArgs = {
-  field: GraphCMS_PageContentFieldsEnum;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-};
-
-
-type GraphCMS_PageContentConnection_maxArgs = {
-  field: GraphCMS_PageContentFieldsEnum;
-};
-
-
-type GraphCMS_PageContentConnection_minArgs = {
-  field: GraphCMS_PageContentFieldsEnum;
-};
-
-
-type GraphCMS_PageContentConnection_sumArgs = {
-  field: GraphCMS_PageContentFieldsEnum;
-};
-
-type GraphCMS_PageContentEdge = {
-  readonly next: Maybe<GraphCMS_PageContent>;
-  readonly node: GraphCMS_PageContent;
-  readonly previous: Maybe<GraphCMS_PageContent>;
-};
-
-type GraphCMS_PageContentFieldsEnum =
-  | 'children'
-  | 'children.children'
-  | 'children.children.children'
-  | 'children.children.children.children'
-  | 'children.children.children.id'
-  | 'children.children.id'
-  | 'children.children.internal.content'
-  | 'children.children.internal.contentDigest'
-  | 'children.children.internal.description'
-  | 'children.children.internal.fieldOwners'
-  | 'children.children.internal.ignoreType'
-  | 'children.children.internal.mediaType'
-  | 'children.children.internal.owner'
-  | 'children.children.internal.type'
-  | 'children.children.parent.children'
-  | 'children.children.parent.id'
-  | 'children.id'
-  | 'children.internal.content'
-  | 'children.internal.contentDigest'
-  | 'children.internal.description'
-  | 'children.internal.fieldOwners'
-  | 'children.internal.ignoreType'
-  | 'children.internal.mediaType'
-  | 'children.internal.owner'
-  | 'children.internal.type'
-  | 'children.parent.children'
-  | 'children.parent.children.children'
-  | 'children.parent.children.id'
-  | 'children.parent.id'
-  | 'children.parent.internal.content'
-  | 'children.parent.internal.contentDigest'
-  | 'children.parent.internal.description'
-  | 'children.parent.internal.fieldOwners'
-  | 'children.parent.internal.ignoreType'
-  | 'children.parent.internal.mediaType'
-  | 'children.parent.internal.owner'
-  | 'children.parent.internal.type'
-  | 'children.parent.parent.children'
-  | 'children.parent.parent.id'
-  | 'content'
-  | 'createdAt'
-  | 'createdBy.children'
-  | 'createdBy.children.children'
-  | 'createdBy.children.children.children'
-  | 'createdBy.children.children.id'
-  | 'createdBy.children.id'
-  | 'createdBy.children.internal.content'
-  | 'createdBy.children.internal.contentDigest'
-  | 'createdBy.children.internal.description'
-  | 'createdBy.children.internal.fieldOwners'
-  | 'createdBy.children.internal.ignoreType'
-  | 'createdBy.children.internal.mediaType'
-  | 'createdBy.children.internal.owner'
-  | 'createdBy.children.internal.type'
-  | 'createdBy.children.parent.children'
-  | 'createdBy.children.parent.id'
-  | 'createdBy.createdAt'
-  | 'createdBy.id'
-  | 'createdBy.internal.content'
-  | 'createdBy.internal.contentDigest'
-  | 'createdBy.internal.description'
-  | 'createdBy.internal.fieldOwners'
-  | 'createdBy.internal.ignoreType'
-  | 'createdBy.internal.mediaType'
-  | 'createdBy.internal.owner'
-  | 'createdBy.internal.type'
-  | 'createdBy.isActive'
-  | 'createdBy.kind'
-  | 'createdBy.name'
-  | 'createdBy.parent.children'
-  | 'createdBy.parent.children.children'
-  | 'createdBy.parent.children.id'
-  | 'createdBy.parent.id'
-  | 'createdBy.parent.internal.content'
-  | 'createdBy.parent.internal.contentDigest'
-  | 'createdBy.parent.internal.description'
-  | 'createdBy.parent.internal.fieldOwners'
-  | 'createdBy.parent.internal.ignoreType'
-  | 'createdBy.parent.internal.mediaType'
-  | 'createdBy.parent.internal.owner'
-  | 'createdBy.parent.internal.type'
-  | 'createdBy.parent.parent.children'
-  | 'createdBy.parent.parent.id'
-  | 'createdBy.picture'
-  | 'createdBy.publishedAt'
-  | 'createdBy.remoteId'
-  | 'createdBy.remoteTypeName'
-  | 'createdBy.stage'
-  | 'createdBy.updatedAt'
-  | 'id'
-  | 'internal.content'
-  | 'internal.contentDigest'
-  | 'internal.description'
-  | 'internal.fieldOwners'
-  | 'internal.ignoreType'
-  | 'internal.mediaType'
-  | 'internal.owner'
-  | 'internal.type'
-  | 'pageSlug'
-  | 'parent.children'
-  | 'parent.children.children'
-  | 'parent.children.children.children'
-  | 'parent.children.children.id'
-  | 'parent.children.id'
-  | 'parent.children.internal.content'
-  | 'parent.children.internal.contentDigest'
-  | 'parent.children.internal.description'
-  | 'parent.children.internal.fieldOwners'
-  | 'parent.children.internal.ignoreType'
-  | 'parent.children.internal.mediaType'
-  | 'parent.children.internal.owner'
-  | 'parent.children.internal.type'
-  | 'parent.children.parent.children'
-  | 'parent.children.parent.id'
-  | 'parent.id'
-  | 'parent.internal.content'
-  | 'parent.internal.contentDigest'
-  | 'parent.internal.description'
-  | 'parent.internal.fieldOwners'
-  | 'parent.internal.ignoreType'
-  | 'parent.internal.mediaType'
-  | 'parent.internal.owner'
-  | 'parent.internal.type'
-  | 'parent.parent.children'
-  | 'parent.parent.children.children'
-  | 'parent.parent.children.id'
-  | 'parent.parent.id'
-  | 'parent.parent.internal.content'
-  | 'parent.parent.internal.contentDigest'
-  | 'parent.parent.internal.description'
-  | 'parent.parent.internal.fieldOwners'
-  | 'parent.parent.internal.ignoreType'
-  | 'parent.parent.internal.mediaType'
-  | 'parent.parent.internal.owner'
-  | 'parent.parent.internal.type'
-  | 'parent.parent.parent.children'
-  | 'parent.parent.parent.id'
-  | 'publishedAt'
-  | 'publishedBy.children'
-  | 'publishedBy.children.children'
-  | 'publishedBy.children.children.children'
-  | 'publishedBy.children.children.id'
-  | 'publishedBy.children.id'
-  | 'publishedBy.children.internal.content'
-  | 'publishedBy.children.internal.contentDigest'
-  | 'publishedBy.children.internal.description'
-  | 'publishedBy.children.internal.fieldOwners'
-  | 'publishedBy.children.internal.ignoreType'
-  | 'publishedBy.children.internal.mediaType'
-  | 'publishedBy.children.internal.owner'
-  | 'publishedBy.children.internal.type'
-  | 'publishedBy.children.parent.children'
-  | 'publishedBy.children.parent.id'
-  | 'publishedBy.createdAt'
-  | 'publishedBy.id'
-  | 'publishedBy.internal.content'
-  | 'publishedBy.internal.contentDigest'
-  | 'publishedBy.internal.description'
-  | 'publishedBy.internal.fieldOwners'
-  | 'publishedBy.internal.ignoreType'
-  | 'publishedBy.internal.mediaType'
-  | 'publishedBy.internal.owner'
-  | 'publishedBy.internal.type'
-  | 'publishedBy.isActive'
-  | 'publishedBy.kind'
-  | 'publishedBy.name'
-  | 'publishedBy.parent.children'
-  | 'publishedBy.parent.children.children'
-  | 'publishedBy.parent.children.id'
-  | 'publishedBy.parent.id'
-  | 'publishedBy.parent.internal.content'
-  | 'publishedBy.parent.internal.contentDigest'
-  | 'publishedBy.parent.internal.description'
-  | 'publishedBy.parent.internal.fieldOwners'
-  | 'publishedBy.parent.internal.ignoreType'
-  | 'publishedBy.parent.internal.mediaType'
-  | 'publishedBy.parent.internal.owner'
-  | 'publishedBy.parent.internal.type'
-  | 'publishedBy.parent.parent.children'
-  | 'publishedBy.parent.parent.id'
-  | 'publishedBy.picture'
-  | 'publishedBy.publishedAt'
-  | 'publishedBy.remoteId'
-  | 'publishedBy.remoteTypeName'
-  | 'publishedBy.stage'
-  | 'publishedBy.updatedAt'
-  | 'remoteId'
-  | 'remoteTypeName'
-  | 'scheduledIn'
-  | 'scheduledIn.children'
-  | 'scheduledIn.children.children'
-  | 'scheduledIn.children.children.children'
-  | 'scheduledIn.children.children.id'
-  | 'scheduledIn.children.id'
-  | 'scheduledIn.children.internal.content'
-  | 'scheduledIn.children.internal.contentDigest'
-  | 'scheduledIn.children.internal.description'
-  | 'scheduledIn.children.internal.fieldOwners'
-  | 'scheduledIn.children.internal.ignoreType'
-  | 'scheduledIn.children.internal.mediaType'
-  | 'scheduledIn.children.internal.owner'
-  | 'scheduledIn.children.internal.type'
-  | 'scheduledIn.children.parent.children'
-  | 'scheduledIn.children.parent.id'
-  | 'scheduledIn.createdAt'
-  | 'scheduledIn.createdBy.children'
-  | 'scheduledIn.createdBy.children.children'
-  | 'scheduledIn.createdBy.children.id'
-  | 'scheduledIn.createdBy.createdAt'
-  | 'scheduledIn.createdBy.id'
-  | 'scheduledIn.createdBy.internal.content'
-  | 'scheduledIn.createdBy.internal.contentDigest'
-  | 'scheduledIn.createdBy.internal.description'
-  | 'scheduledIn.createdBy.internal.fieldOwners'
-  | 'scheduledIn.createdBy.internal.ignoreType'
-  | 'scheduledIn.createdBy.internal.mediaType'
-  | 'scheduledIn.createdBy.internal.owner'
-  | 'scheduledIn.createdBy.internal.type'
-  | 'scheduledIn.createdBy.isActive'
-  | 'scheduledIn.createdBy.kind'
-  | 'scheduledIn.createdBy.name'
-  | 'scheduledIn.createdBy.parent.children'
-  | 'scheduledIn.createdBy.parent.id'
-  | 'scheduledIn.createdBy.picture'
-  | 'scheduledIn.createdBy.publishedAt'
-  | 'scheduledIn.createdBy.remoteId'
-  | 'scheduledIn.createdBy.remoteTypeName'
-  | 'scheduledIn.createdBy.stage'
-  | 'scheduledIn.createdBy.updatedAt'
-  | 'scheduledIn.description'
-  | 'scheduledIn.errorMessage'
-  | 'scheduledIn.id'
-  | 'scheduledIn.internal.content'
-  | 'scheduledIn.internal.contentDigest'
-  | 'scheduledIn.internal.description'
-  | 'scheduledIn.internal.fieldOwners'
-  | 'scheduledIn.internal.ignoreType'
-  | 'scheduledIn.internal.mediaType'
-  | 'scheduledIn.internal.owner'
-  | 'scheduledIn.internal.type'
-  | 'scheduledIn.parent.children'
-  | 'scheduledIn.parent.children.children'
-  | 'scheduledIn.parent.children.id'
-  | 'scheduledIn.parent.id'
-  | 'scheduledIn.parent.internal.content'
-  | 'scheduledIn.parent.internal.contentDigest'
-  | 'scheduledIn.parent.internal.description'
-  | 'scheduledIn.parent.internal.fieldOwners'
-  | 'scheduledIn.parent.internal.ignoreType'
-  | 'scheduledIn.parent.internal.mediaType'
-  | 'scheduledIn.parent.internal.owner'
-  | 'scheduledIn.parent.internal.type'
-  | 'scheduledIn.parent.parent.children'
-  | 'scheduledIn.parent.parent.id'
-  | 'scheduledIn.publishedAt'
-  | 'scheduledIn.publishedBy.children'
-  | 'scheduledIn.publishedBy.children.children'
-  | 'scheduledIn.publishedBy.children.id'
-  | 'scheduledIn.publishedBy.createdAt'
-  | 'scheduledIn.publishedBy.id'
-  | 'scheduledIn.publishedBy.internal.content'
-  | 'scheduledIn.publishedBy.internal.contentDigest'
-  | 'scheduledIn.publishedBy.internal.description'
-  | 'scheduledIn.publishedBy.internal.fieldOwners'
-  | 'scheduledIn.publishedBy.internal.ignoreType'
-  | 'scheduledIn.publishedBy.internal.mediaType'
-  | 'scheduledIn.publishedBy.internal.owner'
-  | 'scheduledIn.publishedBy.internal.type'
-  | 'scheduledIn.publishedBy.isActive'
-  | 'scheduledIn.publishedBy.kind'
-  | 'scheduledIn.publishedBy.name'
-  | 'scheduledIn.publishedBy.parent.children'
-  | 'scheduledIn.publishedBy.parent.id'
-  | 'scheduledIn.publishedBy.picture'
-  | 'scheduledIn.publishedBy.publishedAt'
-  | 'scheduledIn.publishedBy.remoteId'
-  | 'scheduledIn.publishedBy.remoteTypeName'
-  | 'scheduledIn.publishedBy.stage'
-  | 'scheduledIn.publishedBy.updatedAt'
-  | 'scheduledIn.rawPayload'
-  | 'scheduledIn.release.children'
-  | 'scheduledIn.release.children.children'
-  | 'scheduledIn.release.children.id'
-  | 'scheduledIn.release.createdAt'
-  | 'scheduledIn.release.createdBy.children'
-  | 'scheduledIn.release.createdBy.createdAt'
-  | 'scheduledIn.release.createdBy.id'
-  | 'scheduledIn.release.createdBy.isActive'
-  | 'scheduledIn.release.createdBy.kind'
-  | 'scheduledIn.release.createdBy.name'
-  | 'scheduledIn.release.createdBy.picture'
-  | 'scheduledIn.release.createdBy.publishedAt'
-  | 'scheduledIn.release.createdBy.remoteId'
-  | 'scheduledIn.release.createdBy.remoteTypeName'
-  | 'scheduledIn.release.createdBy.stage'
-  | 'scheduledIn.release.createdBy.updatedAt'
-  | 'scheduledIn.release.description'
-  | 'scheduledIn.release.errorMessage'
-  | 'scheduledIn.release.id'
-  | 'scheduledIn.release.internal.content'
-  | 'scheduledIn.release.internal.contentDigest'
-  | 'scheduledIn.release.internal.description'
-  | 'scheduledIn.release.internal.fieldOwners'
-  | 'scheduledIn.release.internal.ignoreType'
-  | 'scheduledIn.release.internal.mediaType'
-  | 'scheduledIn.release.internal.owner'
-  | 'scheduledIn.release.internal.type'
-  | 'scheduledIn.release.isActive'
-  | 'scheduledIn.release.isImplicit'
-  | 'scheduledIn.release.operations'
-  | 'scheduledIn.release.operations.children'
-  | 'scheduledIn.release.operations.createdAt'
-  | 'scheduledIn.release.operations.description'
-  | 'scheduledIn.release.operations.errorMessage'
-  | 'scheduledIn.release.operations.id'
-  | 'scheduledIn.release.operations.publishedAt'
-  | 'scheduledIn.release.operations.rawPayload'
-  | 'scheduledIn.release.operations.remoteId'
-  | 'scheduledIn.release.operations.remoteTypeName'
-  | 'scheduledIn.release.operations.stage'
-  | 'scheduledIn.release.operations.status'
-  | 'scheduledIn.release.operations.updatedAt'
-  | 'scheduledIn.release.parent.children'
-  | 'scheduledIn.release.parent.id'
-  | 'scheduledIn.release.publishedAt'
-  | 'scheduledIn.release.publishedBy.children'
-  | 'scheduledIn.release.publishedBy.createdAt'
-  | 'scheduledIn.release.publishedBy.id'
-  | 'scheduledIn.release.publishedBy.isActive'
-  | 'scheduledIn.release.publishedBy.kind'
-  | 'scheduledIn.release.publishedBy.name'
-  | 'scheduledIn.release.publishedBy.picture'
-  | 'scheduledIn.release.publishedBy.publishedAt'
-  | 'scheduledIn.release.publishedBy.remoteId'
-  | 'scheduledIn.release.publishedBy.remoteTypeName'
-  | 'scheduledIn.release.publishedBy.stage'
-  | 'scheduledIn.release.publishedBy.updatedAt'
-  | 'scheduledIn.release.releaseAt'
-  | 'scheduledIn.release.remoteId'
-  | 'scheduledIn.release.remoteTypeName'
-  | 'scheduledIn.release.stage'
-  | 'scheduledIn.release.status'
-  | 'scheduledIn.release.title'
-  | 'scheduledIn.release.updatedAt'
-  | 'scheduledIn.release.updatedBy.children'
-  | 'scheduledIn.release.updatedBy.createdAt'
-  | 'scheduledIn.release.updatedBy.id'
-  | 'scheduledIn.release.updatedBy.isActive'
-  | 'scheduledIn.release.updatedBy.kind'
-  | 'scheduledIn.release.updatedBy.name'
-  | 'scheduledIn.release.updatedBy.picture'
-  | 'scheduledIn.release.updatedBy.publishedAt'
-  | 'scheduledIn.release.updatedBy.remoteId'
-  | 'scheduledIn.release.updatedBy.remoteTypeName'
-  | 'scheduledIn.release.updatedBy.stage'
-  | 'scheduledIn.release.updatedBy.updatedAt'
-  | 'scheduledIn.remoteId'
-  | 'scheduledIn.remoteTypeName'
-  | 'scheduledIn.stage'
-  | 'scheduledIn.status'
-  | 'scheduledIn.updatedAt'
-  | 'scheduledIn.updatedBy.children'
-  | 'scheduledIn.updatedBy.children.children'
-  | 'scheduledIn.updatedBy.children.id'
-  | 'scheduledIn.updatedBy.createdAt'
-  | 'scheduledIn.updatedBy.id'
-  | 'scheduledIn.updatedBy.internal.content'
-  | 'scheduledIn.updatedBy.internal.contentDigest'
-  | 'scheduledIn.updatedBy.internal.description'
-  | 'scheduledIn.updatedBy.internal.fieldOwners'
-  | 'scheduledIn.updatedBy.internal.ignoreType'
-  | 'scheduledIn.updatedBy.internal.mediaType'
-  | 'scheduledIn.updatedBy.internal.owner'
-  | 'scheduledIn.updatedBy.internal.type'
-  | 'scheduledIn.updatedBy.isActive'
-  | 'scheduledIn.updatedBy.kind'
-  | 'scheduledIn.updatedBy.name'
-  | 'scheduledIn.updatedBy.parent.children'
-  | 'scheduledIn.updatedBy.parent.id'
-  | 'scheduledIn.updatedBy.picture'
-  | 'scheduledIn.updatedBy.publishedAt'
-  | 'scheduledIn.updatedBy.remoteId'
-  | 'scheduledIn.updatedBy.remoteTypeName'
-  | 'scheduledIn.updatedBy.stage'
-  | 'scheduledIn.updatedBy.updatedAt'
-  | 'stage'
-  | 'updatedAt'
-  | 'updatedBy.children'
-  | 'updatedBy.children.children'
-  | 'updatedBy.children.children.children'
-  | 'updatedBy.children.children.id'
-  | 'updatedBy.children.id'
-  | 'updatedBy.children.internal.content'
-  | 'updatedBy.children.internal.contentDigest'
-  | 'updatedBy.children.internal.description'
-  | 'updatedBy.children.internal.fieldOwners'
-  | 'updatedBy.children.internal.ignoreType'
-  | 'updatedBy.children.internal.mediaType'
-  | 'updatedBy.children.internal.owner'
-  | 'updatedBy.children.internal.type'
-  | 'updatedBy.children.parent.children'
-  | 'updatedBy.children.parent.id'
-  | 'updatedBy.createdAt'
-  | 'updatedBy.id'
-  | 'updatedBy.internal.content'
-  | 'updatedBy.internal.contentDigest'
-  | 'updatedBy.internal.description'
-  | 'updatedBy.internal.fieldOwners'
-  | 'updatedBy.internal.ignoreType'
-  | 'updatedBy.internal.mediaType'
-  | 'updatedBy.internal.owner'
-  | 'updatedBy.internal.type'
-  | 'updatedBy.isActive'
-  | 'updatedBy.kind'
-  | 'updatedBy.name'
-  | 'updatedBy.parent.children'
-  | 'updatedBy.parent.children.children'
-  | 'updatedBy.parent.children.id'
-  | 'updatedBy.parent.id'
-  | 'updatedBy.parent.internal.content'
-  | 'updatedBy.parent.internal.contentDigest'
-  | 'updatedBy.parent.internal.description'
-  | 'updatedBy.parent.internal.fieldOwners'
-  | 'updatedBy.parent.internal.ignoreType'
-  | 'updatedBy.parent.internal.mediaType'
-  | 'updatedBy.parent.internal.owner'
-  | 'updatedBy.parent.internal.type'
-  | 'updatedBy.parent.parent.children'
-  | 'updatedBy.parent.parent.id'
-  | 'updatedBy.picture'
-  | 'updatedBy.publishedAt'
-  | 'updatedBy.remoteId'
-  | 'updatedBy.remoteTypeName'
-  | 'updatedBy.stage'
-  | 'updatedBy.updatedAt';
-
-type GraphCMS_PageContentFilterInput = {
-  readonly children: InputMaybe<NodeFilterListInput>;
-  readonly content: InputMaybe<StringQueryOperatorInput>;
-  readonly createdAt: InputMaybe<JSONQueryOperatorInput>;
-  readonly createdBy: InputMaybe<GraphCMS_UserFilterInput>;
-  readonly id: InputMaybe<StringQueryOperatorInput>;
-  readonly internal: InputMaybe<InternalFilterInput>;
-  readonly pageSlug: InputMaybe<StringQueryOperatorInput>;
-  readonly parent: InputMaybe<NodeFilterInput>;
-  readonly publishedAt: InputMaybe<JSONQueryOperatorInput>;
-  readonly publishedBy: InputMaybe<GraphCMS_UserFilterInput>;
-  readonly remoteId: InputMaybe<IDQueryOperatorInput>;
-  readonly remoteTypeName: InputMaybe<StringQueryOperatorInput>;
-  readonly scheduledIn: InputMaybe<GraphCMS_ScheduledOperationFilterListInput>;
-  readonly stage: InputMaybe<GraphCMS_StageQueryOperatorInput>;
-  readonly updatedAt: InputMaybe<JSONQueryOperatorInput>;
-  readonly updatedBy: InputMaybe<GraphCMS_UserFilterInput>;
-};
-
-type GraphCMS_PageContentGroupConnection = {
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<GraphCMS_PageContentEdge>;
-  readonly field: Scalars['String'];
-  readonly fieldValue: Maybe<Scalars['String']>;
-  readonly group: ReadonlyArray<GraphCMS_PageContentGroupConnection>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<GraphCMS_PageContent>;
-  readonly pageInfo: PageInfo;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly totalCount: Scalars['Int'];
-};
-
-
-type GraphCMS_PageContentGroupConnection_distinctArgs = {
-  field: GraphCMS_PageContentFieldsEnum;
-};
-
-
-type GraphCMS_PageContentGroupConnection_groupArgs = {
-  field: GraphCMS_PageContentFieldsEnum;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-};
-
-
-type GraphCMS_PageContentGroupConnection_maxArgs = {
-  field: GraphCMS_PageContentFieldsEnum;
-};
-
-
-type GraphCMS_PageContentGroupConnection_minArgs = {
-  field: GraphCMS_PageContentFieldsEnum;
-};
-
-
-type GraphCMS_PageContentGroupConnection_sumArgs = {
-  field: GraphCMS_PageContentFieldsEnum;
-};
-
-type GraphCMS_PageContentSortInput = {
-  readonly fields: InputMaybe<ReadonlyArray<InputMaybe<GraphCMS_PageContentFieldsEnum>>>;
-  readonly order: InputMaybe<ReadonlyArray<InputMaybe<SortOrderEnum>>>;
-};
-
 type GraphCMS_Project = Node & {
   readonly children: ReadonlyArray<Node>;
   readonly client: Scalars['String'];
   readonly content: GraphCMS_RichText;
   readonly createdAt: Scalars['JSON'];
   readonly createdBy: Maybe<GraphCMS_User>;
-  readonly description: Scalars['String'];
   readonly featuredImage: GraphCMS_Asset;
   readonly featuredProject: Scalars['Boolean'];
   readonly finishDate: Maybe<Scalars['JSON']>;
@@ -5142,7 +4511,6 @@ type GraphCMS_Project = Node & {
   readonly internal: Internal;
   readonly liveProjectUrl: Scalars['String'];
   readonly overview: Scalars['String'];
-  readonly pageContent: Maybe<Scalars['String']>;
   readonly parent: Maybe<Node>;
   readonly projectImages: ReadonlyArray<GraphCMS_Asset>;
   readonly projectType: Scalars['String'];
@@ -5157,7 +4525,6 @@ type GraphCMS_Project = Node & {
   readonly stage: GraphCMS_Stage;
   readonly startDate: Scalars['JSON'];
   readonly techStack: ReadonlyArray<Scalars['String']>;
-  readonly tileBgColor: Maybe<GraphCMS_Color>;
   readonly title: Scalars['String'];
   readonly updatedAt: Scalars['JSON'];
   readonly updatedBy: Maybe<GraphCMS_User>;
@@ -5308,7 +4675,6 @@ type GraphCMS_ProjectFieldsEnum =
   | 'createdBy.remoteTypeName'
   | 'createdBy.stage'
   | 'createdBy.updatedAt'
-  | 'description'
   | 'featuredImage.altText'
   | 'featuredImage.children'
   | 'featuredImage.children.children'
@@ -5470,7 +4836,6 @@ type GraphCMS_ProjectFieldsEnum =
   | 'featuredImage.featuredImageProject.createdBy.remoteTypeName'
   | 'featuredImage.featuredImageProject.createdBy.stage'
   | 'featuredImage.featuredImageProject.createdBy.updatedAt'
-  | 'featuredImage.featuredImageProject.description'
   | 'featuredImage.featuredImageProject.featuredImage.altText'
   | 'featuredImage.featuredImageProject.featuredImage.children'
   | 'featuredImage.featuredImageProject.featuredImage.createdAt'
@@ -5507,7 +4872,6 @@ type GraphCMS_ProjectFieldsEnum =
   | 'featuredImage.featuredImageProject.internal.type'
   | 'featuredImage.featuredImageProject.liveProjectUrl'
   | 'featuredImage.featuredImageProject.overview'
-  | 'featuredImage.featuredImageProject.pageContent'
   | 'featuredImage.featuredImageProject.parent.children'
   | 'featuredImage.featuredImageProject.parent.id'
   | 'featuredImage.featuredImageProject.projectImages'
@@ -5568,9 +4932,6 @@ type GraphCMS_ProjectFieldsEnum =
   | 'featuredImage.featuredImageProject.stage'
   | 'featuredImage.featuredImageProject.startDate'
   | 'featuredImage.featuredImageProject.techStack'
-  | 'featuredImage.featuredImageProject.tileBgColor.css'
-  | 'featuredImage.featuredImageProject.tileBgColor.hex'
-  | 'featuredImage.featuredImageProject.tileBgColor.remoteTypeName'
   | 'featuredImage.featuredImageProject.title'
   | 'featuredImage.featuredImageProject.updatedAt'
   | 'featuredImage.featuredImageProject.updatedBy.children'
@@ -5692,7 +5053,6 @@ type GraphCMS_ProjectFieldsEnum =
   | 'featuredImage.projectImagesProject.createdBy.remoteTypeName'
   | 'featuredImage.projectImagesProject.createdBy.stage'
   | 'featuredImage.projectImagesProject.createdBy.updatedAt'
-  | 'featuredImage.projectImagesProject.description'
   | 'featuredImage.projectImagesProject.featuredImage.altText'
   | 'featuredImage.projectImagesProject.featuredImage.children'
   | 'featuredImage.projectImagesProject.featuredImage.createdAt'
@@ -5729,7 +5089,6 @@ type GraphCMS_ProjectFieldsEnum =
   | 'featuredImage.projectImagesProject.internal.type'
   | 'featuredImage.projectImagesProject.liveProjectUrl'
   | 'featuredImage.projectImagesProject.overview'
-  | 'featuredImage.projectImagesProject.pageContent'
   | 'featuredImage.projectImagesProject.parent.children'
   | 'featuredImage.projectImagesProject.parent.id'
   | 'featuredImage.projectImagesProject.projectImages'
@@ -5790,9 +5149,6 @@ type GraphCMS_ProjectFieldsEnum =
   | 'featuredImage.projectImagesProject.stage'
   | 'featuredImage.projectImagesProject.startDate'
   | 'featuredImage.projectImagesProject.techStack'
-  | 'featuredImage.projectImagesProject.tileBgColor.css'
-  | 'featuredImage.projectImagesProject.tileBgColor.hex'
-  | 'featuredImage.projectImagesProject.tileBgColor.remoteTypeName'
   | 'featuredImage.projectImagesProject.title'
   | 'featuredImage.projectImagesProject.updatedAt'
   | 'featuredImage.projectImagesProject.updatedBy.children'
@@ -5955,7 +5311,6 @@ type GraphCMS_ProjectFieldsEnum =
   | 'internal.type'
   | 'liveProjectUrl'
   | 'overview'
-  | 'pageContent'
   | 'parent.children'
   | 'parent.children.children'
   | 'parent.children.children.children'
@@ -6156,7 +5511,6 @@ type GraphCMS_ProjectFieldsEnum =
   | 'projectImages.featuredImageProject.createdBy.remoteTypeName'
   | 'projectImages.featuredImageProject.createdBy.stage'
   | 'projectImages.featuredImageProject.createdBy.updatedAt'
-  | 'projectImages.featuredImageProject.description'
   | 'projectImages.featuredImageProject.featuredImage.altText'
   | 'projectImages.featuredImageProject.featuredImage.children'
   | 'projectImages.featuredImageProject.featuredImage.createdAt'
@@ -6193,7 +5547,6 @@ type GraphCMS_ProjectFieldsEnum =
   | 'projectImages.featuredImageProject.internal.type'
   | 'projectImages.featuredImageProject.liveProjectUrl'
   | 'projectImages.featuredImageProject.overview'
-  | 'projectImages.featuredImageProject.pageContent'
   | 'projectImages.featuredImageProject.parent.children'
   | 'projectImages.featuredImageProject.parent.id'
   | 'projectImages.featuredImageProject.projectImages'
@@ -6254,9 +5607,6 @@ type GraphCMS_ProjectFieldsEnum =
   | 'projectImages.featuredImageProject.stage'
   | 'projectImages.featuredImageProject.startDate'
   | 'projectImages.featuredImageProject.techStack'
-  | 'projectImages.featuredImageProject.tileBgColor.css'
-  | 'projectImages.featuredImageProject.tileBgColor.hex'
-  | 'projectImages.featuredImageProject.tileBgColor.remoteTypeName'
   | 'projectImages.featuredImageProject.title'
   | 'projectImages.featuredImageProject.updatedAt'
   | 'projectImages.featuredImageProject.updatedBy.children'
@@ -6378,7 +5728,6 @@ type GraphCMS_ProjectFieldsEnum =
   | 'projectImages.projectImagesProject.createdBy.remoteTypeName'
   | 'projectImages.projectImagesProject.createdBy.stage'
   | 'projectImages.projectImagesProject.createdBy.updatedAt'
-  | 'projectImages.projectImagesProject.description'
   | 'projectImages.projectImagesProject.featuredImage.altText'
   | 'projectImages.projectImagesProject.featuredImage.children'
   | 'projectImages.projectImagesProject.featuredImage.createdAt'
@@ -6415,7 +5764,6 @@ type GraphCMS_ProjectFieldsEnum =
   | 'projectImages.projectImagesProject.internal.type'
   | 'projectImages.projectImagesProject.liveProjectUrl'
   | 'projectImages.projectImagesProject.overview'
-  | 'projectImages.projectImagesProject.pageContent'
   | 'projectImages.projectImagesProject.parent.children'
   | 'projectImages.projectImagesProject.parent.id'
   | 'projectImages.projectImagesProject.projectImages'
@@ -6476,9 +5824,6 @@ type GraphCMS_ProjectFieldsEnum =
   | 'projectImages.projectImagesProject.stage'
   | 'projectImages.projectImagesProject.startDate'
   | 'projectImages.projectImagesProject.techStack'
-  | 'projectImages.projectImagesProject.tileBgColor.css'
-  | 'projectImages.projectImagesProject.tileBgColor.hex'
-  | 'projectImages.projectImagesProject.tileBgColor.remoteTypeName'
   | 'projectImages.projectImagesProject.title'
   | 'projectImages.projectImagesProject.updatedAt'
   | 'projectImages.projectImagesProject.updatedBy.children'
@@ -6882,14 +6227,6 @@ type GraphCMS_ProjectFieldsEnum =
   | 'stage'
   | 'startDate'
   | 'techStack'
-  | 'tileBgColor.css'
-  | 'tileBgColor.hex'
-  | 'tileBgColor.remoteTypeName'
-  | 'tileBgColor.rgba.a'
-  | 'tileBgColor.rgba.b'
-  | 'tileBgColor.rgba.g'
-  | 'tileBgColor.rgba.r'
-  | 'tileBgColor.rgba.remoteTypeName'
   | 'title'
   | 'updatedAt'
   | 'updatedBy.children'
@@ -6947,7 +6284,6 @@ type GraphCMS_ProjectFilterInput = {
   readonly content: InputMaybe<GraphCMS_RichTextFilterInput>;
   readonly createdAt: InputMaybe<JSONQueryOperatorInput>;
   readonly createdBy: InputMaybe<GraphCMS_UserFilterInput>;
-  readonly description: InputMaybe<StringQueryOperatorInput>;
   readonly featuredImage: InputMaybe<GraphCMS_AssetFilterInput>;
   readonly featuredProject: InputMaybe<BooleanQueryOperatorInput>;
   readonly finishDate: InputMaybe<JSONQueryOperatorInput>;
@@ -6956,7 +6292,6 @@ type GraphCMS_ProjectFilterInput = {
   readonly internal: InputMaybe<InternalFilterInput>;
   readonly liveProjectUrl: InputMaybe<StringQueryOperatorInput>;
   readonly overview: InputMaybe<StringQueryOperatorInput>;
-  readonly pageContent: InputMaybe<StringQueryOperatorInput>;
   readonly parent: InputMaybe<NodeFilterInput>;
   readonly projectImages: InputMaybe<GraphCMS_AssetFilterListInput>;
   readonly projectType: InputMaybe<StringQueryOperatorInput>;
@@ -6971,7 +6306,6 @@ type GraphCMS_ProjectFilterInput = {
   readonly stage: InputMaybe<GraphCMS_StageQueryOperatorInput>;
   readonly startDate: InputMaybe<JSONQueryOperatorInput>;
   readonly techStack: InputMaybe<StringQueryOperatorInput>;
-  readonly tileBgColor: InputMaybe<GraphCMS_ColorFilterInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
   readonly updatedAt: InputMaybe<JSONQueryOperatorInput>;
   readonly updatedBy: InputMaybe<GraphCMS_UserFilterInput>;
@@ -7027,22 +6361,6 @@ type GraphCMS_ProjectSortInput = {
   readonly order: InputMaybe<ReadonlyArray<InputMaybe<SortOrderEnum>>>;
 };
 
-type GraphCMS_RGBA = {
-  readonly a: Scalars['JSON'];
-  readonly b: Scalars['JSON'];
-  readonly g: Scalars['JSON'];
-  readonly r: Scalars['JSON'];
-  readonly remoteTypeName: Scalars['String'];
-};
-
-type GraphCMS_RGBAFilterInput = {
-  readonly a: InputMaybe<JSONQueryOperatorInput>;
-  readonly b: InputMaybe<JSONQueryOperatorInput>;
-  readonly g: InputMaybe<JSONQueryOperatorInput>;
-  readonly r: InputMaybe<JSONQueryOperatorInput>;
-  readonly remoteTypeName: InputMaybe<StringQueryOperatorInput>;
-};
-
 type GraphCMS_RichText = {
   readonly html: Scalars['String'];
   readonly markdown: Scalars['String'];
@@ -7081,7 +6399,7 @@ type GraphCMS_ScheduledOperation = Node & {
   readonly updatedBy: Maybe<GraphCMS_User>;
 };
 
-type GraphCMS_ScheduledOperationAffectedDocument = GraphCMS_Asset | GraphCMS_BlogPost | GraphCMS_PageContent | GraphCMS_Project;
+type GraphCMS_ScheduledOperationAffectedDocument = GraphCMS_Asset | GraphCMS_BlogPost | GraphCMS_Project;
 
 type GraphCMS_ScheduledOperationConnection = {
   readonly distinct: ReadonlyArray<Scalars['String']>;
@@ -9357,7 +8675,6 @@ type Query = {
   readonly allFile: FileConnection;
   readonly allGraphCmsAsset: GraphCMS_AssetConnection;
   readonly allGraphCmsBlogPost: GraphCMS_BlogPostConnection;
-  readonly allGraphCmsPageContent: GraphCMS_PageContentConnection;
   readonly allGraphCmsProject: GraphCMS_ProjectConnection;
   readonly allGraphCmsScheduledOperation: GraphCMS_ScheduledOperationConnection;
   readonly allGraphCmsScheduledRelease: GraphCMS_ScheduledReleaseConnection;
@@ -9374,7 +8691,6 @@ type Query = {
   readonly file: Maybe<File>;
   readonly graphCmsAsset: Maybe<GraphCMS_Asset>;
   readonly graphCmsBlogPost: Maybe<GraphCMS_BlogPost>;
-  readonly graphCmsPageContent: Maybe<GraphCMS_PageContent>;
   readonly graphCmsProject: Maybe<GraphCMS_Project>;
   readonly graphCmsScheduledOperation: Maybe<GraphCMS_ScheduledOperation>;
   readonly graphCmsScheduledRelease: Maybe<GraphCMS_ScheduledRelease>;
@@ -9419,14 +8735,6 @@ type Query_allGraphCmsBlogPostArgs = {
   limit: InputMaybe<Scalars['Int']>;
   skip: InputMaybe<Scalars['Int']>;
   sort: InputMaybe<GraphCMS_BlogPostSortInput>;
-};
-
-
-type Query_allGraphCmsPageContentArgs = {
-  filter: InputMaybe<GraphCMS_PageContentFilterInput>;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-  sort: InputMaybe<GraphCMS_PageContentSortInput>;
 };
 
 
@@ -9666,33 +8974,12 @@ type Query_graphCmsBlogPostArgs = {
 };
 
 
-type Query_graphCmsPageContentArgs = {
-  children: InputMaybe<NodeFilterListInput>;
-  content: InputMaybe<StringQueryOperatorInput>;
-  createdAt: InputMaybe<JSONQueryOperatorInput>;
-  createdBy: InputMaybe<GraphCMS_UserFilterInput>;
-  id: InputMaybe<StringQueryOperatorInput>;
-  internal: InputMaybe<InternalFilterInput>;
-  pageSlug: InputMaybe<StringQueryOperatorInput>;
-  parent: InputMaybe<NodeFilterInput>;
-  publishedAt: InputMaybe<JSONQueryOperatorInput>;
-  publishedBy: InputMaybe<GraphCMS_UserFilterInput>;
-  remoteId: InputMaybe<IDQueryOperatorInput>;
-  remoteTypeName: InputMaybe<StringQueryOperatorInput>;
-  scheduledIn: InputMaybe<GraphCMS_ScheduledOperationFilterListInput>;
-  stage: InputMaybe<GraphCMS_StageQueryOperatorInput>;
-  updatedAt: InputMaybe<JSONQueryOperatorInput>;
-  updatedBy: InputMaybe<GraphCMS_UserFilterInput>;
-};
-
-
 type Query_graphCmsProjectArgs = {
   children: InputMaybe<NodeFilterListInput>;
   client: InputMaybe<StringQueryOperatorInput>;
   content: InputMaybe<GraphCMS_RichTextFilterInput>;
   createdAt: InputMaybe<JSONQueryOperatorInput>;
   createdBy: InputMaybe<GraphCMS_UserFilterInput>;
-  description: InputMaybe<StringQueryOperatorInput>;
   featuredImage: InputMaybe<GraphCMS_AssetFilterInput>;
   featuredProject: InputMaybe<BooleanQueryOperatorInput>;
   finishDate: InputMaybe<JSONQueryOperatorInput>;
@@ -9701,7 +8988,6 @@ type Query_graphCmsProjectArgs = {
   internal: InputMaybe<InternalFilterInput>;
   liveProjectUrl: InputMaybe<StringQueryOperatorInput>;
   overview: InputMaybe<StringQueryOperatorInput>;
-  pageContent: InputMaybe<StringQueryOperatorInput>;
   parent: InputMaybe<NodeFilterInput>;
   projectImages: InputMaybe<GraphCMS_AssetFilterListInput>;
   projectType: InputMaybe<StringQueryOperatorInput>;
@@ -9716,7 +9002,6 @@ type Query_graphCmsProjectArgs = {
   stage: InputMaybe<GraphCMS_StageQueryOperatorInput>;
   startDate: InputMaybe<JSONQueryOperatorInput>;
   techStack: InputMaybe<StringQueryOperatorInput>;
-  tileBgColor: InputMaybe<GraphCMS_ColorFilterInput>;
   title: InputMaybe<StringQueryOperatorInput>;
   updatedAt: InputMaybe<JSONQueryOperatorInput>;
   updatedBy: InputMaybe<GraphCMS_UserFilterInput>;
@@ -11493,19 +10778,19 @@ type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: 
 type HomePageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type HomePageQuery = { readonly featuredProjects: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly description: string, readonly featuredProject: boolean, readonly finishDate: Record<string, unknown> | null, readonly liveProjectUrl: string, readonly overview: string, readonly projectType: string, readonly role: string | null, readonly slug: string, readonly startDate: Record<string, unknown>, readonly techStack: ReadonlyArray<string>, readonly title: string, readonly featuredImage: { readonly gatsbyImageData: Record<string, unknown> | null }, readonly tileBgColor: { readonly hex: Record<string, unknown> } | null } }> } };
+type HomePageQuery = { readonly featuredProjects: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly featuredProject: boolean, readonly finishDate: Record<string, unknown> | null, readonly liveProjectUrl: string, readonly overview: string, readonly projectType: string, readonly role: string | null, readonly slug: string, readonly startDate: Record<string, unknown>, readonly techStack: ReadonlyArray<string>, readonly title: string, readonly featuredImage: { readonly gatsbyImageData: Record<string, unknown> | null } } }> } };
 
 type ProjectPageQueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
 
 
-type ProjectPageQuery = { readonly graphCmsProject: { readonly description: string, readonly finishDate: Record<string, unknown> | null, readonly liveProjectUrl: string, readonly overview: string, readonly pageContent: string | null, readonly projectType: string, readonly role: string | null, readonly slug: string, readonly startDate: Record<string, unknown>, readonly techStack: ReadonlyArray<string>, readonly title: string, readonly content: { readonly raw: Record<string, unknown> }, readonly featuredImage: { readonly url: string }, readonly projectImages: ReadonlyArray<{ readonly altText: string | null, readonly gatsbyImageData: Record<string, unknown> | null, readonly slug: string | null }> } | null };
+type ProjectPageQuery = { readonly graphCmsProject: { readonly finishDate: Record<string, unknown> | null, readonly liveProjectUrl: string, readonly overview: string, readonly projectType: string, readonly role: string | null, readonly slug: string, readonly startDate: Record<string, unknown>, readonly techStack: ReadonlyArray<string>, readonly title: string, readonly content: { readonly raw: Record<string, unknown> }, readonly featuredImage: { readonly url: string }, readonly projectImages: ReadonlyArray<{ readonly altText: string | null, readonly gatsbyImageData: Record<string, unknown> | null, readonly slug: string | null }> } | null };
 
 type ProjectsPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type ProjectsPageQuery = { readonly projects: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly description: string, readonly featuredProject: boolean, readonly finishDate: Record<string, unknown> | null, readonly liveProjectUrl: string, readonly overview: string, readonly projectType: string, readonly role: string | null, readonly slug: string, readonly startDate: Record<string, unknown>, readonly techStack: ReadonlyArray<string>, readonly title: string, readonly featuredImage: { readonly gatsbyImageData: Record<string, unknown> | null } } }> } };
+type ProjectsPageQuery = { readonly projects: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly featuredProject: boolean, readonly finishDate: Record<string, unknown> | null, readonly liveProjectUrl: string, readonly overview: string, readonly projectType: string, readonly role: string | null, readonly slug: string, readonly startDate: Record<string, unknown>, readonly techStack: ReadonlyArray<string>, readonly title: string, readonly featuredImage: { readonly gatsbyImageData: Record<string, unknown> | null } } }> } };
 
 
 }

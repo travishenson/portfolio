@@ -48,11 +48,6 @@ fragment ScheduledOperation on ScheduledOperation {
       remoteId: id
       stage
     }
-    ... on PageContent {
-      remoteTypeName: __typename
-      remoteId: id
-      stage
-    }
     ... on Project {
       remoteTypeName: __typename
       remoteId: id
