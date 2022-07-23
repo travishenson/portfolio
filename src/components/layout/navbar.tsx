@@ -79,9 +79,9 @@ const Navbar: React.FC<NavbarProps> = ({currentSlug, isFullWidthPage}) => {
               <NavLink href="/projects" currentSlug={currentSlug}>
                 Projects
               </NavLink>
-              <NavLink href="/blog" currentSlug={currentSlug}>
+              {/* <NavLink href="/blog" currentSlug={currentSlug}>
                 Blog
-              </NavLink>
+              </NavLink> */}
             </div>
             <EmailButton />
           </div>
@@ -126,9 +126,9 @@ const Navbar: React.FC<NavbarProps> = ({currentSlug, isFullWidthPage}) => {
                   <NavLink href="/projects" currentSlug={currentSlug}>
                     Projects
                   </NavLink>
-                  <NavLink href="/blog" currentSlug={currentSlug}>
+                  {/* <NavLink href="/blog" currentSlug={currentSlug}>
                     Blog
-                  </NavLink>
+                  </NavLink> */}
                 </nav>
               </div>
             </div>

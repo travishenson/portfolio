@@ -12,9 +12,7 @@ const HeaderData: React.FC<{label: string; value: any}> = ({label, value}) => {
   return (
     <div className="flex flex-col">
       <span className="text-xs text-brand-grey-300 uppercase">{label}</span>
-      <span className="font-outfit text-[1.44rem] md:text-[1.777rem] -mt-2">
-        {value}
-      </span>
+      <span className="font-outfit md:text-[1.777rem] md:-mt-2">{value}</span>
     </div>
   );
 };

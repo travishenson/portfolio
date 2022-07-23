@@ -3,8 +3,6 @@ import {Link} from 'gatsby';
 import {GatsbyImage, getImage, IGatsbyImageData} from 'gatsby-plugin-image';
 import {ArrowNarrowRightIcon} from '@heroicons/react/outline';
 
-import LoremIpsum from '../lorem-ipsum';
-
 export interface BlogCardProps {
   image: any;
   overview: string;
@@ -24,7 +22,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
 
   return (
     <div className="w-full h-[450px] mt-6 overflow-hidden">
-      <div className="w-full h-full flex flex-col bg-brand-grey-100 rounded-t-xl rounded-b-lg">
+      <div className="w-full h-full flex flex-col">
         <Link to={`/blog/${slug}`} className="w-full h-1/2">
           <GatsbyImage
             image={blogImage}
@@ -32,7 +30,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
             className="w-full h-full object-cover rounded-t-lg"
           />
         </Link>
-        <div className="flex flex-col flex-1 text-brand-black p-4">
+        <div className="flex flex-col flex-1 text-brand-black p-4 bg-brand-grey-100 rounded-b-lg">
           <p className="text-sm font-outfit text-brand-grey-700">
             Published {publishedAt}
           </p>
