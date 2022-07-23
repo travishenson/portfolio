@@ -11452,11 +11452,6 @@ type WebPOptions = {
   readonly quality: InputMaybe<Scalars['Int']>;
 };
 
-type AboutPageQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type AboutPageQuery = { readonly aboutMe: { readonly pageSlug: string, readonly content: string } | null };
-
 type BlogPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 

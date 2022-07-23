@@ -8,10 +8,7 @@ import {RichTextContent} from '@graphcms/rich-text-types';
 import Layout from '../../components/layout';
 import {parseProjectDates} from '../../shared/utils';
 
-const HeaderData: React.FC<{label: string; value: string}> = ({
-  label,
-  value,
-}) => {
+const HeaderData: React.FC<{label: string; value: any}> = ({label, value}) => {
   return (
     <div className="flex flex-col">
       <span className="text-xs text-brand-grey-300 uppercase">{label}</span>
@@ -50,7 +47,7 @@ const ProjectPage = (props: PageProps<Queries.ProjectPageQuery>) => {
       </Helmet>
       <Layout path={props.path} isFullWidth>
         <div className="w-full h-auto min-h-[35vh] bg-brand-black text-brand-grey-100 px-8">
-          <div className="flex w-full h-full max-w-content mx-auto pt-[10vh] sm:pt-[15vh] pb-[5vh] sm:pb-0">
+          <div className="flex w-full h-full max-w-content mx-auto pt-[10vh] sm:pt-[15vh] pb-[5vh]">
             <div className="grid grid-cols-1 gap-y-8 sm:grid-cols-2 w-full max-w-text mx-auto">
               <HeaderData label="Project" value={String(project.title)} />
               <HeaderData
@@ -59,6 +56,17 @@ const ProjectPage = (props: PageProps<Queries.ProjectPageQuery>) => {
               />
               <HeaderData label="Role" value={String(project.role)} />
               <HeaderData label="Type" value={String(project.projectType)} />
+              <HeaderData
+                label="Project URL"
+                value={
+                  <a
+                    href={project.liveProjectUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline underline-offset-2 hover:text-brand-grey-300"
+                  >{`Visit ${project.title}`}</a>
+                }
+              />
             </div>
           </div>
         </div>

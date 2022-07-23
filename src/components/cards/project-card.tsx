@@ -29,6 +29,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     card: 'flex md:flex-row rounded-t-xl rounded-b-xl md:rounded-l-xl md:rounded-r-lg',
     image: 'rounded-t-lg md:rounded-tr-none md:rounded-l-lg',
   };
+
   const imageRightStyles = {
     card: 'flex md:flex-row-reverse rounded-t-xl rounded-b-xl md:rounded-r-xl md:rounded-l-lg',
     image: 'w-full rounded-t-lg md:rounded-tl-none md:rounded-r-lg ',
@@ -40,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         isImageLeft ? imageLeftStyles.card : imageRightStyles.card
       }`}
     >
-      <Link to={`/projects/${slug}`} className="w-full md:w-3/5">
+      <Link to={`/projects/${slug}`} className="w-full h-full md:w-3/5">
         <GatsbyImage
           image={projectImage}
           alt={`${title} featured mockup`}
