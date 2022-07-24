@@ -59,7 +59,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             to={`/projects/${slug}`}
             className="max-w-max hover:text-brand-blue-500"
           >
-            <h3>{title}</h3>
+            <p className="font-outfit text-2xl md:text-4xl">{title}</p>
           </Link>
           <span>{overview}</span>
         </div>

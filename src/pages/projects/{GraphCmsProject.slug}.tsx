@@ -12,7 +12,7 @@ const HeaderData: React.FC<{label: string; value: any}> = ({label, value}) => {
   return (
     <div className="flex flex-col">
       <span className="text-xs text-brand-grey-300 uppercase">{label}</span>
-      <span className="font-outfit md:text-[1.777rem] md:-mt-2">{value}</span>
+      <span className="font-outfit md:text-3xl md:-mt-2">{value}</span>
     </div>
   );
 };
@@ -44,9 +44,9 @@ const ProjectPage = (props: PageProps<Queries.ProjectPageQuery>) => {
         />
       </Helmet>
       <Layout path={props.path} isFullWidth>
-        <div className="w-full h-auto min-h-[35vh] bg-brand-black text-brand-grey-100 px-8">
-          <div className="flex w-full h-full max-w-content mx-auto pt-[10vh] pb-[5vh]">
-            <div className="grid grid-cols-1 gap-y-8 sm:grid-cols-2 w-full max-w-text mx-auto">
+        <div className="w-full h-auto min-h-[40vh] bg-brand-black text-brand-grey-100 px-8">
+          <div className="flex w-full h-full max-w-content mx-auto pt-[15vh] pb-[5vh]">
+            <div className="grid grid-cols-2 gap-x-2 sm:gap-x-0 gap-y-8 w-full max-w-text mx-auto">
               <HeaderData label="Project" value={String(project.title)} />
               <HeaderData
                 label="Duration"
@@ -73,8 +73,8 @@ const ProjectPage = (props: PageProps<Queries.ProjectPageQuery>) => {
             content={project?.content?.raw as RichTextContent}
             renderers={{
               h4: ({children}) => (
-                <div className="text-lg max-w-text mx-auto md:mt-12">
-                  <h2>{children}</h2>
+                <div className="text-base max-w-text mx-auto md:mt-8">
+                  <h2 className="text-4xl md:text-5xl">{children}</h2>
                 </div>
               ),
               img: ({src, altText}) => (
@@ -91,11 +91,11 @@ const ProjectPage = (props: PageProps<Queries.ProjectPageQuery>) => {
                 </a>
               ),
               p: ({children}) => (
-                <p className="mx-auto my-8 text-lg leading-8">{children}</p>
+                <p className="mx-auto max-w-text mt-4 mb-8 text-base leading-8">{children}</p>
               ),
               class: ({className}) => {
                 if (className === 'section-break') {
-                  return <div className="h-12" />;
+                  return <div className="h-2" />;
                 }
 
                 const imageIdx = projectImages.findIndex(

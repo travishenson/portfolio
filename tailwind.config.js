@@ -9,6 +9,7 @@ module.exports = {
       outfit: ['Outfit', 'sans-serif'],
       inter: ['Inter', 'sans-serif'],
     },
+
     extend: {
       colors: {
         'brand-blue-100': '#B3D9FF',
@@ -27,9 +28,21 @@ module.exports = {
         'brand-grey-900': '#1A1A1A',
         'brand-black': '#080808',
       },
+      fontSize: {
+        base: '1rem',
+        md: '1.2rem',
+        lg: '1.333rem',
+        xl: '1.44rem',
+        '2xl': '1.728rem',
+        '3xl': '1.777rem',
+        '4xl': '2.074rem',
+        '5xl': '2.488rem',
+        '6xl': '3.357rem',
+        '7xl': '4.209rem',
+      },
       maxWidth: {
         content: '1400px',
-        text: '70ch',
+        text: '65ch',
       },
     },
   },

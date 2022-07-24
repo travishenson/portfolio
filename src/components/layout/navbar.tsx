@@ -48,18 +48,14 @@ const NavLink: React.FC<NavLinkProps> = ({
 const Navbar: React.FC<NavbarProps> = ({currentSlug, isFullWidthPage}) => {
   return (
     <Popover
-      className={`fixed w-full z-30 ${
-        isFullWidthPage
-          ? 'bg-brand-black border-b border-brand-grey-900'
-          : 'bg-brand-grey-900 border-b border-brand-grey-700'
-      }`}
+      className={`fixed w-full z-30 bg-brand-black `}
     >
       <div
         className="absolute inset-0 pointer-events-none"
         aria-hidden="true"
       />
       <div className="relative z-20">
-        <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-5 sm:py-4 lg:px-8 md:space-x-10">
+        <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-5 lg:px-8 md:space-x-10">
           <NavLink href="/" currentSlug={currentSlug} isLogo>
             <div className="w-[40px] h-[40px] md:w-[45px] md:h-[45px]">
               <Logo />

@@ -15,7 +15,8 @@ const techList: string[] = [
 ];
 
 const AboutPage = ({path}: PageProps) => {
-  const pStyles = 'max-w-text mx-auto';
+  const sectionHeaderStyle = 'text-xl md:text-3xl max-w-lg mb-8';
+  const pStyles = 'max-w-text mx-auto my-8';
 
   return (
     <>
@@ -26,13 +27,12 @@ const AboutPage = ({path}: PageProps) => {
       </Helmet>
       <Layout path={path}>
         <div className="mt-8 mx-auto">
-          <h2>
-            I'm Travis Henson, a JavaScript developer currently based in
-            Kentucky.
-          </h2>
-          <ul className="flex flex-row flex-wrap gap-4 justify-center mt-4 mb-12">
-            {techList.map((tech) => textToIcon(tech))}
-          </ul>
+          <div className="max-w-text mx-auto">
+            <h1 className={sectionHeaderStyle}>
+              I'm Travis Henson, a JavaScript developer currently based in
+              Kentucky.
+            </h1>
+          </div>
           <p className={pStyles}>
             As a full-stack developer with a passion for creating clean and
             easy-to-use applications, I place an emphasis on user experience and
@@ -47,9 +47,20 @@ const AboutPage = ({path}: PageProps) => {
             of the internet and web development.
           </p>
           <p className={pStyles}>
-            Outside of that, a few of my main interests are sports, horror
-            movies, video games, and photography.
+            Here are some tools and technologies I've been enjoying a lot
+            lately:
           </p>
+          <div className="max-w-text mx-auto">
+            <ul className="flex flex-row flex-wrap gap-4 justify-center my-12">
+              {techList.map((tech) => textToIcon(tech))}
+            </ul>
+          </div>
+          <div className="max-w-text mx-auto">
+            <h2 className={sectionHeaderStyle}>Experience</h2>
+          </div>
+          <div className="max-w-text mx-auto">
+            <h2 className={sectionHeaderStyle}>Education</h2>
+          </div>
         </div>
       </Layout>
     </>

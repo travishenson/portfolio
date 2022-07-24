@@ -23,13 +23,13 @@ const IndexPage = ({path, data}: PageProps<Queries.HomePageQuery>) => {
           <section className="flex flex-1 h-full items-center">
             <div className="flex flex-row flex-wrap w-full justify-between items-center gap-6 px-8 mt-8 md:mt-0">
               <div className="mx-auto max-w-text">
-                <h1 className="mb-6">Hey, I&apos;m Travis.</h1>
-                <p className="text-lg md:text-xl">
+                <h1 className="mb-6 text-5xl md:text-6xl lg:text-7xl">Hey, I&apos;m Travis.</h1>
+                <p className="text-md mt-4">
                   I&apos;m a JavaScript developer who enjoys working across the
                   full stack and has a passion for creating clean and
                   easy-to-use sites and applications.
                 </p>
-                <p className="text-lg md:text-xl">
+                <p className="text-md mt-4">
                   Currently, I'm part of the team building and
                   maintaining
                   <a
@@ -56,7 +56,7 @@ const IndexPage = ({path, data}: PageProps<Queries.HomePageQuery>) => {
         </Hero>
         <ContentWrapper>
           <section>
-            <h3 className="text-center tracking-wide">Featured Projects</h3>
+            <h3 className="text-center tracking-wide font-outfit text-2xl md:text-4xl">Featured Projects</h3>
             <div className="flex flex-col mt-12 px-8 gap-16">
               {featuredProjects.map((project, index) => {
                 const {featuredImage, projectType, slug} = project.node;

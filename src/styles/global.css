@@ -18,28 +18,8 @@
     @apply font-outfit leading-[1.3];
   }
 
-  h1 {
-    @apply mt-0 text-[2.488rem] md:text-[3.357rem] lg:text-[4.209rem];
-  }
-
-  h2 {
-    @apply text-[2.074rem] md:text-[3.157rem];
-  }
-
-  h3 {
-    @apply text-[1.728rem] md:text-[2.369rem];
-  }
-
-  h4 {
-    @apply text-[1.44rem] md:text-[1.777rem];
-  }
-
-  h5 {
-    @apply text-[1.2rem] md:text-[1.333rem];
-  }
-
   p {
-    @apply mb-4 w-full max-w-text;
+    @apply w-full max-w-text;
   }
 }
 
