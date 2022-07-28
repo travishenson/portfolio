@@ -1,8 +1,9 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 import {Popover, Transition} from '@headlessui/react';
 import {MenuIcon, XIcon} from '@heroicons/react/outline';
 import {Link} from 'gatsby';
 
+import {useScrollPos} from '../../shared/use-scroll-pos';
 import {EmailButton} from '../email-button';
 import Logo from '../logo';
 
@@ -46,16 +47,43 @@ const NavLink: React.FC<NavLinkProps> = ({
 };
 
 const Navbar: React.FC<NavbarProps> = ({currentSlug, isFullWidthPage}) => {
+  const {direction, position} = useScrollPos();
+
+  let navbarClass: string;
+
+  switch (direction) {
+    case null:
+      navbarClass = 'top-[0px]';
+      break;
+    case 'Up':
+      navbarClass = `top-[0px] backdrop-blur-sm ${
+        isFullWidthPage ? 'bg-brand-black/95' : 'bg-brand-grey-900/95'
+      }`;
+      break;
+    case 'Down':
+      navbarClass = `${position >= 25 ? '-top-[100px]' : 'top-[0px]'}`;
+      break;
+    default:
+      navbarClass = 'top-[0px]';
+  }
+
   return (
     <Popover
-      className={`fixed w-full z-30 bg-brand-black `}
+      className={`fixed w-full z-30 transition-all duration-500 ${navbarClass} ${
+        position > 0 ? 'drop-shadow-[0_15px_15px_rgba(0,0,0,0.20)]' : ''
+      } ${isFullWidthPage ? 'bg-brand-black' : 'bg-brand-grey-900'}
+    `}
     >
       <div
         className="absolute inset-0 pointer-events-none"
         aria-hidden="true"
       />
       <div className="relative z-20">
-        <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-5 lg:px-8 md:space-x-10">
+        <nav
+          className={`max-w-7xl mx-auto flex justify-between items-center px-8 transition-all duration-500 ${
+            position < 20 ? 'py-6' : 'py-4'
+          } md:space-x-10`}
+        >
           <NavLink href="/" currentSlug={currentSlug} isLogo>
             <div className="w-[40px] h-[40px] md:w-[45px] md:h-[45px]">
               <Logo />
