@@ -20,16 +20,16 @@ const IndexPage = ({path, data}: PageProps<Queries.HomePageQuery>) => {
       </Helmet>
       <Layout path={path} isFullWidth>
         <Hero>
-          <section className="flex flex-1 h-full items-center">
+          <section className="flex flex-1 h-full items-center py-[85px]">
             <div className="flex flex-row flex-wrap w-full justify-between items-center gap-6 px-8 mt-8 md:mt-0">
               <div className="mx-auto max-w-text">
                 <h1 className="mb-6 text-5xl md:text-6xl lg:text-7xl">Hey, I&apos;m Travis.</h1>
-                <p className="text-md mt-4">
+                <p className="text-base md:text-md mt-4">
                   I&apos;m a JavaScript developer who enjoys working across the
                   full stack and has a passion for creating clean and
                   easy-to-use sites and applications.
                 </p>
-                <p className="text-md mt-4">
+                <p className="text-base md:text-md mt-4">
                   Currently, I'm part of the team building and
                   maintaining
                   <a
@@ -43,7 +43,7 @@ const IndexPage = ({path, data}: PageProps<Queries.HomePageQuery>) => {
                   .
                 </p>
               </div>
-              <div className="w-9/12 md:w-[25vw] lg:w-[30vw] lg:max-w-lg mt-8 mx-auto">
+              <div className="w-9/12 md:w-[30vw] lg:w-[30vw] lg:max-w-lg md:min-w-[325px] mt-8 mx-auto">
                 <StaticImage
                   src="../images/undraw_stars.svg"
                   alt="space illustration with moon and stars"
