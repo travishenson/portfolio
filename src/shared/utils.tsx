@@ -68,9 +68,9 @@ export const textToIcon = (text: string): JSX.Element | null => {
   }
 
   return (
-    <div className="flex flex-row items-center px-4">
+    <div className="flex flex-row items-center">
       <div style={iconStyle}>{icon}</div>
-      <div className="font-outfit ml-1">{text}</div>
+      <div className="font-outfit text-sm ml-1">{text}</div>
     </div>
   );
 };

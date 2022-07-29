@@ -10737,6 +10737,11 @@ type WebPOptions = {
   readonly quality: InputMaybe<Scalars['Int']>;
 };
 
+type AboutPageQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type AboutPageQuery = { readonly graphCmsAsset: { readonly id: string, readonly altText: string | null, readonly gatsbyImageData: Record<string, unknown> | null, readonly slug: string | null } | null };
+
 type BlogPageQueryVariables = Exact<{ [key: string]: never; }>;
 
 

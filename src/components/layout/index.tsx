@@ -29,7 +29,7 @@ const Layout: React.FC<LayoutProps> = ({
       </header>
       <main
         className={`flex-1 mx-auto pb-20 w-full z-0 ${
-          isFullWidth ? '' : 'max-w-content my-8 px-12 pt-[100px]'
+          isFullWidth ? '' : 'max-w-content my-8 px-12 pt-[100px] md:pt-[150px]'
         }`}
       >
         {title ? (
