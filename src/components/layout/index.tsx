@@ -33,7 +33,10 @@ const Layout: React.FC<LayoutProps> = ({
         }`}
       >
         {title ? (
-          <h1 className="text-4xl md:text-5xl">{title}</h1>
+          <div className="flex items-center max-w-screen-lg mx-auto">
+            <h1 className="text-4xl md:text-5xl">{title}</h1>
+            <div className="flex-grow ml-8 border-t border-brand-grey-700" />
+          </div>
         ) : null}
         {children}
       </main>

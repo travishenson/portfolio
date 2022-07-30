@@ -1217,6 +1217,7 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageBlogPost.featuredImage.featuredImageBlogPost.createdAt'
   | 'featuredImageBlogPost.featuredImage.featuredImageBlogPost.gatsbyPath'
   | 'featuredImageBlogPost.featuredImage.featuredImageBlogPost.id'
+  | 'featuredImageBlogPost.featuredImage.featuredImageBlogPost.originalPublishedAt'
   | 'featuredImageBlogPost.featuredImage.featuredImageBlogPost.overview'
   | 'featuredImageBlogPost.featuredImage.featuredImageBlogPost.publishedAt'
   | 'featuredImageBlogPost.featuredImage.featuredImageBlogPost.remoteId'
@@ -1384,6 +1385,7 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageBlogPost.internal.mediaType'
   | 'featuredImageBlogPost.internal.owner'
   | 'featuredImageBlogPost.internal.type'
+  | 'featuredImageBlogPost.originalPublishedAt'
   | 'featuredImageBlogPost.overview'
   | 'featuredImageBlogPost.parent.children'
   | 'featuredImageBlogPost.parent.children.children'
@@ -1601,6 +1603,7 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageProject.featuredImage.featuredImageBlogPost.createdAt'
   | 'featuredImageProject.featuredImage.featuredImageBlogPost.gatsbyPath'
   | 'featuredImageProject.featuredImage.featuredImageBlogPost.id'
+  | 'featuredImageProject.featuredImage.featuredImageBlogPost.originalPublishedAt'
   | 'featuredImageProject.featuredImage.featuredImageBlogPost.overview'
   | 'featuredImageProject.featuredImage.featuredImageBlogPost.publishedAt'
   | 'featuredImageProject.featuredImage.featuredImageBlogPost.remoteId'
@@ -1810,6 +1813,7 @@ type GraphCMS_AssetFieldsEnum =
   | 'featuredImageProject.projectImages.featuredImageBlogPost.createdAt'
   | 'featuredImageProject.projectImages.featuredImageBlogPost.gatsbyPath'
   | 'featuredImageProject.projectImages.featuredImageBlogPost.id'
+  | 'featuredImageProject.projectImages.featuredImageBlogPost.originalPublishedAt'
   | 'featuredImageProject.projectImages.featuredImageBlogPost.overview'
   | 'featuredImageProject.projectImages.featuredImageBlogPost.publishedAt'
   | 'featuredImageProject.projectImages.featuredImageBlogPost.remoteId'
@@ -2392,6 +2396,7 @@ type GraphCMS_AssetFieldsEnum =
   | 'projectImagesProject.featuredImage.featuredImageBlogPost.createdAt'
   | 'projectImagesProject.featuredImage.featuredImageBlogPost.gatsbyPath'
   | 'projectImagesProject.featuredImage.featuredImageBlogPost.id'
+  | 'projectImagesProject.featuredImage.featuredImageBlogPost.originalPublishedAt'
   | 'projectImagesProject.featuredImage.featuredImageBlogPost.overview'
   | 'projectImagesProject.featuredImage.featuredImageBlogPost.publishedAt'
   | 'projectImagesProject.featuredImage.featuredImageBlogPost.remoteId'
@@ -2601,6 +2606,7 @@ type GraphCMS_AssetFieldsEnum =
   | 'projectImagesProject.projectImages.featuredImageBlogPost.createdAt'
   | 'projectImagesProject.projectImages.featuredImageBlogPost.gatsbyPath'
   | 'projectImagesProject.projectImages.featuredImageBlogPost.id'
+  | 'projectImagesProject.projectImages.featuredImageBlogPost.originalPublishedAt'
   | 'projectImagesProject.projectImages.featuredImageBlogPost.overview'
   | 'projectImagesProject.projectImages.featuredImageBlogPost.publishedAt'
   | 'projectImagesProject.projectImages.featuredImageBlogPost.remoteId'
@@ -3288,6 +3294,7 @@ type GraphCMS_BlogPost = Node & {
   readonly gatsbyPath: Maybe<Scalars['String']>;
   readonly id: Scalars['ID'];
   readonly internal: Internal;
+  readonly originalPublishedAt: Scalars['JSON'];
   readonly overview: Scalars['String'];
   readonly parent: Maybe<Node>;
   readonly publishedAt: Maybe<Scalars['JSON']>;
@@ -3533,6 +3540,7 @@ type GraphCMS_BlogPostFieldsEnum =
   | 'featuredImage.featuredImageBlogPost.internal.mediaType'
   | 'featuredImage.featuredImageBlogPost.internal.owner'
   | 'featuredImage.featuredImageBlogPost.internal.type'
+  | 'featuredImage.featuredImageBlogPost.originalPublishedAt'
   | 'featuredImage.featuredImageBlogPost.overview'
   | 'featuredImage.featuredImageBlogPost.parent.children'
   | 'featuredImage.featuredImageBlogPost.parent.id'
@@ -4074,6 +4082,7 @@ type GraphCMS_BlogPostFieldsEnum =
   | 'internal.mediaType'
   | 'internal.owner'
   | 'internal.type'
+  | 'originalPublishedAt'
   | 'overview'
   | 'parent.children'
   | 'parent.children.children'
@@ -4423,6 +4432,7 @@ type GraphCMS_BlogPostFilterInput = {
   readonly gatsbyPath: InputMaybe<StringQueryOperatorInput>;
   readonly id: InputMaybe<StringQueryOperatorInput>;
   readonly internal: InputMaybe<InternalFilterInput>;
+  readonly originalPublishedAt: InputMaybe<JSONQueryOperatorInput>;
   readonly overview: InputMaybe<StringQueryOperatorInput>;
   readonly parent: InputMaybe<NodeFilterInput>;
   readonly publishedAt: InputMaybe<JSONQueryOperatorInput>;
@@ -4766,6 +4776,7 @@ type GraphCMS_ProjectFieldsEnum =
   | 'featuredImage.featuredImageBlogPost.internal.mediaType'
   | 'featuredImage.featuredImageBlogPost.internal.owner'
   | 'featuredImage.featuredImageBlogPost.internal.type'
+  | 'featuredImage.featuredImageBlogPost.originalPublishedAt'
   | 'featuredImage.featuredImageBlogPost.overview'
   | 'featuredImage.featuredImageBlogPost.parent.children'
   | 'featuredImage.featuredImageBlogPost.parent.id'
@@ -5441,6 +5452,7 @@ type GraphCMS_ProjectFieldsEnum =
   | 'projectImages.featuredImageBlogPost.internal.mediaType'
   | 'projectImages.featuredImageBlogPost.internal.owner'
   | 'projectImages.featuredImageBlogPost.internal.type'
+  | 'projectImages.featuredImageBlogPost.originalPublishedAt'
   | 'projectImages.featuredImageBlogPost.overview'
   | 'projectImages.featuredImageBlogPost.parent.children'
   | 'projectImages.featuredImageBlogPost.parent.id'
@@ -8959,6 +8971,7 @@ type Query_graphCmsBlogPostArgs = {
   gatsbyPath: InputMaybe<StringQueryOperatorInput>;
   id: InputMaybe<StringQueryOperatorInput>;
   internal: InputMaybe<InternalFilterInput>;
+  originalPublishedAt: InputMaybe<JSONQueryOperatorInput>;
   overview: InputMaybe<StringQueryOperatorInput>;
   parent: InputMaybe<NodeFilterInput>;
   publishedAt: InputMaybe<JSONQueryOperatorInput>;

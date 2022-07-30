@@ -19,8 +19,10 @@ const BioData: React.FC<{label: string; value: any}> = ({label, value}) => {
   if (label === 'Technology') {
     return (
       <div className="flex flex-col">
-        <span className="text-xs text-brand-grey-300 uppercase">{label}</span>
-        <ul className="grid sm:grid-cols-2 gap-4 mt-2">
+        <span className="text-xs text-brand-grey-300 uppercase font-outfit">
+          {label}
+        </span>
+        <ul className="grid sm:grid-cols-2 gap-4 mt-3">
           {techList.map((tech) => textToIcon(tech))}
         </ul>
       </div>
@@ -29,15 +31,18 @@ const BioData: React.FC<{label: string; value: any}> = ({label, value}) => {
 
   return (
     <div className="flex flex-col">
-      <span className="text-xs text-brand-grey-300 uppercase">{label}</span>
+      <span className="text-xs text-brand-grey-300 uppercase font-outfit">
+        {label}
+      </span>
       <span className="font-outfit text-md md:text-md">{value}</span>
     </div>
   );
 };
 
 const AboutPage = ({path, data}: PageProps<Queries.AboutPageQuery>) => {
-  const sectionHeaderStyle = 'text-xl md:text-4xl max-w-lg mb-8';
-  const pStyles = 'max-w-text my-8';
+  const sectionStyle = 'w-full max-w-text mx-auto mb-8';
+  const sectionHeaderStyle = 'text-xl md:text-4xl max-w-lg mb-4';
+  const pStyles = 'max-w-text mb-8';
 
   const profileImage = getImage(data.graphCmsAsset as any) as IGatsbyImageData;
 
@@ -49,21 +54,18 @@ const AboutPage = ({path, data}: PageProps<Queries.AboutPageQuery>) => {
         <link rel="canonical" href="https://travishenson.com/about" />
       </Helmet>
       <Layout path={path}>
-        <div className="flex flex-col-reverse lg:flex-row gap-8">
-          <div className="flex-1 pt-8">
-            <div className="w-full max-w-text mx-auto">
-              <div className="">
-                <h1 className={sectionHeaderStyle}>
-                  Travis Henson, a JavaScript developer currently based in
-                  Kentucky.
-                </h1>
-              </div>
+        <div className="flex flex-col-reverse lg:flex-row gap-16">
+          <div className="flex flex-col w-3/5 pt-4">
+            <section className={sectionStyle}>
+              <h1 className={sectionHeaderStyle}>
+                JavaScript developer focused on creating clean and easy-to-use
+                sites and applications.
+              </h1>
               <p className={pStyles}>
-                As a full-stack developer with a passion for creating clean and
-                easy-to-use applications, I place an emphasis on user experience
-                and usability. What motivates me is the ongoing challenge of
-                finding elegant, code-based solutions to users’ and businesses’
-                complex problems.
+                As a full-stack developer, I place an emphasis on user
+                experience and usability. What motivates me is the ongoing
+                challenge of finding elegant, code-based solutions to users’ and
+                businesses’ complex problems.
               </p>
               <p className={pStyles}>
                 Being a web developer allows me to do that on a daily basis.
@@ -71,26 +73,78 @@ const AboutPage = ({path, data}: PageProps<Queries.AboutPageQuery>) => {
                 interested and drives me to keep up with the ever-changing
                 landscape of the internet and web development.
               </p>
-              <div className="max-w-text mx-auto">
-                <h2 className={sectionHeaderStyle}>Experience</h2>
+              <p className={pStyles}>
+                When I'm not coding at my computer, my main interests are video
+                games, sports, and various forms of horror media (mainly movies
+                and shows). I definitely have a weird fascination for cryptids
+                and the paranormal as well.
+              </p>
+            </section>
+            <section className={sectionStyle}>
+              <h2 className={sectionHeaderStyle}>Experience</h2>
+              <div
+                className={`${pStyles}  border-l-2 border-brand-blue-500 ml-2 pl-4`}
+              >
+                <h3 className="font-outfit text-lg mb-1">
+                  Web Engineer &mdash; Getter
+                </h3>
+                <p className="text-sm italic text-gray-300">
+                  April 2021 &ndash; Present
+                </p>
               </div>
-              <div className="max-w-text mx-auto">
-                <h2 className={sectionHeaderStyle}>Education</h2>
+              <div
+                className={`${pStyles} border-l-2 border-brand-blue-500 ml-2 pl-4`}
+              >
+                <h3 className="font-outfit text-lg mb-1">
+                  Game Template Developer &mdash; Koji
+                </h3>
+                <p className="text-sm italic text-gray-300">
+                  February 2020 &ndash; June 2020
+                </p>
               </div>
-            </div>
+            </section>
+            <section className={sectionStyle}>
+              <h2 className={sectionHeaderStyle}>Education</h2>
+              <div
+                className={`${pStyles}  border-l-2 border-brand-blue-500 ml-2 pl-4`}
+              >
+                <h3 className="font-outfit text-lg mb-1">
+                  Certificate &mdash; Full Stack Web Development
+                </h3>
+                <p className="text-sm italic text-gray-300">
+                  University of Richmond | Richmond, VA, USA
+                </p>
+                <p className="text-sm italic text-gray-300">
+                  February 2019 &ndash; June 2019
+                </p>
+              </div>
+              <div
+                className={`${pStyles}  border-l-2 border-brand-blue-500 ml-2 pl-4`}
+              >
+                <h3 className="font-outfit text-lg mb-1">
+                  Bachelor of Arts &mdash; Advertising
+                </h3>
+                <p className="text-sm italic text-gray-300">
+                  Western Kentucky University | Bowling Green, KY, USA
+                </p>
+                <p className="text-sm italic text-gray-300">
+                  August 2014 &ndash; May 2017
+                </p>
+              </div>
+            </section>
           </div>
-          <div className="w-full mx-auto max-w-[350px] sm:max-w-[700px] lg:max-w-[350px] pb-8 sm:pb-0 lg:pb-8 min-h-min sm:max-h-[350px] lg:max-h-max bg-brand-black rounded-xl drop-shadow-xl">
-            <div className="w-full mx-auto flex flex-col sm:flex-row lg:flex-col">
-              <GatsbyImage
-                image={profileImage}
-                alt={data.graphCmsAsset?.altText as string}
-                className="mb-4 sm:mb-0 lg:mb-4 rounded-t-xl sm:rounded-l-xl sm:rounded-tr-none lg:rounded-t-xl lg:rounded-bl-none w-full max-w-[350px] sm:max-w-[250px] md:max-w-[350px] h-[350px]"
-              />
-              <div className="flex flex-col gap-6 max-w-text p-6 justify-center">
-                <BioData label="Name" value="Travis Henson" />
-                <BioData label="Position" value="Web Engineer @ Getter" />
-                <BioData label="Technology" value="" />
-              </div>
+
+          <div className="w-full max-w-[400px] min-h-[200px] drop-shadow-xl">
+            <GatsbyImage
+              image={profileImage}
+              alt={data.graphCmsAsset?.altText as string}
+              loading="eager"
+              className="w-full rounded-t-xl"
+            />
+            <div className="bg-brand-black flex flex-col gap-6 max-w-text p-8 justify-center rounded-b-xl">
+              <BioData label="Name" value="Travis Henson" />
+              <BioData label="Position" value="Web Engineer &mdash; Getter" />
+              <BioData label="Technology" value="" />
             </div>
           </div>
         </div>
@@ -101,10 +155,10 @@ const AboutPage = ({path, data}: PageProps<Queries.AboutPageQuery>) => {
 
 export const query = graphql`
   query AboutPage {
-    graphCmsAsset(id: {eq: "Asset:ckw9x2loourij0c78l43f7pkr:en:PUBLISHED"}) {
+    graphCmsAsset(id: {eq: "Asset:cl67hxpddocys0cmtbqzo20b1:en:PUBLISHED"}) {
       id
       altText
-      gatsbyImageData(width: 350, placeholder: BLURRED, layout: CONSTRAINED)
+      gatsbyImageData(width: 500, placeholder: BLURRED, layout: CONSTRAINED)
       slug
     }
   }

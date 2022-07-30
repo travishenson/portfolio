@@ -26,31 +26,41 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const isImageLeft = index % 2 === 0;
 
   const imageLeftStyles = {
-    card: 'flex md:flex-row rounded-t-xl rounded-b-xl md:rounded-l-xl md:rounded-r-lg',
+    card: 'rounded-b-lg md:rounded-bl-none md:rounded-r-lg',
     image: 'rounded-t-lg md:rounded-tr-none md:rounded-l-lg',
   };
 
   const imageRightStyles = {
-    card: 'flex md:flex-row-reverse rounded-t-xl rounded-b-xl md:rounded-r-xl md:rounded-l-lg',
+    card: 'rounded-b-lg md:rounded-br-none md:rounded-l-lg',
     image: 'w-full rounded-t-lg md:rounded-tl-none md:rounded-r-lg ',
   };
 
   return (
     <div
-      className={`w-full h-full md:h-[450px] flex flex-col md:flex-row bg-brand-grey-100 shadow-lg shadow-brand-black justify-start text-brand-grey-900 ${
-        isImageLeft ? imageLeftStyles.card : imageRightStyles.card
+      className={`flex flex-col md:flex-row w-full max-w-screen-lg mx-auto h-full md:h-[425px] shadow-lg shadow-brand-black justify-start text-brand-grey-900 ${
+        isImageLeft ? 'md:flex-row' : 'md:flex-row-reverse'
       }`}
     >
       <Link to={`/projects/${slug}`} className="w-full h-full md:w-3/5">
-        <GatsbyImage
-          image={projectImage}
-          alt={`${title} featured mockup`}
-          className={`w-full h-full object-cover ${
+        <div
+          className={`w-full h-full overflow-hidden ${
             isImageLeft ? imageLeftStyles.image : imageRightStyles.image
           }`}
-        />
+        >
+          <GatsbyImage
+            image={projectImage}
+            alt={`${title} featured mockup`}
+            className={`w-full h-full object-cover hover:scale-110 transition-all duration-500 ${
+              isImageLeft ? imageLeftStyles.image : imageRightStyles.image
+            }`}
+          />
+        </div>
       </Link>
-      <div className="flex flex-col h-full justify-center w-full md:w-2/5 p-8">
+      <div
+        className={`bg-brand-grey-100 flex flex-col h-full justify-center w-full md:w-2/5 p-8 ${
+          isImageLeft ? imageLeftStyles.card : imageRightStyles.card
+        }`}
+      >
         <span className="flex flex-row text-sm italic text-brand-grey-700">
           {type} &mdash; {role}
         </span>
