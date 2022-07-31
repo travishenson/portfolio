@@ -56,9 +56,7 @@ const Navbar: React.FC<NavbarProps> = ({currentSlug, isFullWidthPage}) => {
       navbarClass = 'top-[0px]';
       break;
     case 'Up':
-      navbarClass = `top-[0px] backdrop-blur-sm ${
-        isFullWidthPage ? 'bg-brand-black/95' : 'bg-brand-grey-900/95'
-      }`;
+      navbarClass = 'top-[0px] backdrop-blur-sm bg-brand-grey-900/95';
       break;
     case 'Down':
       navbarClass = `${position >= 25 ? '-top-[100px]' : 'top-[0px]'}`;
@@ -70,8 +68,8 @@ const Navbar: React.FC<NavbarProps> = ({currentSlug, isFullWidthPage}) => {
   return (
     <Popover
       className={`fixed w-full z-30 transition-all duration-500 ${navbarClass} ${
-        position > 0 ? 'drop-shadow-[0_15px_15px_rgba(0,0,0,0.20)]' : ''
-      } ${isFullWidthPage ? 'bg-brand-black' : 'bg-brand-grey-900'}
+        position > 0 ? 'drop-shadow-[0_5px_5px_rgba(0,0,0,0.20)]' : ''
+      } 
     `}
     >
       <div
@@ -126,13 +124,13 @@ const Navbar: React.FC<NavbarProps> = ({currentSlug, isFullWidthPage}) => {
           focus
           className="absolute z-30 top-0 inset-x-0 h-screen transition transform origin-top-right md:hidden touch-none"
         >
-          <div className="h-full flex flex-col justify-between shadow-lg ring-1 ring-black ring-opacity-5 bg-brand-black divide-y-2 divide-brand-grey-900">
-            <div className="pt-5 pb-6 px-5 sm:pb-8">
+          <div className="h-full flex flex-col justify-between px-8 shadow-lg ring-1 ring-black ring-opacity-5 bg-brand-black divide-y-2 divide-brand-grey-900">
+            <div className="pt-5 pb-6 sm:pb-8">
               <div className="flex items-center justify-between">
                 <div className="w-[40px] h-[40px]">
                   <Logo />
                 </div>
-                <div className="-mr-2">
+                <div className="-mr-2 -my-2">
                   <Popover.Button className="bg-brand-black rounded-md p-2 inline-flex items-center justify-center text-brand-grey-500 hover:text-brand-grey-100 hover:bg-brand-grey-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-blue-500">
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />

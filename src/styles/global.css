@@ -6,7 +6,7 @@
   }
 
   body {
-    @apply w-full h-screen font-inter font-normal text-brand-grey-100 leading-[1.75] overscroll-none;
+    @apply w-full h-screen font-inter font-normal text-brand-grey-100 leading-[1.75];
   }
 
   /* Typography */

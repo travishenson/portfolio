@@ -42,7 +42,7 @@ const BioData: React.FC<{label: string; value: any}> = ({label, value}) => {
 const AboutPage = ({path, data}: PageProps<Queries.AboutPageQuery>) => {
   const sectionStyle = 'w-full max-w-text mx-auto mb-8';
   const sectionHeaderStyle = 'text-xl md:text-4xl max-w-lg mb-4';
-  const pStyles = 'max-w-text mb-8';
+  const pStyles = 'mb-8';
 
   const profileImage = getImage(data.graphCmsAsset as any) as IGatsbyImageData;
 
@@ -55,7 +55,7 @@ const AboutPage = ({path, data}: PageProps<Queries.AboutPageQuery>) => {
       </Helmet>
       <Layout path={path}>
         <div className="flex flex-col-reverse lg:flex-row gap-16">
-          <div className="flex flex-col w-3/5 pt-4">
+          <div className="flex flex-col w-full md:w-3/5 pt-4">
             <section className={sectionStyle}>
               <h1 className={sectionHeaderStyle}>
                 JavaScript developer focused on creating clean and easy-to-use
@@ -134,7 +134,7 @@ const AboutPage = ({path, data}: PageProps<Queries.AboutPageQuery>) => {
             </section>
           </div>
 
-          <div className="w-full max-w-[400px] min-h-[200px] drop-shadow-xl">
+          <div className="w-full max-w-[400px] min-h-[200px] mx-auto drop-shadow-xl">
             <GatsbyImage
               image={profileImage}
               alt={data.graphCmsAsset?.altText as string}

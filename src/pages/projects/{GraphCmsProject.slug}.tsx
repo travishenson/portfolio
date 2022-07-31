@@ -74,7 +74,7 @@ const ProjectPage = (props: PageProps<Queries.ProjectPageQuery>) => {
             renderers={{
               h4: ({children}) => (
                 <div className="text-base max-w-text mx-auto md:mt-8">
-                  <h2 className="text-4xl md:text-5xl">{children}</h2>
+                  <h2 className="text-3xl md:text-4xl">{children}</h2>
                 </div>
               ),
               img: ({src, altText}) => (

@@ -57,12 +57,12 @@ const IndexPage = ({path, data}: PageProps<Queries.HomePageQuery>) => {
         </Hero>
         <ContentWrapper>
           <section>
-            <div className="flex items-center max-w-screen-xl mx-auto">
-              <div className="flex-grow mr-8 border-t border-brand-grey-700" />
+            <div className="flex items-center max-w-screen-xl mx-auto px-4">
+              <div className="flex-grow mr-4 md:mr-8 border-t border-brand-grey-700" />
               <h3 className="text-center tracking-wide font-outfit text-2xl md:text-4xl">
                 Featured Projects
               </h3>
-              <div className="flex-grow ml-8 border-t border-brand-grey-700" />
+              <div className="flex-grow ml-4 md:ml-8 border-t border-brand-grey-700" />
             </div>
 
             <div className="flex flex-col mt-12 px-8 gap-16">
