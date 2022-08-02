@@ -44,7 +44,7 @@ const ProjectPage = (props: PageProps<Queries.ProjectPageQuery>) => {
         />
       </Helmet>
       <Layout path={props.path} isProjectPage>
-        <div className="flex flex-col w-full min-h-[75vh] bg-brand-black text-brand-grey-100 pt-[15vh]">
+        <div className="flex flex-col w-full min-h-[75vh] bg-brand-black text-brand-grey-100 pt-[10vh] md:pt-[15vh]">
           <div className="flex flex-1 w-full items-center px-8">
           <div className="grid grid-cols-2 gap-x-2 sm:gap-x-0 gap-y-8 w-full max-w-text mx-auto">
               <HeaderData label="Project" value={String(project.title)} />
