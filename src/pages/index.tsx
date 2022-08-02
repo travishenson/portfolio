@@ -13,7 +13,7 @@ const IndexPage = ({path, data}: PageProps<Queries.HomePageQuery>) => {
 
   return (
     <>
-      <Helmet>
+      <Helmet htmlAttributes={{lang: 'en'}}>
         <meta charSet="utf-8" />
         <title>Travis Henson | JavaScript Developer</title>
         <link rel="canonical" href="https://travishenson.com" />
@@ -59,9 +59,9 @@ const IndexPage = ({path, data}: PageProps<Queries.HomePageQuery>) => {
           <section>
             <div className="flex items-center max-w-screen-xl mx-auto px-4">
               <div className="flex-grow mr-4 md:mr-8 border-t border-brand-grey-700" />
-              <h3 className="text-center tracking-wide font-outfit text-2xl md:text-4xl">
+              <h2 className="text-center tracking-wide font-outfit text-2xl md:text-4xl">
                 Featured Projects
-              </h3>
+              </h2>
               <div className="flex-grow ml-4 md:ml-8 border-t border-brand-grey-700" />
             </div>
 

@@ -12,13 +12,14 @@ const Footer: React.FC = () => {
     <footer className="flex h-[150px] md:h-[200px] bg-brand-grey-900">
       <div className="flex flex-col justify-center gap-5 w-full max-w-content mx-auto border-t border-brand-grey-700">
         <div className="flex gap-5 mx-auto">
-          <a href="mailto:hello@travishenson.com">
+          <a href="mailto:hello@travishenson.com" aria-label="Send email to hello@travishenson.com">
             <IoMail className={iconClassName} />
           </a>
           <a
             href="https://github.com/travishenson"
             target="_blank"
             rel="noreferrer"
+            aria-label="GitHub profile"
           >
             <FaGithub className={iconClassName} />
           </a>
@@ -26,6 +27,7 @@ const Footer: React.FC = () => {
             href="https://linkedin.com/in/travisghenson"
             target="_blank"
             rel="noreferrer"
+            aria-label="LinkedIn profile"
           >
             <FaLinkedin className={iconClassName} />
           </a>
