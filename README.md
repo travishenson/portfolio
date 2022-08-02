@@ -4,13 +4,14 @@
 My portfolio and personal website.
 
 Built with:
-- Next.js
-- SASS
+- Gatsby
+- Tailwind CSS
 - GraphCMS
 
 ## Contact 
 ### Travis Henson
 
+> LinkedIn: [travisghenson](https://linkedin.com/in/travisghenson) <br />
 > Twitter: [@travishenson](https://twitter.com/travishenson) <br />
 > Email: hello@travishenson.com
 
