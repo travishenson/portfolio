@@ -17,7 +17,7 @@ interface NavLinkProps {
 
 interface NavbarProps {
   currentSlug: string;
-  isFullWidthPage: boolean;
+  isProjectPage: boolean;
 }
 
 const NavLink: React.FC<NavLinkProps> = ({
@@ -46,7 +46,7 @@ const NavLink: React.FC<NavLinkProps> = ({
   );
 };
 
-const Navbar: React.FC<NavbarProps> = ({currentSlug, isFullWidthPage}) => {
+const Navbar: React.FC<NavbarProps> = ({currentSlug, isProjectPage}) => {
   const {direction, position} = useScrollPos();
 
   let navbarClass: string;
@@ -56,7 +56,9 @@ const Navbar: React.FC<NavbarProps> = ({currentSlug, isFullWidthPage}) => {
       navbarClass = 'top-[0px]';
       break;
     case 'Up':
-      navbarClass = 'top-[0px] backdrop-blur-sm bg-brand-grey-900/95';
+      navbarClass = `top-[0px] backdrop-blur-sm ${
+        isProjectPage ? 'bg-brand-black/95' : 'bg-brand-grey-900/95'
+      }`;
       break;
     case 'Down':
       navbarClass = `${position >= 25 ? '-top-[100px]' : 'top-[0px]'}`;

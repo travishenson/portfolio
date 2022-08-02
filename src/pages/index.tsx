@@ -18,7 +18,7 @@ const IndexPage = ({path, data}: PageProps<Queries.HomePageQuery>) => {
         <title>Travis Henson | JavaScript Developer</title>
         <link rel="canonical" href="https://travishenson.com" />
       </Helmet>
-      <Layout path={path} isFullWidth>
+      <Layout path={path} isHomePage>
         <Hero>
           <section className="flex flex-1 h-full items-center py-[85px]">
             <div className="flex flex-row flex-wrap w-full justify-between items-center gap-6 px-8 mt-8 md:mt-0">

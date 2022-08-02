@@ -9,14 +9,16 @@ import {Footer} from './footer';
 interface LayoutProps {
   path: string;
   children: ReactNode;
-  isFullWidth?: boolean;
+  isHomePage?: boolean;
+  isProjectPage?: boolean;
   title?: string;
 }
 
 const Layout: React.FC<LayoutProps> = ({
   path,
   children,
-  isFullWidth = false,
+  isHomePage = false,
+  isProjectPage = false,
   title,
 }: LayoutProps) => {
   console.log('What are you doing here? 🤨');
@@ -25,11 +27,11 @@ const Layout: React.FC<LayoutProps> = ({
   return (
     <div className="bg-brand-grey-900 text-brand-grey-100 flex flex-col min-h-screen relative w-full z-0">
       <header>
-        <Navbar currentSlug={currentSlug} isFullWidthPage={isFullWidth} />
+        <Navbar currentSlug={currentSlug} isProjectPage={isProjectPage} />
       </header>
       <main
         className={`flex-1 mx-auto pb-20 w-full z-0 ${
-          isFullWidth ? '' : 'max-w-content my-8 px-12 pt-[100px] md:pt-[150px]'
+          isProjectPage || isHomePage ? '' : 'max-w-content my-8 px-12 pt-[100px] md:pt-[150px]'
         }`}
       >
         {title ? (

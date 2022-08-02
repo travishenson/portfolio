@@ -43,10 +43,10 @@ const ProjectPage = (props: PageProps<Queries.ProjectPageQuery>) => {
           href={`https://travishenson.com/projects/${project.slug}`}
         />
       </Helmet>
-      <Layout path={props.path} isFullWidth>
-        <div className="w-full h-auto min-h-[40vh] bg-brand-black text-brand-grey-100 px-8">
-          <div className="flex w-full h-full max-w-content mx-auto pt-[15vh] pb-[5vh]">
-            <div className="grid grid-cols-2 gap-x-2 sm:gap-x-0 gap-y-8 w-full max-w-text mx-auto">
+      <Layout path={props.path} isProjectPage>
+        <div className="flex flex-col w-full min-h-[75vh] bg-brand-black text-brand-grey-100 pt-[15vh]">
+          <div className="flex flex-1 w-full items-center px-8">
+          <div className="grid grid-cols-2 gap-x-2 sm:gap-x-0 gap-y-8 w-full max-w-text mx-auto">
               <HeaderData label="Project" value={String(project.title)} />
               <HeaderData
                 label="Duration"
